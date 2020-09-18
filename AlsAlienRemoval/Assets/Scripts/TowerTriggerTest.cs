@@ -7,7 +7,7 @@ public class TowerTriggerTest : MonoBehaviour
     private SpriteRenderer _tileHighlight;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();   // All spriterenderers in this gameobject and children
 
@@ -31,12 +31,10 @@ public class TowerTriggerTest : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         _tileHighlight.color = Color.green;
-        Debug.Log("Enter!");
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         _tileHighlight.color = Color.red;
-        Debug.Log("Exit!");
     }
 }

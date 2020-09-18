@@ -64,7 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game.cs" />
+    <Compile Include="Assets\Scripts\PathFollowerTest.cs" />
     <Compile Include="Assets\Scripts\TowerTriggerTest.cs" />
+    <Compile Include="Assets\Scripts\WaypointArea.cs" />
     <Compile Include="Assets\Scripts\test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
