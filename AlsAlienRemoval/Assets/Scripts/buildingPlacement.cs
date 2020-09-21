@@ -17,8 +17,11 @@ public class buildingPlacement : MonoBehaviour
     {
         if(currentBuilding != null && !hasPlaced)
             {
-            Vector2 m = Input.mousePosition;
-            currentBuilding.position = new Vector2(m.x/100,m.y/100);
+         
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
+            currentBuilding.position = new Vector2(worldPoint2d.x,worldPoint2d.y);
+
             if(Input.GetMouseButtonDown(0))
                 {
                 hasPlaced = true;
