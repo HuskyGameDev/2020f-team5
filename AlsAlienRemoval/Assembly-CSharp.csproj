@@ -59,7 +59,6 @@
      <Compile Include="Assets\Scripts\PathFollowerTest.cs" />
      <Compile Include="Assets\Scripts\TowerTriggerTest.cs" />
      <Compile Include="Assets\Scripts\WaypointArea.cs" />
-     <Compile Include="Assets\Scripts\buildingManager.cs" />
      <Compile Include="Assets\Scripts\buildingPlaceable.cs" />
      <Compile Include="Assets\Scripts\buildingPlacement.cs" />
      <Compile Include="Assets\Scripts\test.cs" />
