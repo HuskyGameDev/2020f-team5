@@ -30,11 +30,11 @@ public class TowerTriggerTest : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        _tileHighlight.color = Color.green;
+        _tileHighlight.color = Color.red;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        _tileHighlight.color = Color.red;
+        _tileHighlight.color = Color.green;
     }
 }

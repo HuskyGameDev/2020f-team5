@@ -646,37 +646,37 @@
  <HintPath>C:/unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/2020team5repository/2020f-team5/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/2020team5repository/2020f-team5/AlsAlienRemoval/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
