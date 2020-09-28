@@ -6,6 +6,7 @@ public class buildingPlacement : MonoBehaviour
 {
     private Transform currentBuilding;
     private bool hasPlaced;
+    private buildingPlaceable buildingPlaceable;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,11 @@ Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
 
             if(Input.GetMouseButtonDown(0))
                 {
-                hasPlaced = true;
+                if(IsLegalPosition())
+                    {
+                     hasPlaced = true;
+                }
+               
             }
             if(hasPlaced)
                 {
@@ -33,9 +38,20 @@ Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
         }
         
     }
+    bool IsLegalPosition()
+        {
+        if(buildingPlaceable.colliders.Count > 0)
+        {
+        return false;
+        }
+        return true;
+    }
     public void setItem(GameObject b)
         {
         hasPlaced = false;
        currentBuilding = ((GameObject)Instantiate(b)).transform;
+        buildingPlaceable = currentBuilding.GetComponent<buildingPlaceable>();
         }
+
+
 }

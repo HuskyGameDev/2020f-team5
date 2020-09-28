@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2623971271211070165}
   - component: {fileID: 2623971271211070186}
   - component: {fileID: 2623971271211070185}
+  - component: {fileID: -1429633166995673398}
   m_Layer: 8
   m_Name: Trigger Debug Tower
   m_TagString: building
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623971271211070166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.63, y: -0.24, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 1.6012, y: -0.2454, z: 0}
+  m_LocalScale: {x: 0.94241095, y: 0.9891989, z: 0}
   m_Children:
   - {fileID: 2623971271218409295}
   m_Father: {fileID: 0}
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -144,6 +145,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1429633166995673398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623971271211070166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b268b9312cb5644eae622e8dfbf0ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliders: []
 --- !u!1 &2623971271218409288
 GameObject:
   m_ObjectHideFlags: 0
