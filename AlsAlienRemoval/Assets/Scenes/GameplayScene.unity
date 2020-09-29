@@ -940,7 +940,13 @@ MonoBehaviour:
   spawnpoint: {fileID: 1050528737}
   debugEnemy: {fileID: 6611935607478839159, guid: f8916eb236bf2414282947e3637624ef,
     type: 3}
-  doDebugSpawning: 0
+  doDebugSpawning: 1
+  debugEnemy1: {fileID: 6611935607478839159, guid: f8916eb236bf2414282947e3637624ef,
+    type: 3}
+  debugEnemy2: {fileID: 2639010729161105698, guid: 1f170866faa65c041a96e7d8b9637a71,
+    type: 3}
+  debugEnemy3: {fileID: 1376983613764651060, guid: 168393e07611baf47a32352575d7edf9,
+    type: 3}
 --- !u!1 &964309331
 GameObject:
   m_ObjectHideFlags: 0
