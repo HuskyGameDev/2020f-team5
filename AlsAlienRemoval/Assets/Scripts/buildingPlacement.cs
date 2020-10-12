@@ -40,10 +40,14 @@ Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
     }
     bool IsLegalPosition()
         {
-        if(buildingPlaceable.colliders.Count > 0)
-        {
-        return false;
-        }
+            if(buildingPlaceable.colliders.Count > 0 )
+            {
+            
+                 return false;
+               
+            }
+       
+        
         return true;
     }
     public void setItem(GameObject b)
