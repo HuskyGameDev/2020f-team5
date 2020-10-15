@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class buildingPlacement : MonoBehaviour
@@ -28,6 +29,7 @@ Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
                 if(IsLegalPosition())
                     {
                      hasPlaced = true;
+                    buildingPlaceable.SendMessage("hasPlaced", true);
                 }
                
             }

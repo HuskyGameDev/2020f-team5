@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6611935607478839156}
   - component: {fileID: 6611935607478839159}
   m_Layer: 0
-  m_Name: Debug Path Follower
-  m_TagString: Untagged
+  m_Name: Bob
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,3 +136,4 @@ MonoBehaviour:
   speed: 2
   destination: {x: 0, y: 0}
   nextDestination: {x: 0, y: 0}
+  health: 20

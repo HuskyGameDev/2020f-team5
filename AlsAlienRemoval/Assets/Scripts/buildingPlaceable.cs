@@ -32,4 +32,9 @@ public class buildingPlaceable : MonoBehaviour
             colliders.Remove(c);
         }
     }
+
+    void hasPlaced(bool hasPlaced)
+    {
+        this.SendMessage("placed", true);
+    }
 }
