@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41095346264736830}
   - component: {fileID: 275127454822870496}
-  - component: {fileID: 1041665573766217669}
+  - component: {fileID: 9202132005820731217}
   m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
@@ -322,7 +322,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1041665573766217669
+--- !u!58 &9202132005820731217
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

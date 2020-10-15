@@ -6,10 +6,9 @@ public class Level : MonoBehaviour
 {
     public WaypointArea firstWaypointArea;  // First waypoint in path. Default destination for enemies
     public GameObject spawnpoint;           // Spawn point for enemies
-    public Enemy debugEnemy;
 
     public bool doDebugSpawning;            // Spawn random enemies for debug purposes
-    public Enemy debugEnemy1;
+    public Enemy debugEnemy1;               // Pool of enemies for random spawning
     public Enemy debugEnemy2;
     public Enemy debugEnemy3;
 

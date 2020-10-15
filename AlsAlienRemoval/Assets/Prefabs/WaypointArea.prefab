@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3202195772826479583}
   - component: {fileID: 3958792631255321099}
   - component: {fileID: 3202195772826479582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WaypointArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5915726754313693409}
   - component: {fileID: 1152590467782466073}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,8 +140,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -679063555
-  m_SortingLayer: -1
+  m_SortingLayerID: 845991157
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
