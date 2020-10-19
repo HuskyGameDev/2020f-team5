@@ -8,10 +8,11 @@ public class buildingPlacement : MonoBehaviour
     private Transform currentBuilding;
     private bool hasPlaced;
     private buildingPlaceable buildingPlaceable;
+    public SpriteRenderer rangeSpriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -41,16 +42,16 @@ Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
         
     }
     bool IsLegalPosition()
-        {
+        {   
+        
             if(buildingPlaceable.colliders.Count > 0 )
             {
             
                  return false;
                
             }
-       
-        
         return true;
+        
     }
     public void setItem(GameObject b)
         {
