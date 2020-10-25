@@ -6,31 +6,36 @@ using UnityEngine;
 public class buildingPlaceable : MonoBehaviour
 {
     [HideInInspector]
-    public List<Collider2D> colliders = new List<Collider2D>();
-     public SpriteRenderer rangeSpriteRenderer;
-    // Start is called before the first frame update
+    public SpriteRenderer rangeSpriteRenderer;
+    private int _triggerCount;  // Number of triggers this building is currently intersecting 
+
+    private SpriteRenderer _tileHighlight;
+
     void Start()
     {
       rangeSpriteRenderer = GetComponent<SpriteRenderer>();  
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter2D(Collider2D c)
-        {
-        if(c.tag == "building")
-            {
-            colliders.Add(c);
-        }
+    {
+        _triggerCount++;
     }
-     void OnTriggerExit2D(Collider2D c)
+
+    void OnTriggerExit2D(Collider2D c)
+    {
+        _triggerCount--;
+    }
+
+    // Return true if collider is not currently intersecting any triggers (path, other towers, etc.)
+    public bool IsLegalPosition()
+    {
+        if (_triggerCount == 0)
         {
-        if(c.tag == "building")
-            {
-            colliders.Remove(c);
+            return true;
+        } 
+        else
+        {
+            return false;
         }
     }
 

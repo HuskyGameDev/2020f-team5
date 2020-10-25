@@ -9,56 +9,35 @@ public class buildingPlacement : MonoBehaviour
     private bool hasPlaced;
     private buildingPlaceable buildingPlaceable;
     public SpriteRenderer rangeSpriteRenderer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    public void Update()
+    public void Update() 
     {
-        if(currentBuilding != null && !hasPlaced)
-            {
-         
+        if (currentBuilding != null && !hasPlaced) 
+        {
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
+            Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
             currentBuilding.position = new Vector2(worldPoint2d.x,worldPoint2d.y);
 
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)) 
+            {
+                if (buildingPlaceable.IsLegalPosition()) 
                 {
-                if(IsLegalPosition())
-                    {
-                     hasPlaced = true;
+                    hasPlaced = true;
                     buildingPlaceable.SendMessage("hasPlaced", true);
                 }
-               
             }
-            if(hasPlaced)
-                {
+            if (hasPlaced) 
+            {
                 currentBuilding = null;
             }
         }
-        
     }
-    bool IsLegalPosition()
-        {   
-        
-            if(buildingPlaceable.colliders.Count > 0 )
-            {
-            
-                 return false;
-               
-            }
-        return true;
-        
-    }
-    public void setItem(GameObject b)
-        {
+    
+    public void setItem(GameObject b) 
+    {
         hasPlaced = false;
-       currentBuilding = ((GameObject)Instantiate(b)).transform;
+        currentBuilding = (Instantiate(b)).transform;
         buildingPlaceable = currentBuilding.GetComponent<buildingPlaceable>();
-        }
-
-
+    }
 }
