@@ -8,12 +8,14 @@ public class buildingPlaceable : MonoBehaviour
     [HideInInspector]
     public SpriteRenderer rangeSpriteRenderer;
     private int _triggerCount;  // Number of triggers this building is currently intersecting 
-
+    public GameObject range;
+    public int cost = 100;
     private SpriteRenderer _tileHighlight;
 
     void Start()
     {
-      rangeSpriteRenderer = GetComponent<SpriteRenderer>();  
+        cost = 100;
+        rangeSpriteRenderer = GetComponent<SpriteRenderer>();  
     }
 
     void OnTriggerEnter2D(Collider2D c)
@@ -25,7 +27,10 @@ public class buildingPlaceable : MonoBehaviour
     {
         _triggerCount--;
     }
-
+    public int getCost()
+    {
+        return cost;
+    }
     // Return true if collider is not currently intersecting any triggers (path, other towers, etc.)
     public bool IsLegalPosition()
     {

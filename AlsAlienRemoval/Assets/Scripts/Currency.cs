@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Currency : MonoBehaviour
 {
-    
+    public static int amount;
+    public static string displayCurrency = null;
     // Start is called before the first frame update
     void Start()
     {
+        amount = 500;
+        displayCurrency = amount.ToString() + "$";
     Text currency = GameObject.Find("Canvas/MainUIPanel/CurrencyDisplay").GetComponent<Text>();
-    currency.text = "500$";
+    currency.text = displayCurrency;
     }
 
     // Update is called once per frame
@@ -18,8 +21,25 @@ public class Currency : MonoBehaviour
     {
         
     }
-    public void TextChange()
+    public static void textChange()
     {
-        //currency.text ="500$" ;
+        displayCurrency = amount.ToString() + "$";
+        Text currency = GameObject.Find("Canvas/MainUIPanel/CurrencyDisplay").GetComponent<Text>();
+        currency.text = displayCurrency;
+    }
+    public static void addCurrency(int changeAmount)
+    {
+        amount = amount + changeAmount;
+        textChange();
+    }
+    public static void subtractCurrency(int changeAmount)
+    {
+            amount = amount - changeAmount;
+            textChange();
+   
+    }
+    public int getCurrency()
+    {
+        return amount;
     }
 }

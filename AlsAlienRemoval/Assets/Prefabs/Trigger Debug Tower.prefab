@@ -270,8 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b268b9312cb5644eae622e8dfbf0ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliders: []
   rangeSpriteRenderer: {fileID: 0}
+  range: {fileID: 4348926466859441465}
+  cost: 100
 --- !u!58 &6921178478751613962
 CircleCollider2D:
   m_ObjectHideFlags: 0

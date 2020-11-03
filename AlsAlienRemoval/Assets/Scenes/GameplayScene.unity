@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstWaypointArea: {fileID: 1116192833}
   spawnpoint: {fileID: 1050528737}
-  doDebugSpawning: 0
+  doDebugSpawning: 1
   debugEnemy1: {fileID: 6611935607478839159, guid: f8916eb236bf2414282947e3637624ef,
     type: 3}
   debugEnemy2: {fileID: 2639010729161105698, guid: 1f170866faa65c041a96e7d8b9637a71,
@@ -1958,7 +1958,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 2623971271211070166, guid: 8395480a1b696ac4fb1ece2211cff572,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 100
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
