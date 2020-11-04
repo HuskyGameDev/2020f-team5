@@ -11,10 +11,13 @@ public class Level : MonoBehaviour
     public Enemy debugEnemy1;               // Pool of enemies for random spawning
     public Enemy debugEnemy2;
     public Enemy debugEnemy3;
+    public Cow cow;
 
     private Enemy[] _debugEnemies;
     private float _spawnTimer = 0f;         // Time since last spawn (debug)
     private float _spawnCooldown = .25f;    // Time required between spawning enemies (debug)
+
+    public int lives;                     // Number of player lives/cows
 
     private void Start()
     {
@@ -26,6 +29,12 @@ public class Level : MonoBehaviour
         Enemy newEnemy = GameObject.Instantiate(enemyType, spawnpoint.transform.position, Quaternion.identity);
 
         firstWaypointArea.setAsNextDestination(newEnemy);
+    }
+
+    public void loseLife()
+    {
+        lives--;
+        Debug.Log("Life Lost! Remaining: " + lives);
     }
 
     private void FixedUpdate()
