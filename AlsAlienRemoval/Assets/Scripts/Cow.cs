@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Cow : MonoBehaviour
 {
@@ -9,12 +11,20 @@ public class Cow : MonoBehaviour
     {
         Enemy enemy = collider.GetComponent<Enemy>();   // Enemy script of other collider that entered. Null if other collider does not belong to an enemy (Tower, etc.)
 
-        // Set this waypoint area as enemy's next destination
+        // Destroy enemy and cow and subtract life if colliding enemy is this cow's attacker
         if (enemy != null)
         {
-            Destroy(enemy.gameObject);
-            level.loseLife();
-            Destroy(gameObject);
+            if (enemy.destination == transform.position)
+            {
+                // Subtract life
+                level.loseLife();
+                Text livestock = GameObject.Find("Canvas/MainUIPanel/LivestockDisplay").GetComponent<Text>();
+                livestock.text = level.lives.ToString();
+
+                // Destroy attacking enemy and itself
+                Destroy(enemy.gameObject);
+                Destroy(gameObject);
+            }
         }
     }
 }

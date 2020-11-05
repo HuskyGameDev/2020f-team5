@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Level : MonoBehaviour
 {
     public WaypointArea firstWaypointArea;  // First waypoint in path. Default destination for enemies
     public GameObject spawnpoint;           // Spawn point for enemies
 
+    public bool showWaypoints;              // Show red dots at waypoint locations
     public bool doDebugSpawning;            // Spawn random enemies for debug purposes
     public Enemy debugEnemy1;               // Pool of enemies for random spawning
     public Enemy debugEnemy2;
@@ -21,6 +24,14 @@ public class Level : MonoBehaviour
 
     private void Start()
     {
+        if (!showWaypoints)
+        {
+            Destroy(spawnpoint.GetComponent<SpriteRenderer>());
+        }
+
+        Text livestock = GameObject.Find("Canvas/MainUIPanel/LivestockDisplay").GetComponent<Text>();
+        livestock.text = lives.ToString();
+
         _debugEnemies = new Enemy[] { debugEnemy1, debugEnemy2, debugEnemy3 };
     }
     public void spawnEnemy (Enemy enemyType)
@@ -34,7 +45,6 @@ public class Level : MonoBehaviour
     public void loseLife()
     {
         lives--;
-        Debug.Log("Life Lost! Remaining: " + lives);
     }
 
     private void FixedUpdate()

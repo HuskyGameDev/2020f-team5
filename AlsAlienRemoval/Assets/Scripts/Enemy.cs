@@ -3,8 +3,8 @@
 public class Enemy : MonoBehaviour
 {
     public float speed;                             // Speed in units/second
-    public Vector2 destination = Vector2.zero;      // Current point enemy is moving towards in world space
-    public Vector2 nextDestination = Vector2.zero;  // Next point enemy will move to. Assigned when new waypoint area is entered, and set to destination when previous area is left
+    public Vector3 destination = Vector2.zero;      // Current point enemy is moving towards in world space
+    public Vector3 nextDestination = Vector2.zero;  // Next point enemy will move to. Assigned when new waypoint area is entered, and set to destination when previous area is left
     public float health;
     public int moneyDropped;
 

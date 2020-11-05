@@ -6,14 +6,21 @@ public class WaypointArea : MonoBehaviour
     private Level _level;
 
     public GameObject waypointGameObject;   // Waypoint child gameobject which enemies in area move towards. Assigned in editor
-    private Vector2 waypointPosition;       // Position of waypoint in world space
+    private Vector3 waypointPosition;       // Position of waypoint in world space
     public bool isLastWaypoint;             // Waypoint area is last in area. Enemies will be destroyed upon exiting
 
     private List<Cow> _cowList;      // List of cows in final waypoint
 
-    private void Start()
+    private void Awake()
     {
+        // Get reference to parent level
         _level = GetComponentInParent<Level>();
+
+        // Destroy waypoint sprite if hidden by level
+        if (!_level.showWaypoints)
+        {
+            Destroy(GetComponentInChildren<SpriteRenderer>());
+        }
 
         // Get poistion of waypoint converted from local space to world space
         waypointPosition = waypointGameObject.transform.position;
@@ -47,9 +54,10 @@ public class WaypointArea : MonoBehaviour
         {
             if (isLastWaypoint)
             {
+                // Set enemy destination to first cow in list and remove it.
                 Cow cowTarget = _cowList[0];
-                setAsNextDestination(enemy, cowTarget.transform.position);
                 _cowList.Remove(cowTarget);
+                setAsNextDestination(enemy, cowTarget.transform.position);
             } 
             else
             {
@@ -84,7 +92,7 @@ public class WaypointArea : MonoBehaviour
         enemy.nextDestination = dest;
 
         // Set enemy's current destination as well if it does not have one (first waypoint in level, etc.) as indicated by zero vector
-        if (enemy.destination == Vector2.zero)
+        if (enemy.destination == Vector3.zero)
         {
             enemy.destination = dest;
         }
