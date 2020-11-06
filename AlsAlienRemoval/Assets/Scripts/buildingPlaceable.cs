@@ -48,6 +48,10 @@ public class buildingPlaceable : MonoBehaviour
     {
         this.SendMessage("placed", true);
     }
+    void type(int type)
+    {
+        this.SendMessage("setTowerType", type);
+    }
     public void Select()
         {
 

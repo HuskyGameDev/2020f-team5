@@ -11,15 +11,25 @@ public class TowerTargetingSystem : MonoBehaviour
     public float lineWidth;
     public float lineDuration;
     public float towerDamage;
+    public float towerSpeedDecrease;
+    public float towerSlowDuration;
     public float rangeMin;
     public float rangeMax;
     private float fireTimer;
     public GameObject laser;
     private bool hasPlaced;
+    private int towerType;
+    public float splashMinRange;
+    public float splashMaxRange;
 
     void placed(bool placed)
     {
         hasPlaced = true;
+    }
+
+    void setTowerType(int type)
+    {
+        towerType = type;
     }
 
     private GameObject FindClosestEnemy()
@@ -58,7 +68,7 @@ public class TowerTargetingSystem : MonoBehaviour
         foreach (GameObject go in gos)
         {
             Vector3 diff = go.transform.position - position;
-            Enemy enemy = GetComponent<Enemy>();
+            Enemy enemy = go.GetComponent<Enemy>();
             float health = enemy.health;
             float curDistance = diff.sqrMagnitude;
             if (health < minHealth && curDistance >= min && curDistance <= max)
@@ -70,6 +80,56 @@ public class TowerTargetingSystem : MonoBehaviour
         return weakest;
     }
 
+    private GameObject FindStrongestEnemy()
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject strongest = null;
+        float maxHealth = 0;
+        Vector3 position = towerPosition.position;
+
+        // calculate squared distances
+        float min = rangeMin * rangeMin;
+        float max = rangeMax * rangeMax;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            Enemy enemy = go.GetComponent<Enemy>();
+            float health = enemy.health;
+            float curDistance = diff.sqrMagnitude;
+            if (health > maxHealth && curDistance >= min && curDistance <= max)
+            {
+                strongest = go;
+                maxHealth = health;
+            }
+        }
+        return strongest;
+    }
+
+    private GameObject FindFastestEnemy()
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject fastest = null;
+        float maxSpeed = 0;
+        Vector3 position = towerPosition.position;
+
+        // calculate squared distances
+        float min = rangeMin * rangeMin;
+        float max = rangeMax * rangeMax;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            Enemy enemy = go.GetComponent<Enemy>();
+            float speed = enemy.speed;
+            float curDistance = diff.sqrMagnitude;
+            if (speed > maxSpeed && curDistance >= min && curDistance <= max)
+            {
+                fastest = go;
+                maxSpeed = speed;
+            }
+        }
+        return fastest;
+    }
+
     IEnumerator DrawLine(Vector3 start, Vector3 end, Color color, float width, float duration)
     {
         laser.GetComponent<LineRenderer>().enabled = true;
@@ -79,6 +139,7 @@ public class TowerTargetingSystem : MonoBehaviour
         lr.endWidth = width;
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
+        lr.material.color = color;
         yield return new WaitForSeconds(duration);
         laser.GetComponent<LineRenderer>().enabled = false;
     }
@@ -99,12 +160,52 @@ public class TowerTargetingSystem : MonoBehaviour
 
             if (fireTimer >= fireRate)
             {
-                GameObject target = FindClosestEnemy();
-                if (target != null)
+                if (towerType == 1)
                 {
-                    StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.red, lineWidth, lineDuration));
-                    target.SendMessage("Hit", towerDamage);
-                    fireTimer = 0;
+                    GameObject target = FindClosestEnemy();
+                    if (target != null)
+                    {
+                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.red, lineWidth, lineDuration));
+                        target.SendMessage("Hit", towerDamage);
+                        fireTimer = 0;
+                    }
+                }
+                else if(towerType == 2)
+                {
+                    GameObject target = FindWeakestEnemy();
+                    if (target != null)
+                    {
+                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.magenta, lineWidth, lineDuration));
+                        target.SendMessage("Hit", towerDamage);
+                        fireTimer = 0;
+                    }
+                }
+                else if (towerType == 3)
+                {
+                    GameObject target = FindFastestEnemy();
+                    if (target != null)
+                    {
+                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.blue, lineWidth, lineDuration));
+                        target.SendMessage("setSlowDuration", towerSlowDuration);
+                        target.SendMessage("Slow", towerSpeedDecrease);
+                        fireTimer = 0;
+                    }
+                }
+                else if (towerType == 4)
+                {
+                    GameObject target = FindStrongestEnemy();
+                    if (target != null)
+                    {
+                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.yellow, lineWidth, lineDuration));
+                        target.SendMessage("Hit", towerDamage);
+                        target.SendMessage("setLineWidth", lineWidth);
+                        target.SendMessage("setLineDuration", lineDuration);
+                        target.SendMessage("setTowerDamge", towerDamage);
+                        target.SendMessage("setMinRange", splashMinRange);
+                        target.SendMessage("setMaxRange", splashMaxRange);
+                        target.SendMessage("Splash");
+                        fireTimer = 0;
+                    }
                 }
             }
         }
