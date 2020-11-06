@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 
 public class Level : MonoBehaviour
@@ -9,57 +12,155 @@ public class Level : MonoBehaviour
     public WaypointArea firstWaypointArea;  // First waypoint in path. Default destination for enemies
     public GameObject spawnpoint;           // Spawn point for enemies
 
-    public bool showWaypoints;              // Show red dots at waypoint locations
+    public static bool showWaypoints;       // Show red dots at waypoint locations
     public bool doDebugSpawning;            // Spawn random enemies for debug purposes
-    public Enemy debugEnemy1;               // Pool of enemies for random spawning
-    public Enemy debugEnemy2;
-    public Enemy debugEnemy3;
-    public Cow cow;
-
+    public Enemy DebugEnemy1;               // Pool of enemies for random spawning
+    public Enemy DebugEnemy2;
+    public Enemy DebugEnemy3;
+    public Cow Cow;
     private Enemy[] _debugEnemies;
-    private float _spawnTimer = 0f;         // Time since last spawn (debug)
-    private float _spawnCooldown = .25f;    // Time required between spawning enemies (debug)
 
-    public int lives;                     // Number of player lives/cows
+    // wave variables
+    private int[] _enemyCosts;
+    private int[] _waveStrengths;
+    bool waveInProgress;
 
-    private void Start()
-    {
-        if (!showWaypoints)
-        {
+    // public game status variables
+    public static int WaveNumber;               // global wave #
+    public static int EnemiesRemaining;         // global enemies remaining
+    public static int LivestockRemaining;       // global livestock remaining
+
+    // private status # ui elements
+    private Text _waveNumber;                   // Wave number text
+    private Text _enemiesRemaining;             // Enemies remaining text
+    private Text _livestockRemaining;           // Livestock remaining text
+    private WaveTimer _waveTimer;
+
+    private void Start() {
+
+        if (!showWaypoints) {
             Destroy(spawnpoint.GetComponent<SpriteRenderer>());
         }
+        
+        // ASSIGNS GAME SETTINGS
+        _debugEnemies = new Enemy[] { DebugEnemy1, DebugEnemy2, DebugEnemy3 };
+        _enemyCosts = new int[] { 5, 10, 20 };
+        _waveStrengths = new int[] { 100, 150, 225, 335, 500, 750, 1125, 1700, 2500, 5000 };
+        WaveNumber = 1;
+        EnemiesRemaining = 0;
+        LivestockRemaining = 20;
 
-        Text livestock = GameObject.Find("Canvas/MainUIPanel/LivestockDisplay").GetComponent<Text>();
-        livestock.text = lives.ToString();
+        // gets UI text elements so they can be updated
+        _waveNumber = GameObject.Find("wave_number").GetComponent<Text>();
+        _enemiesRemaining = GameObject.Find("enemies_remaining").GetComponent<Text>();
+        _livestockRemaining = GameObject.Find("livestock_remaining").GetComponent<Text>();
 
-        _debugEnemies = new Enemy[] { debugEnemy1, debugEnemy2, debugEnemy3 };
+        // timer crap
+        GameObject MainUIPanel = GameObject.Find("MainUIPanel");
+        _waveTimer = MainUIPanel.AddComponent<WaveTimer>();
+        _waveTimer.enabled = false;
+        waveInProgress = false;
+
     }
-    public void spawnEnemy (Enemy enemyType)
-    {
+
+    public void spawnEnemy (Enemy enemyType) {
+
         // Create new enemy of specified type at spawnpoint and set its destination to first waypoint
         Enemy newEnemy = GameObject.Instantiate(enemyType, spawnpoint.transform.position, Quaternion.identity);
 
         firstWaypointArea.setAsNextDestination(newEnemy);
     }
 
-    public void loseLife()
-    {
-        lives--;
+    // updates independant of fps
+    private void FixedUpdate() {
+
+        _waveNumber.text = WaveNumber.ToString();
+        _enemiesRemaining.text = EnemiesRemaining.ToString();
+        _livestockRemaining.text = LivestockRemaining.ToString();
+
+        // Spawn random enemies if "debug spawning" is enabled
+        if (doDebugSpawning) {
+
+            if (!waveInProgress) {
+                waveInProgress = true;
+                SpawnWave(WaveNumber);
+            }
+
+            if (!_waveTimer.enabled && waveInProgress && EnemiesRemaining == 0) {
+                _waveTimer.enabled = true;
+                Debug.Log($"WAVE {WaveNumber} DEFEATED");
+            }
+
+            if (_waveTimer.enabled && _waveTimer.timeRemaining <= 0) {
+                WaveNumber++;
+                Debug.Log($"WAVE {WaveNumber} BEGINS");
+                _waveTimer.enabled = false;
+                waveInProgress = false;
+            }
+
+        }
     }
 
-    private void FixedUpdate()
-    {
-        // Spawn random enemies is debug spawning enabled
-        if (doDebugSpawning)
-        {
-            _spawnTimer += Time.fixedDeltaTime;
+    // spwans the given wave number (waves are indexed from 1)
+    private void SpawnWave(int waveNumber) {
 
-            if (_spawnTimer >= _spawnCooldown)
-            {
-                int rand = (int)Random.Range(0f, 2.99f);
-                Debug.Log(rand);
-                spawnEnemy(_debugEnemies[rand]);
-                _spawnTimer %= _spawnCooldown;
+        int totalWaveStrength = _waveStrengths[waveNumber - 1];
+
+        while (totalWaveStrength > 0) {
+
+            // determines enemy, subtracts cost, spawns enemy
+            int rand = (int)Random.Range(0f, 2.99f);
+            Debug.Log($"Spawning random enemy: {rand}, subtracting cost: {_enemyCosts[rand]}");
+            totalWaveStrength -= _enemyCosts[rand];
+            spawnEnemy(_debugEnemies[rand]);
+            EnemiesRemaining++;
+        }
+
+        Debug.Log($"All enemies for wave {waveNumber} have spawned");
+    }
+
+    // timer class for displaying the time until the next wave
+    private class WaveTimer : MonoBehaviour {
+
+        Text _timerText;                    // timer text on the main ui panel
+        Text _labelText;                    // label text "Next wave:"
+        public float timeRemaining;         // time remaining on this timer
+        
+        private void Awake() {
+            
+            // retrieves timer crap
+            _timerText = GameObject.Find("next_wave_timer").GetComponent<Text>();
+            _labelText = GameObject.Find("next_wave_timer_label").GetComponent<Text>();
+            _timerText.enabled = false;
+            _labelText.enabled = false;
+        }
+
+        // enables the timer text, sets to 10s
+        void OnEnable() {
+
+            // todo: make this value dynamic
+            timeRemaining = 10;
+
+            _timerText.enabled = true;
+            _labelText.enabled = true;
+        }
+
+        // disables the timer tex
+        void OnDisable() {
+            _timerText.enabled = false;
+            _labelText.enabled = false;
+        }
+
+        // updates time text. self-disables when it reaches 0
+        void FixedUpdate() {
+            if (timeRemaining > 0) {
+                timeRemaining -= Time.fixedDeltaTime;
+                if (timeRemaining < 0)
+                    timeRemaining = 0;
+                _timerText.text = timeRemaining.ToString();
+            }
+            else {
+                this.enabled = false;
             }
         }
     }

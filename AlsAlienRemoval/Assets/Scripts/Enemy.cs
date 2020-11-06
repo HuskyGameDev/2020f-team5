@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
         {
             Currency.addCurrency(moneyDropped);
             Destroy(gameObject);
+            Level.EnemiesRemaining--;
         }
     }
 

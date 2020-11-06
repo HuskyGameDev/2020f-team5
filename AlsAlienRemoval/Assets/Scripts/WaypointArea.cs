@@ -3,21 +3,19 @@ using System.Collections.Generic;
 
 public class WaypointArea : MonoBehaviour
 {
-    private Level _level;
-
     public GameObject waypointGameObject;   // Waypoint child gameobject which enemies in area move towards. Assigned in editor
     private Vector3 waypointPosition;       // Position of waypoint in world space
     public bool isLastWaypoint;             // Waypoint area is last in area. Enemies will be destroyed upon exiting
 
-    private List<Cow> _cowList;      // List of cows in final waypoint
+    private List<Cow> _cowList;      // List of cows on the final waypoint
 
     private void Awake()
     {
-        // Get reference to parent level
-        _level = GetComponentInParent<Level>();
+        // Get reference to game "Level" object
+        Level level = GetComponentInParent<Level>();
 
         // Destroy waypoint sprite if hidden by level
-        if (!_level.showWaypoints)
+        if (!Level.showWaypoints)
         {
             Destroy(GetComponentInChildren<SpriteRenderer>());
         }
@@ -33,13 +31,11 @@ public class WaypointArea : MonoBehaviour
             float areaWidth = collider.size.x;
             float areaHeight = collider.size.y;
 
-            for (int i = 0; i < _level.lives; i++)
+            for (int i = 0; i < Level.LivestockRemaining; i++)
             {
-
                 // Create a cow prefab at a random location
-                Cow newCow = Instantiate<Cow>(_level.cow);
-                newCow.level = _level;
-                newCow.transform.parent = transform;
+                Cow newCow = Instantiate(level.Cow);
+                //newCow.transform.parent = transform;
                 newCow.transform.position = transform.TransformPoint(new Vector2(Random.Range(-(areaWidth - 1) / 2, (areaWidth - 1) / 2), Random.Range(-(areaHeight - 1) / 2, (areaHeight - 1) / 2)));
                 _cowList.Add(newCow);
             }
