@@ -19,7 +19,9 @@ public class Currency : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        displayCurrency = amount.ToString() + "$";
+        Text currency = GameObject.Find("Canvas/MainUIPanel/CurrencyDisplay").GetComponent<Text>();
+        currency.text = displayCurrency;
     }
     public static void textChange()
     {

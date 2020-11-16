@@ -7,6 +7,7 @@ public class TowerTargetingSystem : MonoBehaviour
 {
     public Transform firePosition;
     public Transform towerPosition;
+    public int upgradeCost;
     public float fireRate;
     public float lineWidth;
     public float lineDuration;
@@ -19,6 +20,7 @@ public class TowerTargetingSystem : MonoBehaviour
     public GameObject laser;
     private bool hasPlaced;
     private int towerType;
+    private int timesUpgraded;
     public float splashMinRange;
     public float splashMaxRange;
 
@@ -208,6 +210,35 @@ public class TowerTargetingSystem : MonoBehaviour
                     }
                 }
             }
+
         }
+    }
+    public void upgradeTower()
+    {
+        if (Currency.amount >= upgradeCost)
+        {
+            if (timesUpgraded < 3)
+            {
+                if (towerType == 1)
+                {
+                    towerDamage = towerDamage + 5;
+                }
+                if (towerType == 2)
+                {
+                    towerDamage = towerDamage + 3;
+                }
+                if (towerType == 3)
+                {
+                    towerSlowDuration = towerSlowDuration + 1;
+                }
+                if (towerType == 4)
+                {
+                    towerDamage = towerDamage + 5;
+                }
+                timesUpgraded = timesUpgraded + 1;
+                upgradeCost = upgradeCost * 2;
+            }
+        }
+       
     }
 }

@@ -10,10 +10,11 @@ public class buildingPlaceable : MonoBehaviour
     private int _triggerCount;  // Number of triggers this building is currently intersecting 
     public GameObject range;
     public int cost = 100;
-    private int upgradecost = 0;
+    private int upgradecost = 200;
     public GameObject towerUI;
     private int timesUpgraded = 0;
     private SpriteRenderer _tileHighlight;
+    int towerType;
     private bool beenPlaced = false;
     private bool toggleBool = false;
     void Start()
@@ -50,7 +51,7 @@ public class buildingPlaceable : MonoBehaviour
             return false;
         }
     }
-    void upgrade()
+   public void upgradeTimes()
     {
         if(Currency.amount >= upgradecost)
         {
@@ -61,7 +62,7 @@ public class buildingPlaceable : MonoBehaviour
                 upgradecost = upgradecost * 2;
             }
         }
-       
+        
     }
     void hasPlaced(bool hasPlaced)
     {
@@ -71,6 +72,7 @@ public class buildingPlaceable : MonoBehaviour
     void type(int type)
     {
         this.SendMessage("setTowerType", type);
+        towerType = type;
     }
     public void Select()
         {
@@ -97,8 +99,16 @@ public class buildingPlaceable : MonoBehaviour
             }
             
         }
+    }
+    public void sell()
+    {
+        Currency.amount = Currency.amount + (upgradecost - (upgradecost / 2));
+        Destroy(gameObject);
+        
+    }
+    public void destroy()
+    {
+        Destroy(gameObject);
 
-
-       
     }
 }

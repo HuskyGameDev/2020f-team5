@@ -27,7 +27,14 @@ public class buildingPlacement : MonoBehaviour
                     buildingPlaceable.SendMessage("hasPlaced", true);
                     buildingPlaceable.range.GetComponent<SpriteRenderer>().enabled = false;
                 }
+                else
+                {
+                    buildingPlaceable.destroy();
+                    currentBuilding = null;
+                    
+                }
             }
+            
             if (hasPlaced) 
             {
                 currentBuilding = null;
