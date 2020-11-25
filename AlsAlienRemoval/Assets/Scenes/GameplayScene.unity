@@ -1974,6 +1974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstWaypointArea: {fileID: 1116192833}
+  lastWaypointArea: {fileID: 2017081270}
   spawnpoint: {fileID: 1050528737}
   doDebugSpawning: 1
   DebugEnemy1: {fileID: 1376983613764651060, guid: 168393e07611baf47a32352575d7edf9,
@@ -1982,7 +1983,7 @@ MonoBehaviour:
     type: 3}
   DebugEnemy3: {fileID: 2639010729161105698, guid: 1f170866faa65c041a96e7d8b9637a71,
     type: 3}
-  Cow: {fileID: 1080124079421325054, guid: ae002ce4bccade242b00dbed8a34c27b, type: 3}
+  cowPrefab: {fileID: 0}
 --- !u!1 &869277309
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,6 +8289,18 @@ PolygonCollider2D:
       - {x: 1, y: -1.5}
       - {x: 1, y: -0.5}
       - {x: 2, y: -0.5}
+--- !u!114 &2017081270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3202195772826479582, guid: b0286777c31364447bb3eb0895290677,
+    type: 3}
+  m_PrefabInstance: {fileID: 360100642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801fb685fab0c2646a2a755c113eeea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023158606
 GameObject:
   m_ObjectHideFlags: 0

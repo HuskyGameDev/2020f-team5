@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
@@ -10,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Level : MonoBehaviour
 {
     public WaypointArea firstWaypointArea;  // First waypoint in path. Default destination for enemies
+    public WaypointArea lastWaypointArea;   // Last waypoint in path. Contains cows
     public GameObject spawnpoint;           // Spawn point for enemies
 
     public static bool showWaypoints;       // Show red dots at waypoint locations
@@ -17,8 +16,11 @@ public class Level : MonoBehaviour
     public Enemy DebugEnemy1;               // Pool of enemies for random spawning
     public Enemy DebugEnemy2;
     public Enemy DebugEnemy3;
-    public Cow Cow;
     private Enemy[] _debugEnemies;
+
+    // Cow/livestock visual representation variables
+    public Cow cowPrefab;                  // Cow prefab for spawning. Assigned in editor
+    public static List<Cow> cowList;       // List of cows on the final waypoint
 
     // wave variables
     private int[] _enemyCosts;
@@ -54,6 +56,10 @@ public class Level : MonoBehaviour
         _waveNumber = GameObject.Find("wave_number").GetComponent<Text>();
         _enemiesRemaining = GameObject.Find("enemies_remaining").GetComponent<Text>();
         _livestockRemaining = GameObject.Find("livestock_remaining").GetComponent<Text>();
+
+        // Mark final waypoint and spawn cows in it
+        lastWaypointArea.isLastWaypoint = true;
+        spawnCows();
 
         // timer crap
         GameObject MainUIPanel = GameObject.Find("MainUIPanel");
@@ -117,6 +123,29 @@ public class Level : MonoBehaviour
         }
 
         Debug.Log($"All enemies for wave {waveNumber} have spawned");
+    }
+
+    // Spawn herd of cows in final waypoint to represent remaining livestock
+    private void spawnCows()
+    {
+        // Create list of remaining cows
+        cowList = new List<Cow>();
+
+        // Get collider/bounds of last waypoint area
+        BoxCollider2D collider = lastWaypointArea.GetComponent<BoxCollider2D>();
+        float areaWidth = collider.size.x;
+        float areaHeight = collider.size.y;
+
+        // Spawn cows at randomized locations in final waypoint area
+        for (int i = 0; i < LivestockRemaining; i++)
+        {
+            // Create a cow prefab at a random location
+            Cow newCow = Instantiate(cowPrefab);
+            newCow.transform.position = lastWaypointArea.transform.TransformPoint(new Vector2(Random.Range(-(areaWidth - 1) / 2, (areaWidth - 1) / 2), Random.Range(-(areaHeight - 1) / 2, (areaHeight - 1) / 2)));
+
+            // Add new cow to list
+            cowList.Add(newCow);
+        }
     }
 
     // timer class for displaying the time until the next wave

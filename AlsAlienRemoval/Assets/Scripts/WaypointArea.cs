@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
+
 
 public class WaypointArea : MonoBehaviour
 {
@@ -7,12 +7,8 @@ public class WaypointArea : MonoBehaviour
     private Vector3 waypointPosition;       // Position of waypoint in world space
     public bool isLastWaypoint;             // Waypoint area is last in area. Enemies will be destroyed upon exiting
 
-    private List<Cow> _cowList;      // List of cows on the final waypoint
-
     private void Awake()
     {
-        // Get reference to game "Level" object
-        Level level = GetComponentInParent<Level>();
 
         // Destroy waypoint sprite if hidden by level
         if (!Level.showWaypoints)
@@ -23,40 +19,25 @@ public class WaypointArea : MonoBehaviour
         // Get poistion of waypoint converted from local space to world space
         waypointPosition = waypointGameObject.transform.position;
 
-        if (isLastWaypoint)
-        {
-            _cowList = new List<Cow>();
-
-            BoxCollider2D collider = GetComponent<BoxCollider2D>();
-            float areaWidth = collider.size.x;
-            float areaHeight = collider.size.y;
-
-            for (int i = 0; i < Level.LivestockRemaining; i++)
-            {
-                // Create a cow prefab at a random location
-                Cow newCow = Instantiate(level.Cow);
-                //newCow.transform.parent = transform;
-                newCow.transform.position = transform.TransformPoint(new Vector2(Random.Range(-(areaWidth - 1) / 2, (areaWidth - 1) / 2), Random.Range(-(areaHeight - 1) / 2, (areaHeight - 1) / 2)));
-                _cowList.Add(newCow);
-            }
-        }
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Enemy enemy = collider.GetComponent<Enemy>();   // Enemy script of other collider that entered. Null if other collider does not belong to an enemy (Tower, etc.)
 
-        // Set this waypoint area as enemy's next destination, or a random cow if this is the last waypoint
+        // Determine if collider belongs to an enemy
         if (enemy != null)
         {
+
+            // Set enemy destination to first cow in list (random location) and remove it if this is the last waypoint
             if (isLastWaypoint)
             {
-                // Set enemy destination to first cow in list and remove it.
-                Cow cowTarget = _cowList[0];
-                _cowList.Remove(cowTarget);
+                Cow cowTarget = Level.cowList[0];
+                Level.cowList.Remove(cowTarget);
                 setAsNextDestination(enemy, cowTarget.transform.position);
             } 
             else
             {
+                // Set waypoint as enemy's next destination
                 setAsNextDestination(enemy);
             }
             
@@ -98,5 +79,4 @@ public class WaypointArea : MonoBehaviour
     {
         setAsNextDestination(enemy, waypointPosition);
     }
-    
 }
