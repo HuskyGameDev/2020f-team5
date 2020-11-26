@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: grasstex_spriteatlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+    totalSpriteSurfaceArea: 196608
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4113054946563284847, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 4862250687920032565, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 7880845178714192236, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 298551564747856963, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -36176694839232502, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -7615828056053580905, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -7554728866984544883, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 1469993137873498276, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -5962184922888898222, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -3816383272190403935, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 5632736397727214013, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 8819758945477436116, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 6198617884878383428, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 1046631612991642678, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -2374642170683569793, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -7472015934938568221, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 2468956147844942293, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -2301478070828286356, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 531620001855787236, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 186428370508713322, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 1813677796923487455, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 1213449451554825838, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 6947676182288723388, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -6514548934666576626, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -85434594732561334, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -3374329722205277782, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -4885730255229860316, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 7387010228764063031, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 9005554751537793845, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -5502838002475205946, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 8164691521755127354, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -1941996540166769997, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -7734137094792850725, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -2230494149581961944, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -1368862783839615727, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -1408533535238706753, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -7680560083631593319, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 9160125811429656688, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 6024234224808887710, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 1059921893482581585, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -8543300201750540986, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 2020067988492411808, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -4016621069441074612, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -2410987011320655144, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 7591293678652632465, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -796066440619503433, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: 4842200184395696622, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  - {fileID: -5139873980671020561, guid: 7713d62c2ad9fc645bdf259a7bd4e54f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - grasstex_spritesheet_46
+  - grasstex_spritesheet_47
+  - grasstex_spritesheet_44
+  - grasstex_spritesheet_45
+  - grasstex_spritesheet_42
+  - grasstex_spritesheet_43
+  - grasstex_spritesheet_40
+  - grasstex_spritesheet_41
+  - grasstex_spritesheet_28
+  - grasstex_spritesheet_29
+  - grasstex_spritesheet_24
+  - grasstex_spritesheet_25
+  - grasstex_spritesheet_39
+  - grasstex_spritesheet_26
+  - grasstex_spritesheet_38
+  - grasstex_spritesheet_6
+  - grasstex_spritesheet_27
+  - grasstex_spritesheet_37
+  - grasstex_spritesheet_7
+  - grasstex_spritesheet_20
+  - grasstex_spritesheet_36
+  - grasstex_spritesheet_4
+  - grasstex_spritesheet_21
+  - grasstex_spritesheet_35
+  - grasstex_spritesheet_5
+  - grasstex_spritesheet_22
+  - grasstex_spritesheet_34
+  - grasstex_spritesheet_2
+  - grasstex_spritesheet_23
+  - grasstex_spritesheet_33
+  - grasstex_spritesheet_3
+  - grasstex_spritesheet_32
+  - grasstex_spritesheet_0
+  - grasstex_spritesheet_31
+  - grasstex_spritesheet_1
+  - grasstex_spritesheet_30
+  - grasstex_spritesheet_8
+  - grasstex_spritesheet_9
+  - grasstex_spritesheet_15
+  - grasstex_spritesheet_14
+  - grasstex_spritesheet_17
+  - grasstex_spritesheet_16
+  - grasstex_spritesheet_11
+  - grasstex_spritesheet_10
+  - grasstex_spritesheet_13
+  - grasstex_spritesheet_12
+  - grasstex_spritesheet_19
+  - grasstex_spritesheet_18
+  m_Tag: grasstex_spriteatlas
+  m_IsVariant: 0
