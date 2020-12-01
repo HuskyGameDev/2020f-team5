@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Security.Cryptography;
@@ -20,16 +21,17 @@ public class Enemy : MonoBehaviour
     private float towerDamage;
     private Vector3 lineEnd;
 
-
+    // enemy takes damage
     void Hit(float damage)
     {
         health -= damage;
-        if(health <= 0)
-        {
-            Currency.addCurrency(moneyDropped);
-            Level.EnemiesRemaining--;
-            Destroy(gameObject);
-        }
+    }
+
+    // enemy is slowed by an attack
+    void Slow(float decrease) {
+        float temp = speed;
+        speed = Math.Max(0, speed - decrease);                  // limits speed reduction to 0 speed
+        StartCoroutine(slow(temp, slowDuration));
     }
 
     IEnumerator slow(float oldspeed, float slowduration)
@@ -71,13 +73,6 @@ public class Enemy : MonoBehaviour
     void setLineEnd(Vector3 end)
     {
         lineEnd = end;
-    }
-
-    void Slow(float decrease)
-    {
-        float temp = speed;
-        speed -= decrease;
-        StartCoroutine(slow(temp, slowDuration));
     }
 
     IEnumerator DrawLine(Vector3 start, Vector3 end, Color color, float width, float duration)
@@ -133,5 +128,12 @@ public class Enemy : MonoBehaviour
     {
         // Move towards destination
         transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.fixedDeltaTime);
+
+        // enemy death
+        if (health <= 0) {
+            Currency.addCurrency(moneyDropped);
+            Level.EnemiesRemaining--;
+            Destroy(gameObject);
+        }
     }
 }

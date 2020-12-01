@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public class WaypointArea : MonoBehaviour
@@ -6,10 +8,10 @@ public class WaypointArea : MonoBehaviour
     public GameObject waypointGameObject;   // Waypoint child gameobject which enemies in area move towards. Assigned in editor
     private Vector3 waypointPosition;       // Position of waypoint in world space
     public bool isLastWaypoint;             // Waypoint area is last in area. Enemies will be destroyed upon exiting
+    public bool isSpawnPoint;
 
     private void Awake()
     {
-
         // Destroy waypoint sprite if hidden by level
         if (!Level.showWaypoints)
         {
@@ -25,22 +27,21 @@ public class WaypointArea : MonoBehaviour
         Enemy enemy = collider.GetComponent<Enemy>();   // Enemy script of other collider that entered. Null if other collider does not belong to an enemy (Tower, etc.)
 
         // Determine if collider belongs to an enemy
-        if (enemy != null)
-        {
-
-            // Set enemy destination to first cow in list (random location) and remove it if this is the last waypoint
+        if (enemy != null) {
+            
+            // If an enemy has made it to the end,
+            // set its destination to first cow in list (random location) and remove it
             if (isLastWaypoint)
             {
                 Cow cowTarget = Level.cowList[0];
                 Level.cowList.Remove(cowTarget);
                 setAsNextDestination(enemy, cowTarget.transform.position);
-            } 
-            else
-            {
-                // Set waypoint as enemy's next destination
+            }
+
+            // otherwise, set the enemy's destination to this area's waypoint
+            else {
                 setAsNextDestination(enemy);
             }
-            
         }
     }
 
@@ -50,6 +51,11 @@ public class WaypointArea : MonoBehaviour
 
         if (enemy != null)
         {
+            // tracks enemies leaving spawn
+            if (isSpawnPoint) {
+                Level.enemiesInSpawn--;
+            }
+
             // Make enemy pursue its next destination if it was successfully assigned one before leaving
             if (enemy.nextDestination != waypointPosition)
             {
