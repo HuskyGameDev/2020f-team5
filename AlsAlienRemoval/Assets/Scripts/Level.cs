@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 
 public class Level : MonoBehaviour
@@ -112,6 +113,10 @@ public class Level : MonoBehaviour
             if (!_waveTimer.enabled && _waveInProgress && EnemiesRemaining == 0) {
                 _waveTimer.enabled = true;
                 Debug.Log($"WAVE {WaveNumber} DEFEATED");
+                if (WaveNumber == 10)
+                {
+                    SceneManager.LoadScene("Win Screen");
+                }
             }
 
             // timer reaches 0, spawn next wave
