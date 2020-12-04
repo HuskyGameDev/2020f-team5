@@ -332,10 +332,10 @@ MonoBehaviour:
   towerPosition: {fileID: 2623971271211070187}
   upgradeCost: 200
   fireRate: 0.5
-  lineWidth: 0.25
+  lineWidth: 0.125
   lineDuration: 0.25
-  towerDamage: 20
-  towerSpeedDecrease: 0
+  towerDamage: 10
+  towerSpeedDecreasePercent: 0
   towerSlowDuration: 0
   rangeMin: 0
   rangeMax: 2.5
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1db484a69b8a65a46b35f6a567103977, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cc086bdd89b317409d5159780c81cc2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -839,7 +839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1db484a69b8a65a46b35f6a567103977, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9516cf58c97ea484ba414fa1c9775bb8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

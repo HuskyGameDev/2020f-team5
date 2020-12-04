@@ -134,10 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af32dd2ecdcdffa4c8797267669989d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.25
   destination: {x: 0, y: 0, z: 0}
   nextDestination: {x: 0, y: 0, z: 0}
-  health: 50
+  health: 150
   moneyDropped: 15
   laser: {fileID: 2466212335633224390}
 --- !u!1 &2466212335633224390

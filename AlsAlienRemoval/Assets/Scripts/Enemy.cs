@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     // enemy is slowed by an attack
     void Slow(float decrease) {
         float temp = speed;
-        speed = Math.Max(0, speed - decrease);                  // limits speed reduction to 0 speed
+        speed = speed * (1 - decrease);                  // decreases the speed by a percentage
         StartCoroutine(slow(temp, slowDuration));
     }
 

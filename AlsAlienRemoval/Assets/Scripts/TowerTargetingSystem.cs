@@ -12,7 +12,7 @@ public class TowerTargetingSystem : MonoBehaviour
     public float lineWidth;
     public float lineDuration;
     public float towerDamage;
-    public float towerSpeedDecrease;
+    public float towerSpeedDecreasePercent;
     public float towerSlowDuration;
     public float rangeMin;
     public float rangeMax;
@@ -189,7 +189,7 @@ public class TowerTargetingSystem : MonoBehaviour
                     {
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.blue, lineWidth, lineDuration));
                         target.SendMessage("setSlowDuration", towerSlowDuration);
-                        target.SendMessage("Slow", towerSpeedDecrease);
+                        target.SendMessage("Slow", towerSpeedDecreasePercent);
                         fireTimer = 0;
                     }
                 }
@@ -229,11 +229,11 @@ public class TowerTargetingSystem : MonoBehaviour
                 }
                 if (towerType == 3)
                 {
-                    towerSlowDuration = towerSlowDuration + 1;
+                    towerSlowDuration = towerSlowDuration + (float)0.125;
                 }
                 if (towerType == 4)
                 {
-                    towerDamage = towerDamage + 5;
+                    towerDamage = towerDamage + 10;
                 }
                 timesUpgraded = timesUpgraded + 1;
                 upgradeCost = upgradeCost * 2;

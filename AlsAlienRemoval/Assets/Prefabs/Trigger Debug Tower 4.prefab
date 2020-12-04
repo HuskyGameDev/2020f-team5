@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1db484a69b8a65a46b35f6a567103977, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cc086bdd89b317409d5159780c81cc2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -395,10 +395,10 @@ MonoBehaviour:
   towerPosition: {fileID: 2623971271211070187}
   upgradeCost: 200
   fireRate: 1
-  lineWidth: 0.25
+  lineWidth: 0.125
   lineDuration: 0.25
-  towerDamage: 20
-  towerSpeedDecrease: 0
+  towerDamage: 25
+  towerSpeedDecreasePercent: 0
   towerSlowDuration: 0
   rangeMin: 0
   rangeMax: 2.5
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeSpriteRenderer: {fileID: 0}
   range: {fileID: 4348926466859441465}
-  cost: 100
+  cost: 500
   towerUI: {fileID: 0}
 --- !u!58 &6921178478751613962
 CircleCollider2D:
@@ -630,8 +630,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.076, y: -0.047}
-  m_SizeDelta: {x: 19.365606, y: 7.81534}
+  m_AnchoredPosition: {x: 0, y: 0.000000059604645}
+  m_SizeDelta: {x: 14.297798, y: 8.715855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8307980199967241680
 CanvasRenderer:
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1db484a69b8a65a46b35f6a567103977, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9516cf58c97ea484ba414fa1c9775bb8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
