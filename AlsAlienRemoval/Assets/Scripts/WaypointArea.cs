@@ -29,17 +29,25 @@ public class WaypointArea : MonoBehaviour
         // Determine if collider belongs to an enemy
         if (enemy != null) {
             
+
             // If an enemy has made it to the end,
             // set its destination to first cow in list (random location) and remove it
             if (isLastWaypoint)
             {
+                enemy.isProtected = true;
                 Cow cowTarget = Level.cowList[0];
                 Level.cowList.Remove(cowTarget);
                 setAsNextDestination(enemy, cowTarget.transform.position);
             }
+            else
+            {
+                // Remove spawn protection, if not done already
+                if (!isSpawnPoint)
+                {
+                    enemy.isProtected = false;
+                }
 
-            // otherwise, set the enemy's destination to this area's waypoint
-            else {
+                // set the enemy's destination to this area's waypoint
                 setAsNextDestination(enemy);
             }
         }

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float speed;                             // Speed in units/second
     public Vector3 destination = Vector2.zero;      // Current point enemy is moving towards in world space
     public Vector3 nextDestination = Vector2.zero;  // Next point enemy will move to. Assigned when new waypoint area is entered, and set to destination when previous area is left
+    public bool isProtected;                        // If true, enemy is invincible due to spawn protection, or it is attacking a cow
     public float health;
     public int moneyDropped;
     private float slowDuration;
@@ -24,7 +25,8 @@ public class Enemy : MonoBehaviour
     // enemy takes damage
     void Hit(float damage)
     {
-        health -= damage;
+        if (!isProtected)
+            health -= damage;
     }
 
     // enemy is slowed by an attack
@@ -121,6 +123,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isProtected = true;
     }
 
     // Update is called once per frame
