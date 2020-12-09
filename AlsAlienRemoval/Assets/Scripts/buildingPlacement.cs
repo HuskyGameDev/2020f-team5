@@ -9,7 +9,6 @@ public class buildingPlacement : MonoBehaviour
     private bool hasPlaced;
     private buildingPlaceable buildingPlaceable;
     public SpriteRenderer rangeSpriteRenderer;
-    private int cost = 100;
     // Update is called once per frame
     public void Update() 
     {
@@ -20,10 +19,10 @@ public class buildingPlacement : MonoBehaviour
             currentBuilding.position = new Vector2(worldPoint2d.x,worldPoint2d.y);
             if (Input.GetMouseButtonDown(0)) 
             {
-                if (buildingPlaceable.IsLegalPosition() && Currency.amount >= cost) 
+                if (buildingPlaceable.IsLegalPosition() && Currency.amount >= buildingPlaceable.getCost()) 
                 {
                     hasPlaced = true;
-                    Currency.subtractCurrency(cost);
+                    Currency.subtractCurrency(buildingPlaceable.getCost());
                     buildingPlaceable.SendMessage("hasPlaced", true);
                     buildingPlaceable.range.GetComponent<SpriteRenderer>().enabled = false;
                 }

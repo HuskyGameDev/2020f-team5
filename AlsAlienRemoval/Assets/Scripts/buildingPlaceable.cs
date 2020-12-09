@@ -9,7 +9,7 @@ public class buildingPlaceable : MonoBehaviour
     public SpriteRenderer rangeSpriteRenderer;
     private int _triggerCount;  // Number of triggers this building is currently intersecting 
     public GameObject range;
-    public int cost = 100;
+    public int cost;
     private int upgradecost = 200;
     public GameObject towerUI;
     private int timesUpgraded = 0;
@@ -19,7 +19,6 @@ public class buildingPlaceable : MonoBehaviour
     private bool toggleBool = false;
     void Start()
     {
-        cost = 100;
         upgradecost = cost * 2;
         towerUI = GameObject.Find("TowerUI");
         towerUI.gameObject.SetActive(false);
