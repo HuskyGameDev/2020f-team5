@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cow : MonoBehaviour {
 
@@ -16,6 +17,11 @@ public class Cow : MonoBehaviour {
                 Destroy(gameObject);
                 Level.EnemiesRemaining--;
                 Level.LivestockRemaining--;
+
+                if (Level.LivestockRemaining <= 0)
+                {
+                    SceneManager.LoadScene("Lose Screen");
+                }
 
                 // todo: add a horrific bloody explosion
             }

@@ -32,7 +32,7 @@ public class WaypointArea : MonoBehaviour
 
             // If an enemy has made it to the end,
             // set its destination to first cow in list (random location) and remove it
-            if (isLastWaypoint)
+            if (isLastWaypoint && Level.cowList.Count > 0)
             {
                 enemy.isProtected = true;
                 Cow cowTarget = Level.cowList[0];

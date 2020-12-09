@@ -167,7 +167,7 @@ public class Level : MonoBehaviour
         {
             // Create a cow prefab at a random location
             Cow newCow = Instantiate(cowPrefab);
-            newCow.transform.position = lastWaypointArea.transform.TransformPoint(new Vector2(Random.Range(-(areaWidth - 1) / 2, (areaWidth - 1) / 2), Random.Range(-(areaHeight - 1) / 2, (areaHeight - 1) / 2)));
+            newCow.transform.position = lastWaypointArea.transform.TransformPoint(new Vector2(Random.Range(-(areaWidth - 1) / 2, (areaWidth - 1) / 2), Random.Range(-(areaHeight - 1) / 2, (areaHeight - 1) / 2 - 1)));
 
             // Add new cow to list
             cowList.Add(newCow);
