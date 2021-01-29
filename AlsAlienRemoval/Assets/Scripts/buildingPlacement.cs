@@ -28,8 +28,16 @@ public class buildingPlacement : MonoBehaviour
                 }
                 else
                 {
-                    buildingPlaceable.destroy();
-                    currentBuilding = null;
+                    if (buildingPlaceable.IsLegalPosition() && Currency.amount < buildingPlaceable.getCost())
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        buildingPlaceable.destroy();
+                        currentBuilding = null;
+                    }
+                       
                     
                 }
             }
