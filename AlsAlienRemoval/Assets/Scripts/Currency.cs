@@ -7,27 +7,27 @@ public class Currency : MonoBehaviour
 {
     public static int amount;
     public static string displayCurrency = null;
+    private static Text currencyText;
+
     // Start is called before the first frame update
     void Start()
     {
         amount = 500;
         displayCurrency = amount.ToString() + "$";
-    Text currency = GameObject.Find("Canvas/MainUIPanel/CurrencyDisplay").GetComponent<Text>();
-    currency.text = displayCurrency;
+        currencyText = GetComponent<Text>();
+        currencyText.text = displayCurrency;
     }
 
     // Update is called once per frame
     void Update()
     {
         displayCurrency = amount.ToString() + "$";
-        Text currency = GameObject.Find("Canvas/MainUIPanel/CurrencyDisplay").GetComponent<Text>();
-        currency.text = displayCurrency;
+        currencyText.text = displayCurrency;
     }
     public static void textChange()
     {
         displayCurrency = amount.ToString() + "$";
-        Text currency = GameObject.Find("Canvas/MainUIPanel/CurrencyDisplay").GetComponent<Text>();
-        currency.text = displayCurrency;
+        currencyText.text = displayCurrency;
     }
     public static void addCurrency(int changeAmount)
     {
@@ -36,8 +36,8 @@ public class Currency : MonoBehaviour
     }
     public static void subtractCurrency(int changeAmount)
     {
-            amount = amount - changeAmount;
-            textChange();
+        amount = amount - changeAmount;
+        textChange();
    
     }
     public int getCurrency()

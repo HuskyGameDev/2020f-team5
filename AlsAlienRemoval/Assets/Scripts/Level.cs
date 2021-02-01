@@ -66,7 +66,7 @@ public class Level : MonoBehaviour
         spawnCows();
 
         // timer stuff
-        _waveTimer = GameObject.Find("MainUIPanel").AddComponent<WaveTimer>();
+        _waveTimer = GameObject.Find("TopUIPanel").AddComponent<WaveTimer>();
         _waveTimer.enabled = false;
         _waveInProgress = false;
     }
