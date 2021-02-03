@@ -509,7 +509,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tower 5
+  m_Text: 'Projectile
+
+    $100'
 --- !u!222 &270748723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2196,7 +2198,7 @@ MonoBehaviour:
         m_MethodName: setItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2623971271211070166, guid: 8395480a1b696ac4fb1ece2211cff572,
+          m_ObjectArgument: {fileID: 2623971271211070166, guid: 16c469adc3e62604795a5e3e902e54c0,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -2216,7 +2218,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1020275999}
-        m_MethodName: tower1
+        m_MethodName: tower5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2239,7 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.92347443, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.08627451, b: 0.30980393, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
