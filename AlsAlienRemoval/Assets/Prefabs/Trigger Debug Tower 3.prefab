@@ -465,7 +465,7 @@ MonoBehaviour:
   lineWidth: 0.125
   lineDuration: 0.375
   towerDamage: 0
-  towerSpeedDecreasePercent: 0.5
+  towerSpeedDecreasePercent: 0.4
   towerSlowDuration: 3
   rangeMin: 0
   rangeMax: 2.5

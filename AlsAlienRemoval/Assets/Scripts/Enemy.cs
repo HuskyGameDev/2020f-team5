@@ -22,58 +22,93 @@ public class Enemy : MonoBehaviour
     private float towerDamage;
     private Vector3 lineEnd;
 
-    // enemy takes damage
-    void Hit(float damage)
+    // slow tower settings
+    private Color baseColor = new Color(255, 255, 255, 255);        // normal color
+    private Color slowedColor = new Color(0, 150, 255, 200);        // blue tint
+    private SlowTimer slowTimer;                                    // timer that contols enemy speed
+    private float minSpeed;                                         // min speed this enemy can move
+    private float initialSpeed;                                     // initial speed of this enemy
+    private bool slowed;                                            // flag for being slowed
+
+    // Start is called before the first frame update
+    void Start() {
+        isProtected = true;
+        slowTimer = gameObject.AddComponent<SlowTimer>();
+        slowed = false;
+        initialSpeed = speed;
+        minSpeed = initialSpeed * 0.10f;
+    }
+
+    // called once per frame
+    void FixedUpdate()
     {
+        // unslows enemy if timer expired
+        if (slowed && !slowTimer.enabled) {
+            UnSlow();
+        }
+
+        // Move towards destination
+        transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.fixedDeltaTime);
+
+        // enemy death
+        if (health <= 0) {
+            Currency.addCurrency(moneyDropped);
+            Level.EnemiesRemaining--;
+            Destroy(gameObject);
+        }
+    }
+
+    // enemy takes damage
+    void Hit(float damage) {
         if (!isProtected)
             health -= damage;
     }
 
-    // enemy is slowed by an attack
+    // applies slow, adds to timer, colors enemy blue
     void Slow(float decrease) {
-        float temp = speed;
-        speed = speed * (1 - decrease);                  // decreases the speed by a percentage
-        StartCoroutine(slow(temp, slowDuration));
+
+        slowed = true;
+        float newSpeed = (speed * (1 - decrease));
+        if (newSpeed >= minSpeed) {
+            speed = newSpeed;
+        }
+
+        slowTimer.addDuration(4.0f);
+        GetComponent<SpriteRenderer>().color = slowedColor;
     }
 
-    IEnumerator slow(float oldspeed, float slowduration)
-    {
-        yield return new WaitForSeconds(slowduration);
-        speed = oldspeed;
+    // resets enemy speed / color
+    void UnSlow() {
+        speed = initialSpeed;
+        GetComponent<SpriteRenderer>().color = baseColor;
+        slowed = false;
     }
-
-    void setSlowDuration(float duration)
-    {
+    
+    void setSlowDuration(float duration) {
         slowDuration = duration;
     }
 
-    void setMinRange(float min)
-    {
+    void setMinRange(float min) {
         splashMinRange = min;
     }
 
-    void setMaxRange(float max)
-    {
+    void setMaxRange(float max) {
         splashMaxRange = max;
     }
 
-    void setLineWidth(float width)
-    {
+    void setLineWidth(float width) {
         lineWidth = width;
     }
 
-    void setLineDuration(float duration)
-    {
+    void setLineDuration(float duration) {
         lineDuration = duration;
     }
 
-    void setTowerDamge(float damage)
-    {
+    void setTowerDamge(float damage) {
         towerDamage = damage;
     }
 
-    void setLineEnd(Vector3 end)
-    {
+    void setLineEnd(Vector3 end) {
         lineEnd = end;
     }
 
@@ -120,23 +155,35 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        isProtected = true;
-    }
+    // timer for tracking duration remaining on slow
+    class SlowTimer : MonoBehaviour {
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        // Move towards destination
-        transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.fixedDeltaTime);
+        private float timeRemaining = 0.0f;     // time remaining
+        private float maxDuration = 7.5f;       // maximum duration
 
-        // enemy death
-        if (health <= 0) {
-            Currency.addCurrency(moneyDropped);
-            Level.EnemiesRemaining--;
-            Destroy(gameObject);
+        private void Awake() {
+            this.enabled = false;
+        }
+
+        // adds time to the slow, cannot exceed max duration
+        public void addDuration(float seconds) {
+            if (! this.enabled)
+                this.enabled = true;
+
+            timeRemaining += seconds;
+            if (timeRemaining > maxDuration) {
+                timeRemaining = maxDuration;
+            }
+        }
+
+        // updates timer, disables when reaching 0
+        private void FixedUpdate() {
+            if (timeRemaining >= 0) {
+                timeRemaining -= Time.fixedDeltaTime;
+            }
+            else {
+                this.enabled = false;
+            }
         }
     }
 }

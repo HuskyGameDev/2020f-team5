@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+    "\\Assets\\Prefabs",
     "\\Assets\\Scripts"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\buildingPlacement.cs",
+  "SelectedNode": "\\Assets\\Prefabs\\Slushie.prefab",
   "PreviewInSolutionExplorer": false
 }
