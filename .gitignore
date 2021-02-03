@@ -1,42 +1,37 @@
 # ========== #
 # Unity Crap #
 # ========== #
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild
-/[Bb]uilds/
-/[Ll]ibrary/
-/*.userprefs
-/*.csproj
-/*.pidb
+AlsAlienRemoval/[Tt]emp/
+AlsAlienRemoval/[Oo]bj/
+AlsAlienRemoval/[Bb]uild
+AlsAlienRemoval/[Bb]uilds/
+AlsAlienRemoval/[Ll]ibrary/
+AlsAlienRemoval/Assets/AssetStoreTools*
+AlsAlienRemoval/*.userprefs
+AlsAlienRemoval/*.csproj
+AlsAlienRemoval/*.pidb
+AlsAlienRemoval/*.suo
+AlsAlienRemoval/*.sln*
+AlsAlienRemoval/*.user
+AlsAlienRemoval/*.unityproj
+AlsAlienRemoval/*.booproj
 *.pidb.meta
-/*.suo
-/*.sln*
-/*.user
-/*.unityproj
-/*.booproj
-sysinfo.txt
-/Assets/AssetStoreTools*
 *.stackdump
 *.apk
 *.unitypackage
 *.lock
+sysinfo.txt
 
 # ======== #
 # IDE Crap #
 # ======== #
-/.vs/
-/.idea/
-/.vscode/
-/*.sln*
-/*.unityproj
-/*.csproj
+AlsAlienRemoval/.vs/
+AlsAlienRemoval/.idea/
+AlsAlienRemoval/.vscode/
+AlsAlienRemoval/*.sln*
+AlsAlienRemoval/*.unityproj
+AlsAlienRemoval/*.csproj
 
-AlsAlienRemoval/Temp/UnityLockfile
-Assembly-CSharp.csproj
-Assembly-CSharp-Editor.csproj
-WhenWeFell.sln
-2019f-team5.sln
 Assets/Shaders/LightProcessor.mat
 Assets/Sprites/Sprites.spriteatlas
 Packages/manifest.json
