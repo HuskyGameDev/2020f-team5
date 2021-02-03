@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -42,6 +43,9 @@ public class Level : MonoBehaviour
     private Text _livestockRemaining;           // Livestock remaining text
     private WaveTimer _waveTimer;
 
+    // building error message fader stuff
+    private GameObject no_money_text;
+
     private void Start() {
 
         // ASSIGNS GAME SETTINGS
@@ -69,6 +73,9 @@ public class Level : MonoBehaviour
         _waveTimer = GameObject.Find("TopUIPanel").AddComponent<WaveTimer>();
         _waveTimer.enabled = false;
         _waveInProgress = false;
+
+        no_money_text = GameObject.Find("text_no_money");
+        no_money_text.GetComponent<Text>().color = new Color(0, 0, 0, 0);
     }
 
     // Create new enemy of specified type at the spawn area

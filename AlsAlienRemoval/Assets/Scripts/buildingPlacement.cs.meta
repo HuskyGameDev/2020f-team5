@@ -3,7 +3,10 @@ guid: deb00d0a9706f694083873527eb06d58
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rangeSpriteRenderer: {instanceID: 0}
+  - prefab_noMoney: {fileID: 1483472580942040836, guid: 8c30755fb41ce8043b47f3e79d36fd5d,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
