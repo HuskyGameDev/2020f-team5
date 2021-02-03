@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class TowerTargetingSystem : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class TowerTargetingSystem : MonoBehaviour
     private int timesUpgraded;
     public float splashMinRange;
     public float splashMaxRange;
+    public TMP_Text TargetText;
+    private int targetType;
+    public Projectile projectile;
 
     void placed(bool placed)
     {
@@ -32,6 +37,32 @@ public class TowerTargetingSystem : MonoBehaviour
     void setTowerType(int type)
     {
         towerType = type;
+
+        if(type == 1)
+        {
+            targetType = 1;
+            TargetText.text = "Closest";
+        }
+        else if(type == 2)
+        {
+            targetType = 2;
+            TargetText.text = "Weakest";
+        }
+        else if (type == 3)
+        {
+            targetType = 4;
+            TargetText.text = "Fastest";
+        }
+        else if (type == 4)
+        {
+            targetType = 3;
+            TargetText.text = "Strongest";
+        }
+        else if(type == 5)
+        {
+            targetType = 1;
+            TargetText.text = "Closest";
+        }
     }
 
     private GameObject FindClosestEnemy()
@@ -159,12 +190,28 @@ public class TowerTargetingSystem : MonoBehaviour
         if(hasPlaced)
         {
             fireTimer += Time.deltaTime;
-
             if (fireTimer >= fireRate)
             {
+                GameObject target = null;
+                if (targetType == 1)
+                {
+                    target = FindClosestEnemy();
+                }
+                else if (targetType == 2)
+                {
+                    target = FindWeakestEnemy();
+                }
+                else if (targetType == 3)
+                {
+                    target = FindStrongestEnemy();
+                }
+                else if (targetType == 4)
+                {
+                    target = FindFastestEnemy();
+                }
+
                 if (towerType == 1)
                 {
-                    GameObject target = FindClosestEnemy();
                     if (target != null)
                     {
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.red, lineWidth, lineDuration));
@@ -174,7 +221,6 @@ public class TowerTargetingSystem : MonoBehaviour
                 }
                 else if(towerType == 2)
                 {
-                    GameObject target = FindWeakestEnemy();
                     if (target != null)
                     {
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.magenta, lineWidth, lineDuration));
@@ -184,7 +230,6 @@ public class TowerTargetingSystem : MonoBehaviour
                 }
                 else if (towerType == 3)
                 {
-                    GameObject target = FindFastestEnemy();
                     if (target != null)
                     {
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.blue, lineWidth, lineDuration));
@@ -195,7 +240,6 @@ public class TowerTargetingSystem : MonoBehaviour
                 }
                 else if (towerType == 4)
                 {
-                    GameObject target = FindStrongestEnemy();
                     if (target != null)
                     {
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.yellow, lineWidth, lineDuration));
@@ -209,10 +253,20 @@ public class TowerTargetingSystem : MonoBehaviour
                         fireTimer = 0;
                     }
                 }
+                else if (towerType == 5)
+                {
+                    if(target != null)
+                    {
+                        firePosition.right = target.transform.position - firePosition.position;
+                        Instantiate(projectile, firePosition.position, firePosition.rotation);
+                        fireTimer = 0;
+                    }
+                }
             }
 
         }
     }
+
     public void upgradeTower()
     {
         if (Currency.amount >= upgradeCost)
@@ -240,5 +294,57 @@ public class TowerTargetingSystem : MonoBehaviour
             }
         }
        
+    }
+
+    public void changeTargetingUp()
+    {
+        targetType++;
+        if(targetType > 4)
+        {
+            targetType = 1;
+        }
+
+        if(targetType == 1)
+        {
+            TargetText.text = "Closest";
+        }
+        else if(targetType == 2)
+        {
+            TargetText.text = "Weakest";
+        }
+       else if(targetType == 3)
+        {
+            TargetText.text = "Strongest";
+        }
+        else if(targetType == 4)
+        {
+            TargetText.text = "Fastest";
+        }
+    }
+
+    public void changeTargetingDown()
+    {
+        targetType--;
+        if (targetType < 1)
+        {
+            targetType = 4;
+        }
+
+        if (targetType == 1)
+        {
+            TargetText.text = "Closest";
+        }
+        else if (targetType == 2)
+        {
+            TargetText.text = "Weakest";
+        }
+        else if (targetType == 3)
+        {
+            TargetText.text = "Strongest";
+        }
+        else if (targetType == 4)
+        {
+            TargetText.text = "Fastest";
+        }
     }
 }
