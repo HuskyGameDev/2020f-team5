@@ -10,6 +10,7 @@ public class buildingPlacement : MonoBehaviour
     private bool hasPlaced;
     private buildingPlaceable buildingPlaceable;
     public SpriteRenderer rangeSpriteRenderer;
+    public Sprite highlightSprite;
     private TextFader textFader;                    // for fading error text
     private GameObject money_text;                  // cloned to create error text
     private int errorTextCount;                     // tracks # of error texts (too many = lag)
