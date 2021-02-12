@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class buildingPlacement : MonoBehaviour
 {
     private Transform currentBuilding;
+    private bool towerSelected;
     private bool hasPlaced;
     private buildingPlaceable buildingPlaceable;
     public SpriteRenderer rangeSpriteRenderer;
@@ -19,6 +20,7 @@ public class buildingPlacement : MonoBehaviour
         money_text = GameObject.Find("text_no_money");
         money_text.AddComponent<TextFader>();
         errorTextCount = 0;
+        towerSelected = false;
     }
 
     // controls the fading and rising of the "not enough money" text
@@ -58,13 +60,27 @@ public class buildingPlacement : MonoBehaviour
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
             currentBuilding.position = new Vector2(worldPoint2d.x,worldPoint2d.y);
-
-            if (Input.GetMouseButtonDown(0)) 
+            if(buildingPlaceable.IsLegalPosition() && Currency.amount >= buildingPlaceable.getCost())
+                {
+                buildingPlaceable.range.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 0f, .25f);
+            }
+            else
+            {
+                buildingPlaceable.range.GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f, .25f);
+            }
+            if(Input.GetMouseButtonDown(1))
+            {
+                towerSelected = false;
+                buildingPlaceable.destroy();
+                currentBuilding = null;
+            }
+                if (Input.GetMouseButtonDown(0)) 
             {
                 if (buildingPlaceable.IsLegalPosition() && Currency.amount >= buildingPlaceable.getCost()) 
                 {
                     buildingPlaceable.SendMessage("hasPlaced", true);
                     hasPlaced = true;
+                    towerSelected = false;
                     Currency.subtractCurrency(buildingPlaceable.getCost());
                     buildingPlaceable.range.GetComponent<SpriteRenderer>().enabled = false;
                 }
@@ -80,13 +96,13 @@ public class buildingPlacement : MonoBehaviour
                         }
                         return;
                     }
-                    else
+                   else
                     {
                         // todo: implement a better solution that doesn't remove the tower from the cursor
                         // todo: maybe a right-click will do this. It's currently very annoying having
                         // todo: to re-click the button every time you mis-click on the path.
-                        buildingPlaceable.destroy();
-                        currentBuilding = null;
+                       // buildingPlaceable.destroy();
+                       // currentBuilding = null;
                     }
                 }
             }
@@ -100,9 +116,20 @@ public class buildingPlacement : MonoBehaviour
 
     public void setItem(GameObject b) 
     {
-        hasPlaced = false;
-        currentBuilding = (Instantiate(b)).transform;
-        buildingPlaceable = currentBuilding.GetComponent<buildingPlaceable>();
+        if (towerSelected == false)
+        {
+            towerSelected = true;
+            hasPlaced = false;
+            currentBuilding = (Instantiate(b)).transform;
+            buildingPlaceable = currentBuilding.GetComponent<buildingPlaceable>();
+        }
+        else
+        {
+            towerSelected = false;
+            buildingPlaceable.destroy();
+            currentBuilding = null;
+        }
+           
     }
 
     public void tower1() {
