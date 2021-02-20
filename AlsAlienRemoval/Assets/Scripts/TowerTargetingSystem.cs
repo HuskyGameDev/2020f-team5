@@ -28,6 +28,7 @@ public class TowerTargetingSystem : MonoBehaviour
     public TMP_Text TargetText;
     private int targetType;
     public Projectile projectile;
+    private AudioSource fireSoundSource;
 
     void placed(bool placed)
     {
@@ -182,6 +183,8 @@ public class TowerTargetingSystem : MonoBehaviour
     {
         fireTimer = fireRate;
         hasPlaced = false;
+
+        fireSoundSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -217,6 +220,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.red, lineWidth, lineDuration));
                         target.SendMessage("Hit", towerDamage);
                         fireTimer = 0;
+                        fireSoundSource.Play();
                     }
                 }
                 else if(towerType == 2)
@@ -226,6 +230,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.magenta, lineWidth, lineDuration));
                         target.SendMessage("Hit", towerDamage);
                         fireTimer = 0;
+                        fireSoundSource.Play();
                     }
                 }
                 else if (towerType == 3)
@@ -236,6 +241,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         target.SendMessage("setSlowDuration", towerSlowDuration);
                         target.SendMessage("Slow", towerSpeedDecreasePercent);
                         fireTimer = 0;
+                        fireSoundSource.Play();
                     }
                 }
                 else if (towerType == 4)
@@ -251,6 +257,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         target.SendMessage("setMaxRange", splashMaxRange);
                         target.SendMessage("Splash");
                         fireTimer = 0;
+                        fireSoundSource.Play();
                     }
                 }
                 else if (towerType == 5)
@@ -260,6 +267,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         firePosition.right = target.transform.position - firePosition.position;
                         Instantiate(projectile, firePosition.position, firePosition.rotation);
                         fireTimer = 0;
+                        fireSoundSource.Play();
                     }
                 }
             }

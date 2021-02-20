@@ -76,6 +76,9 @@ public class Level : MonoBehaviour
 
         no_money_text = GameObject.Find("text_no_money");
         no_money_text.GetComponent<Text>().color = new Color(0, 0, 0, 0);
+
+        // Play music
+        GetComponent<AudioSource>().Play();
     }
 
     // Create new enemy of specified type at the spawn area
