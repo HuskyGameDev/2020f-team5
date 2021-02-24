@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -9,87 +7,19 @@ using Object = UnityEngine.Object;
 public class buildingPlacement : MonoBehaviour
 {
     private Transform currentBuilding;
-    private bool towerSelected;
+    private bool towerSelected = false;
     private bool hasPlaced;
     private buildingPlaceable buildingPlaceable;
     public SpriteRenderer rangeSpriteRenderer;
     public Sprite highlightSprite;
 
-    //error text stuff
-    private GameObject errorText_Money;                     // "not enouch money" error text object
-    private GameObject errorText_Location;                  // "invalid location" error text object
-    public static int errorTextCount;                       // tracks # of error texts (too many = lag)
-    private static Queue<FloatingFadeText> errorTexts;      // list of currently active error-text wrapper objects
-    private const int ERROR_TEXT_LIMIT = 3;                 // maximum error texts allowed at once
-    
-    // wrapper class for floating error texts
-    private class FloatingFadeText {
-        private GameObject errorTextObject;         // reference to actual text object
-        private Vector2 fadeBegin;                  // mouse location where text starts
-        private float fadeTime = 2.65f;             // seconds text will be visible
-        private float fadeDistance = 0.7f;          // distance text travels
-        private float timeRemaining;                // time until text is removed
-
-        // constructor
-        public FloatingFadeText(GameObject errorTextObject, Vector3 mousePosition) {
-
-            this.errorTextObject = errorTextObject;
-            fadeBegin = new Vector2(mousePosition.x, mousePosition.y);
-            timeRemaining = fadeTime;
-
-            errorTextObject.GetComponent<CanvasGroup>().alpha = 1;
-            errorTextObject.GetComponent<Text>().transform.position = fadeBegin;
-        }
-
-        // updates the fade and location of the text
-        public bool updateFadeAndLocation() {
-            
-            // updates alpha
-            float currentAlpha = errorTextObject.GetComponent<CanvasGroup>().alpha;
-            float newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
-            errorTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
-
-            // updates position
-            float currentY = errorTextObject.GetComponent<Text>().transform.position.y;
-            float newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
-            Vector2 newPosition = new Vector2(errorTextObject.GetComponent<Text>().transform.position.x, newY);
-            errorTextObject.GetComponent<Text>().transform.position = newPosition;
-            
-            timeRemaining -= Time.deltaTime;
-
-            if (timeRemaining <= 0) {
-                Object.Destroy(errorTextObject);
-                return false;
-            }
-            return true;
-        }
-    }
-
-    // runs once
+    // runs once for EACH INSTANCE (one for each tower...)
     public void Start() {
-        errorText_Money = GameObject.Find("text_no_money");
-        errorText_Location = GameObject.Find("text_invalid_location");
-        errorTextCount = 0;
-        towerSelected = false;
-        errorTexts = new Queue<FloatingFadeText>();
+
     }
 
     // Update is called once per frame
     public void Update() {
-        
-        // updates location of all floating error-text
-        int dequeus = 0;
-        foreach (FloatingFadeText text in errorTexts) {
-            if (! text.updateFadeAndLocation()) {
-                dequeus++;
-            }
-        }
-
-        // removes any floating error-text that have faded
-        for (int i = 0; i < dequeus; i++) {
-            errorTexts.Dequeue();
-            errorTextCount--;
-        }
 
         if (currentBuilding != null && !hasPlaced) 
         {
@@ -128,24 +58,27 @@ public class buildingPlacement : MonoBehaviour
 
                     // invalid position, show error text
                     else {
-                        if (errorTextCount < ERROR_TEXT_LIMIT) {
-                            GameObject errorText = Object.Instantiate(errorText_Location, errorText_Location.transform, true);
-                            Vector3 mousePos3d = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                            errorTexts.Enqueue(new FloatingFadeText(errorText, mousePos3d));
-                            errorTextCount++;
+                        if (Level.errorTextCount < Level.ERROR_TEXT_LIMIT) {
+                            Level.errorTextList[Level.nextErrIndex].SetText("Invalid Location");
+                            Level.errorTextList[Level.nextErrIndex].SetupFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                            Level.errorTextCount++;
+                            Level.nextErrIndex++;
+                            if (Level.nextErrIndex == Level.ERROR_TEXT_LIMIT)
+                                Level.nextErrIndex = 0;
                         }
                         return;
                     }
-
                 }
 
                 // not enough money, shows error text (higher prio than "invalid location")
                 else {
-                    if (errorTextCount < ERROR_TEXT_LIMIT) {
-                        GameObject errorText = Object.Instantiate(errorText_Money, errorText_Money.transform, true);
-                        Vector3 mousePos3d = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        errorTexts.Enqueue(new FloatingFadeText(errorText, mousePos3d));
-                        errorTextCount++;
+                    if (Level.errorTextCount < Level.ERROR_TEXT_LIMIT) {
+                        Level.errorTextList[Level.nextErrIndex].SetText("Not Enough $$");
+                        Level.errorTextList[Level.nextErrIndex].SetupFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                        Level.errorTextCount++;
+                        Level.nextErrIndex++;
+                        if (Level.nextErrIndex == Level.ERROR_TEXT_LIMIT)
+                            Level.nextErrIndex = 0;
                     }
                     return;
                 }

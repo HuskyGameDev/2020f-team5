@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Object = UnityEngine.Object;
@@ -38,10 +39,16 @@ public class Level : MonoBehaviour
     private int _enemiesInSpawnLimit;
 
     // private status # ui elements
-    private Text _waveNumber;                   // Wave number text
-    private Text _enemiesRemaining;             // Enemies remaining text
-    private Text _livestockRemaining;           // Livestock remaining text
+    private Text _waveNumber;               // Wave number text
+    private Text _enemiesRemaining;         // Enemies remaining text
+    private Text _livestockRemaining;       // Livestock remaining text
     public WaveTimer waveTimer;
+
+    // floating-error-text stuff
+    public static int errorTextCount = 0;               // tracks # of error texts (too many = lag)
+    public const int ERROR_TEXT_LIMIT = 10;             // maximum error texts can exist
+    public static FloatingErrorText[] errorTextList;    // list of error-text wrapper objects
+    public static int nextErrIndex = 0;                 // index of next available text
 
     private Button _utilityButton;
 
@@ -75,9 +82,16 @@ public class Level : MonoBehaviour
         _waveInProgress = false;
 
         // hides floating error text
-        GameObject.Find("text_no_money").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("text_invalid_location").GetComponent<CanvasGroup>().alpha = 0;
+        GameObject errorTextObject = GameObject.Find("text_floating_error");
+        errorTextObject.GetComponent<CanvasGroup>().alpha = 0;
 
+        // fills error-text object array with wrapper objects by cloning the error-text from the scene
+        errorTextList = new FloatingErrorText[ERROR_TEXT_LIMIT];
+        for (int i = 0; i < ERROR_TEXT_LIMIT; i++) {
+            GameObject newText = Object.Instantiate(errorTextObject, errorTextObject.transform, true);
+            errorTextList[i] = new FloatingErrorText(newText);
+        }
+        
         // Play music
         GetComponent<AudioSource>().Play();
     }
@@ -98,9 +112,18 @@ public class Level : MonoBehaviour
         Instantiate(enemyType, randomSpawnPoint, Quaternion.identity);
     }
 
+    private void Update() {
+        // updates location of all active floating error-texts
+        foreach (FloatingErrorText text in errorTextList) {
+            if (text.IsActive()) {
+                text.UpdateFadeAndLocation();
+            }
+        }
+    }
+
     // updates independant of fps
     private void FixedUpdate() {
-
+        
         _waveNumber.text = WaveNumber.ToString();
         _enemiesRemaining.text = EnemiesRemaining.ToString();
         _livestockRemaining.text = LivestockRemaining.ToString();
@@ -188,5 +211,63 @@ public class Level : MonoBehaviour
         }
     }
 
-    
+    // wrapper class used to manage the floating-error-text objects
+    public class FloatingErrorText {
+        private GameObject errorTextObject;     // reference to an instantiated text object from scene
+        private float fadeTime = 1f;            // seconds text will be visible
+        private float fadeDistance = 0.7f;      // distance text travels
+        private float timeRemaining;            // time until text is hidden
+        private bool isActive;
+
+        // constructor
+        public FloatingErrorText(GameObject errorTextObject) {
+            this.errorTextObject = errorTextObject;
+        }
+
+        // is the text currently shown
+        public bool IsActive() {
+            return isActive;
+        }
+
+        // sets the text of the object
+        public void SetText(string text) {
+            errorTextObject.GetComponent<Text>().text = text;
+        }
+
+        // hides the text of the object
+        public void HideText() {
+            errorTextObject.GetComponent<CanvasGroup>().alpha = 0;
+        }
+        
+        // resets the starting location and timer for the object
+        public void SetupFadeCycle(Vector2 location) {
+            timeRemaining = fadeTime;
+            errorTextObject.GetComponent<Text>().transform.position = location;
+            errorTextObject.GetComponent<CanvasGroup>().alpha = 1;
+            isActive = true;
+        }
+
+        // repeatidly updates the fade and location of the object
+        public void UpdateFadeAndLocation() {
+            
+            // updates alpha
+            float currentAlpha = errorTextObject.GetComponent<CanvasGroup>().alpha;
+            float newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
+            errorTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
+
+            // updates position
+            float currentY = errorTextObject.GetComponent<Text>().transform.position.y;
+            float newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
+            Vector2 newPosition = new Vector2(errorTextObject.GetComponent<Text>().transform.position.x, newY);
+            errorTextObject.GetComponent<Text>().transform.position = newPosition;
+            
+            timeRemaining -= Time.deltaTime;
+
+            if (timeRemaining <= 0) {
+                HideText();
+                isActive = false;
+                errorTextCount--;
+            }
+        }
+    }
 }
