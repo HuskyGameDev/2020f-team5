@@ -45,9 +45,7 @@ public class Level : MonoBehaviour
 
     private Button _utilityButton;
 
-    // building error message fader stuff
-    private GameObject no_money_text;
-
+    // runs once
     private void Start() {
 
         // ASSIGNS GAME SETTINGS
@@ -76,8 +74,9 @@ public class Level : MonoBehaviour
         waveTimer.enabled = false;
         _waveInProgress = false;
 
-        no_money_text = GameObject.Find("text_no_money");
-        no_money_text.GetComponent<Text>().color = new Color(0, 0, 0, 0);
+        // hides floating error text
+        GameObject.Find("text_no_money").GetComponent<CanvasGroup>().alpha = 0;
+        GameObject.Find("text_invalid_location").GetComponent<CanvasGroup>().alpha = 0;
 
         // Play music
         GetComponent<AudioSource>().Play();
