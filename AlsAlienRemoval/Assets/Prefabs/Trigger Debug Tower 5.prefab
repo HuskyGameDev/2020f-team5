@@ -362,6 +362,9 @@ MonoBehaviour:
   range: {fileID: 4348926466859441465}
   cost: 100
   towerUI: {fileID: 0}
+  star1: {fileID: 21300000, guid: 34b17a95b97d0b647be72fb77b092c8f, type: 3}
+  star2: {fileID: 21300000, guid: d186050c6b74dff4cb5c385464e76959, type: 3}
+  star3: {fileID: 21300000, guid: 996b0717c87198541bfde59291fded5a, type: 3}
 --- !u!58 &6921178478751613962
 CircleCollider2D:
   m_ObjectHideFlags: 0

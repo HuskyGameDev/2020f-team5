@@ -17,12 +17,23 @@ public class buildingPlaceable : MonoBehaviour
     int towerType;
     private bool beenPlaced = false;
     private bool toggleBool = false;
+
+    public Sprite star1;
+    public Sprite star2;
+    public Sprite star3;
+    private static Sprite[] _starSprites;
+    private SpriteRenderer _upgradeSprite;
+
+
     void Start()
     {
         upgradecost = cost * 2;
         towerUI = GameObject.Find("TowerUI");
         towerUI.gameObject.SetActive(false);
-        rangeSpriteRenderer = GetComponent<SpriteRenderer>();  
+        rangeSpriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Initialize array of sprites for viewing upgrades
+        _starSprites = new Sprite[3] { star1, star2, star3 };
     }
 
     void OnTriggerEnter2D(Collider2D c)
@@ -56,6 +67,19 @@ public class buildingPlaceable : MonoBehaviour
         {
             if (timesUpgraded < 3)
             {
+
+                // Create upgrade viewer for first upgrade
+                if (timesUpgraded == 0)
+                {
+                    GameObject upgradeViewer = new GameObject("UpgradeViewer");
+                    _upgradeSprite = upgradeViewer.AddComponent<SpriteRenderer>();
+                    upgradeViewer.transform.parent = transform;
+                    upgradeViewer.transform.position = transform.position;
+                }
+
+                // Update star sprite
+                _upgradeSprite.sprite = _starSprites[timesUpgraded];
+
                 Currency.amount = Currency.amount - upgradecost;
                 timesUpgraded = timesUpgraded + 1;
                 upgradecost = upgradecost * 2;
