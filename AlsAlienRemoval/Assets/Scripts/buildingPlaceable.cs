@@ -30,7 +30,7 @@ public class buildingPlaceable : MonoBehaviour
         upgradecost = cost * 2;
         towerUI = GameObject.Find("TowerUI");
         towerUI.gameObject.SetActive(false);
-        rangeSpriteRenderer = GetComponent<SpriteRenderer>();
+        rangeSpriteRenderer = range.GetComponent<SpriteRenderer>();
 
         // Initialize array of sprites for viewing upgrades
         _starSprites = new Sprite[3] { star1, star2, star3 };
@@ -112,12 +112,15 @@ public class buildingPlaceable : MonoBehaviour
             if(toggleBool)
             {
                 towerUI.gameObject.SetActive(false);
+                rangeSpriteRenderer.enabled = false;
                 toggleBool = false;
 
             }
             else
             {
                 towerUI.gameObject.SetActive(true);
+                rangeSpriteRenderer.enabled = true;
+                rangeSpriteRenderer.color = new Color(0.0f, 0.0f, 0.0f, 0.25f);
                 toggleBool = true;
             }
             

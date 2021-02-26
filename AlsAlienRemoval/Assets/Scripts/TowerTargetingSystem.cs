@@ -25,6 +25,8 @@ public class TowerTargetingSystem : MonoBehaviour
     public float splashMinRange;
     public float splashMaxRange;
     public TMP_Text TargetText;
+    public TMP_Text upgradeText;
+    public TMP_Text sellText;
     private int targetType;
     public Projectile projectile;
     public Laser laser;
@@ -43,26 +45,36 @@ public class TowerTargetingSystem : MonoBehaviour
         {
             targetType = 1;
             TargetText.text = "Closest";
+            upgradeText.text = "Upgrade:\n+Damage\n$" + upgradeCost;
+            sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
         }
         else if(type == 2)
         {
             targetType = 2;
             TargetText.text = "Weakest";
+            upgradeText.text = "Upgrade:\n+Damage\n$" + upgradeCost;
+            sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
         }
         else if (type == 3)
         {
             targetType = 4;
             TargetText.text = "Fastest";
+            upgradeText.text = "Upgrade:\n+Duration\n$" + upgradeCost;
+            sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
         }
         else if (type == 4)
         {
             targetType = 3;
             TargetText.text = "Strongest";
+            upgradeText.text = "Upgrade:\n+Damage\n$" + upgradeCost;
+            sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
         }
         else if(type == 5)
         {
             targetType = 1;
             TargetText.text = "Closest";
+            upgradeText.text = "Upgrade:\n+Damage\n$" + upgradeCost;
+            sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
         }
     }
 
@@ -312,8 +324,35 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     towerDamage = towerDamage + 10;
                 }
+                if(towerType == 5)
+                {
+                    towerDamage = towerDamage + 5;
+                }
                 timesUpgraded = timesUpgraded + 1;
                 upgradeCost = upgradeCost * 2;
+                if(timesUpgraded < 3)
+                {
+                    if(timesUpgraded == 2 && towerType == 5)
+                    {
+                        upgradeText.text = "Upgrade:\n+Damage\n+Triple Shot\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                    else if(towerType == 3)
+                    {
+                        upgradeText.text = "Upgrade:\n+Duration\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                    else
+                    {
+                        upgradeText.text = "Upgrade:\n+Damage\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                }
+                else
+                {
+                    upgradeText.text = "No More Upgrades";
+                    sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                }
             }
         }
        
