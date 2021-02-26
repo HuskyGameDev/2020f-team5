@@ -276,6 +276,11 @@ public class TowerTargetingSystem : MonoBehaviour
                     {
                         firePosition.right = target.transform.position - firePosition.position;
                         Instantiate(projectile, firePosition.position, firePosition.rotation);
+                        if(timesUpgraded >= 3)
+                        {
+                            Instantiate(projectile, firePosition.position, firePosition.rotation*Quaternion.Euler(0,0,22.5f));
+                            Instantiate(projectile, firePosition.position, firePosition.rotation*Quaternion.Euler(0,0,-22.5f));
+                        }
                         fireTimer = 0;
                         fireSoundSource.Play();
                     }
