@@ -14,13 +14,12 @@ public class Enemy : MonoBehaviour
     public float health;
     public int moneyDropped;
     private float slowDuration;
-    public GameObject laser;
     private float splashMinRange;
     private float splashMaxRange;
     private float lineWidth;
     private float lineDuration;
     private float towerDamage;
-    private Vector3 lineEnd;
+    public Laser laser;
 
     // slow tower settings
     private Color baseColor = new Color(255, 255, 255, 255);        // normal color
@@ -108,29 +107,6 @@ public class Enemy : MonoBehaviour
         towerDamage = damage;
     }
 
-    void setLineEnd(Vector3 end) {
-        lineEnd = end;
-    }
-
-    IEnumerator DrawLine(Vector3 start, Vector3 end, Color color, float width, float duration)
-    {
-        laser.GetComponent<LineRenderer>().enabled = true;
-        laser.transform.position = start;
-        LineRenderer lr = laser.GetComponent<LineRenderer>();
-        lr.startWidth = width;
-        lr.endWidth = width;
-        lr.SetPosition(0, start);
-        lr.SetPosition(1, end);
-        lr.material.color = color;
-        yield return new WaitForSeconds(duration);
-        laser.GetComponent<LineRenderer>().enabled = false;
-    }
-
-    void splashHit()
-    {
-        StartCoroutine(DrawLine(this.transform.position, lineEnd, Color.yellow, lineWidth, lineDuration));
-    }
-
     void Splash()
     {
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
@@ -145,12 +121,14 @@ public class Enemy : MonoBehaviour
             float curDistance = diff.sqrMagnitude;
             if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
             {
+                Laser drawLaser = Instantiate(laser);
+                drawLaser.SendMessage("setStartPosition", this.transform.position);
+                drawLaser.SendMessage("setEndPosition", go.transform.position);
+                drawLaser.SendMessage("setColor", Color.yellow);
+                drawLaser.SendMessage("setWidth", lineWidth);
+                drawLaser.SendMessage("setDuration", lineDuration);
+                drawLaser.SendMessage("draw");
                 go.SendMessage("Hit", towerDamage);
-                go.SendMessage("setLineWidth", lineWidth);
-                go.SendMessage("setLineDuration", lineDuration);
-                go.SendMessage("setTowerDamge", towerDamage);
-                go.SendMessage("setLineEnd", this.transform.position);
-                go.SendMessage("splashHit");
             }
         }
     }

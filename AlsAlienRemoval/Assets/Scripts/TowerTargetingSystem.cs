@@ -19,7 +19,6 @@ public class TowerTargetingSystem : MonoBehaviour
     public float rangeMin;
     public float rangeMax;
     private float fireTimer;
-    public GameObject laser;
     private bool hasPlaced;
     private int towerType;
     private int timesUpgraded;
@@ -28,6 +27,7 @@ public class TowerTargetingSystem : MonoBehaviour
     public TMP_Text TargetText;
     private int targetType;
     public Projectile projectile;
+    public Laser laser;
     private AudioSource fireSoundSource;
 
     void placed(bool placed)
@@ -164,20 +164,6 @@ public class TowerTargetingSystem : MonoBehaviour
         return fastest;
     }
 
-    IEnumerator DrawLine(Vector3 start, Vector3 end, Color color, float width, float duration)
-    {
-        laser.GetComponent<LineRenderer>().enabled = true;
-        laser.transform.position = start;
-        LineRenderer lr = laser.GetComponent<LineRenderer>();
-        lr.startWidth = width;
-        lr.endWidth = width;
-        lr.SetPosition(0, start);
-        lr.SetPosition(1, end);
-        lr.material.color = color;
-        yield return new WaitForSeconds(duration);
-        laser.GetComponent<LineRenderer>().enabled = false;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -217,7 +203,13 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     if (target != null)
                     {
-                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.red, lineWidth, lineDuration));
+                        Laser drawLaser = Instantiate(laser);
+                        drawLaser.SendMessage("setStartPosition", firePosition.position);
+                        drawLaser.SendMessage("setEndPosition", target.transform.position);
+                        drawLaser.SendMessage("setColor", Color.red);
+                        drawLaser.SendMessage("setWidth", lineWidth);
+                        drawLaser.SendMessage("setDuration", lineDuration);
+                        drawLaser.SendMessage("draw");
                         target.SendMessage("Hit", towerDamage);
                         fireTimer = 0;
                         fireSoundSource.Play();
@@ -227,7 +219,13 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     if (target != null)
                     {
-                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.magenta, lineWidth, lineDuration));
+                        Laser drawLaser = Instantiate(laser);
+                        drawLaser.SendMessage("setStartPosition", firePosition.position);
+                        drawLaser.SendMessage("setEndPosition", target.transform.position);
+                        drawLaser.SendMessage("setColor", Color.magenta);
+                        drawLaser.SendMessage("setWidth", lineWidth);
+                        drawLaser.SendMessage("setDuration", lineDuration);
+                        drawLaser.SendMessage("draw");
                         target.SendMessage("Hit", towerDamage);
                         fireTimer = 0;
                         fireSoundSource.Play();
@@ -237,7 +235,13 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     if (target != null)
                     {
-                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.blue, lineWidth, lineDuration));
+                        Laser drawLaser = Instantiate(laser);
+                        drawLaser.SendMessage("setStartPosition", firePosition.position);
+                        drawLaser.SendMessage("setEndPosition", target.transform.position);
+                        drawLaser.SendMessage("setColor", Color.cyan);
+                        drawLaser.SendMessage("setWidth", lineWidth);
+                        drawLaser.SendMessage("setDuration", lineDuration);
+                        drawLaser.SendMessage("draw");
                         target.SendMessage("setSlowDuration", towerSlowDuration);
                         target.SendMessage("Slow", towerSpeedDecreasePercent);
                         fireTimer = 0;
@@ -248,14 +252,20 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     if (target != null)
                     {
-                        StartCoroutine(DrawLine(firePosition.position, target.transform.position, Color.yellow, lineWidth, lineDuration));
-                        target.SendMessage("Hit", towerDamage);
+                        Laser drawLaser = Instantiate(laser);
+                        drawLaser.SendMessage("setStartPosition", firePosition.position);
+                        drawLaser.SendMessage("setEndPosition", target.transform.position);
+                        drawLaser.SendMessage("setColor", Color.yellow);
+                        drawLaser.SendMessage("setWidth", lineWidth);
+                        drawLaser.SendMessage("setDuration", lineDuration);
+                        drawLaser.SendMessage("draw");
                         target.SendMessage("setLineWidth", lineWidth);
                         target.SendMessage("setLineDuration", lineDuration);
                         target.SendMessage("setTowerDamge", towerDamage);
                         target.SendMessage("setMinRange", splashMinRange);
                         target.SendMessage("setMaxRange", splashMaxRange);
                         target.SendMessage("Splash");
+                        target.SendMessage("Hit", towerDamage);
                         fireTimer = 0;
                         fireSoundSource.Play();
                     }
