@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 36
+  controlID: 38
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,10 +160,10 @@ MonoBehaviour:
     y: 0
     width: 1362
     height: 947
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 37
+  controlID: 39
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,10 +185,10 @@ MonoBehaviour:
     y: 0
     width: 1362
     height: 595
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 38
+  controlID: 40
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 903d0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6aaafdffacd4fdff0c29feff82a0feff2eccfeff7cf6feff3621ffff50fbffffc83400000e350000a4350000b2350000ec350000
+      m_SelectedIDs: cc630000
+      m_LastClickedID: 25548
+      m_ExpandedIDs: 2ccbfdff5ef5fdff6af6fdffacf6fdffcce1feffd0eafeffeef3ffffcef6ffff183800004c38000078380000c03800003c390000105b0000265b00000a5c000098630000de630000e8630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -479,9 +479,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.5631668, y: -1.7595017, z: 376.43762}
+    m_Target: {x: 0.0488075, y: -0.8499032, z: 344.3053}
     speed: 2
-    m_Value: {x: -0.5631668, y: -1.7595017, z: 376.43762}
+    m_Value: {x: 0.0488075, y: -0.8499032, z: 344.3053}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -531,9 +531,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.996427
+    m_Target: 7.5002766
     speed: 2
-    m_Value: 7.996427
+    m_Value: 7.5002766
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -597,20 +597,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\benja\Documents\GitHub\2020f-team5\AlsAlienRemoval
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0e3b0000
-    m_LastClickedID: 15118
-    m_ExpandedIDs: 00000000543a0000563a0000583a000000ca9a3b
+    m_SelectedIDs: f23d0000
+    m_LastClickedID: 15858
+    m_ExpandedIDs: 00000000463d0000483d00004a3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -638,7 +638,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000543a0000563a0000583a0000
+    m_ExpandedIDs: 00000000463d0000483d00004a3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000090360000ae3b00009e350000783b000000000000
+    m_ExpandedInstanceIDs: c623000090360000ae3b00009e350000783b0000000000001a3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
