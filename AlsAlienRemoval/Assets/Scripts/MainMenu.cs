@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Start()
+    {
+        // Set volume to non-deafening level
+        AudioListener.volume = 0.15f;
+    }
 
     public void PlayGame()
     {

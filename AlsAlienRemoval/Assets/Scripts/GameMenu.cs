@@ -6,29 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-    private Graphic[] _menuGraphics;
-    private Button[] _menuButtons;
+    private Graphic[] _menuGraphics;        // Images
+    private Selectable[] _menuSelectables;  // Buttons, slider, etc.
+
+    public Slider volumeSlider;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Get all graphical and selectable components for hiding/showing menu
         _menuGraphics = GetComponentsInChildren<Graphic>();
-        _menuButtons = GetComponentsInChildren<Button>();
+        _menuSelectables = GetComponentsInChildren<Selectable>();
 
+        // Add listener for volume change and set volume to default value
+        volumeSlider.onValueChanged.AddListener(delegate { changeVolume(); });
+        changeVolume();
+        /*
         // Not visible by default
         toggleVisible();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        // Undo timescale adjustment done by first call of toggleVisible()
+        Time.timeScale = 1;*/
     }
 
     // Toggle visibility of menu's graphical and button components and pause game
     public void toggleVisible()
     {
-        /*
         // Pause or resume game depending on menu open/close
         if (Time.timeScale != 0)
         {
@@ -37,18 +40,23 @@ public class GameMenu : MonoBehaviour
         else
         {
             Time.timeScale = 1;
-        }*/
-        
+        }
+
         // Toggle visibility of graphics and buttons
         foreach (Graphic g in _menuGraphics)
         {
             g.enabled = !g.enabled;
         }
 
-        foreach (Button b in _menuButtons)
+        foreach (Selectable s in _menuSelectables)
         {
-            b.enabled = !b.enabled;
+            s.enabled = !s.enabled;
         }
+    }
+
+    private void changeVolume()
+    {
+        AudioListener.volume = volumeSlider.value;
     }
 
     public void goToMenu()
