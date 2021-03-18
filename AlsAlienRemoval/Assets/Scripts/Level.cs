@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour
 {
     // public game status variables
-    public static int WaveNumber;               // global wave #
+    public int WaveNumber;               // global wave #
     public static int EnemiesRemaining;         // global enemies remaining
     public static int LivestockRemaining;       // global livestock remaining
     public static int enemiesInSpawn;           // # of enemies within the spawn location
@@ -61,7 +61,7 @@ public class Level : MonoBehaviour
         _waveStrengths = new int[] { 100, 150, 225, 335, 500, 750, 1125, 1700, 2500, 5000 };
         enemiesInSpawn = 0;
         _enemiesInSpawnLimit = 30;
-        WaveNumber = 1;
+        //WaveNumber = 1;
         EnemiesRemaining = 0;
         LivestockRemaining = 20;
 

@@ -2211,6 +2211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55cf03a75faf9dc4f9b1eee565dcdc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaveNumber: 8
   lastWaypointArea: {fileID: 2017081270}
   spawnArea: {fileID: 0}
   doDebugSpawning: 1
