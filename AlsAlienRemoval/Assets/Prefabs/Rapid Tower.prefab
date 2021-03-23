@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 2039301582011662812}
   - component: {fileID: 6921178478751613962}
   - component: {fileID: -986188609286198093}
+  - component: {fileID: 7991241917708251948}
   m_Layer: 8
   m_Name: Rapid Tower
   m_TagString: building
@@ -708,6 +709,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7991241917708251948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623971271211070166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &3192490718594150560
 GameObject:
   m_ObjectHideFlags: 0
