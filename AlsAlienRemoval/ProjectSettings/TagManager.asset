@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - building
+  - Enemy
+  - Projectile
+  - Laser
   layers:
   - Default
   - TransparentFX

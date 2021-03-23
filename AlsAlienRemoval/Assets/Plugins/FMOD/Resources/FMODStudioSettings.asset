@@ -456,8 +456,10 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../Team 5 FMOD/Team 5 FMOD.fspro
-  sourceBankPath: ../../../Team 5 FMOD/Build
+  sourceProjectPath: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team
+    5 FMOD/Team 5 FMOD.fspro
+  sourceBankPath: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team
+    5 FMOD/Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
