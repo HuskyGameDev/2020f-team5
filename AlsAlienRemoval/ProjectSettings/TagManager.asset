@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Projectile
   - Laser
+  - Button
   layers:
   - Default
   - TransparentFX
