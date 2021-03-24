@@ -54,13 +54,24 @@ public class buildingPlacement : MonoBehaviour
                         towerSelected = false;
                         Currency.subtractCurrency(buildingPlaceable.getCost());
                         buildingPlaceable.range.GetComponent<SpriteRenderer>().enabled = false;
+
+                        // display -$123 floating buy text
+                        if (Level.currencyTextCount < Level.CRNCY_TEXT_LIMIT) {
+                            Level.currencyTextList[Level.nextCrncyIndex].SetText($"- ${buildingPlaceable.getCost()}");
+                            Level.currencyTextList[Level.nextCrncyIndex].SetColor(Color.red);
+                            Level.currencyTextList[Level.nextCrncyIndex].StartFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                            Level.currencyTextCount++;
+                            Level.nextCrncyIndex++;
+                            if (Level.nextCrncyIndex == Level.CRNCY_TEXT_LIMIT)
+                                Level.nextCrncyIndex = 0;
+                        }
                     }
 
                     // invalid position, show error text
                     else {
                         if (Level.errorTextCount < Level.ERROR_TEXT_LIMIT) {
                             Level.errorTextList[Level.nextErrIndex].SetText("Invalid Location");
-                            Level.errorTextList[Level.nextErrIndex].SetupFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                            Level.errorTextList[Level.nextErrIndex].StartFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                             Level.errorTextCount++;
                             Level.nextErrIndex++;
                             if (Level.nextErrIndex == Level.ERROR_TEXT_LIMIT)
@@ -74,7 +85,7 @@ public class buildingPlacement : MonoBehaviour
                 else {
                     if (Level.errorTextCount < Level.ERROR_TEXT_LIMIT) {
                         Level.errorTextList[Level.nextErrIndex].SetText("Not Enough $$");
-                        Level.errorTextList[Level.nextErrIndex].SetupFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                        Level.errorTextList[Level.nextErrIndex].StartFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                         Level.errorTextCount++;
                         Level.nextErrIndex++;
                         if (Level.nextErrIndex == Level.ERROR_TEXT_LIMIT)

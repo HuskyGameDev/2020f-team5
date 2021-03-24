@@ -44,11 +44,15 @@ public class Level : MonoBehaviour
     private Text _livestockRemaining;       // Livestock remaining text
     public WaveTimer waveTimer;
 
-    // floating-error-text stuff
-    public static int errorTextCount = 0;               // tracks # of error texts (too many = lag)
-    public const int ERROR_TEXT_LIMIT = 10;             // maximum error texts can exist
-    public static FloatingErrorText[] errorTextList;    // list of error-text wrapper objects
-    public static int nextErrIndex = 0;                 // index of next available text
+    // floating-text stuff
+    public static int errorTextCount = 0;               // # of error texts currently visible
+    public static int currencyTextCount = 0;            // # of currency texts currently visible
+    public const int ERROR_TEXT_LIMIT = 10;             // maximum floating error-texts that can exist
+    public const int CRNCY_TEXT_LIMIT = 5;              // maximum floating currency-texts that can exist
+    public static FloatingText[] errorTextList;         // list of error-text wrapper objects
+    public static FloatingText[] currencyTextList;       // list of currency-text wrapper objects
+    public static int nextErrIndex = 0;                 // index of next available error text
+    public static int nextCrncyIndex = 0;               // index of next available currency text
 
     private Button _utilityButton;
 
@@ -81,17 +85,27 @@ public class Level : MonoBehaviour
         waveTimer.enabled = false;
         _waveInProgress = false;
 
-        // hides floating error text
+        // hides floating texts
         GameObject errorTextObject = GameObject.Find("text_floating_error");
+        GameObject currencyTextObject = GameObject.Find("text_floating_currency");
         errorTextObject.GetComponent<CanvasGroup>().alpha = 0;
+        currencyTextObject.GetComponent<CanvasGroup>().alpha = 0;
 
-        // fills error-text object array with wrapper objects by cloning the error-text from the scene
-        errorTextList = new FloatingErrorText[ERROR_TEXT_LIMIT];
+        // fills error/currencty text object arrays with wrapper objects by cloning their respective texts from the scene
+        GameObject newText;
+        GameObject buttomUIPanel = GameObject.Find("BottomUIPanel");        // this will be parent of the clones
+        errorTextList = new FloatingText[ERROR_TEXT_LIMIT];
         for (int i = 0; i < ERROR_TEXT_LIMIT; i++) {
-            GameObject newText = Object.Instantiate(errorTextObject, errorTextObject.transform, true);
-            errorTextList[i] = new FloatingErrorText(newText);
+            newText = Object.Instantiate(errorTextObject, buttomUIPanel.transform, true);
+            errorTextList[i] = new FloatingText(newText, 1);
         }
-        
+        currencyTextList = new FloatingText[CRNCY_TEXT_LIMIT];
+        for (int i = 0; i < CRNCY_TEXT_LIMIT; i++) {
+            newText = Object.Instantiate(currencyTextObject, buttomUIPanel.transform, true);
+            currencyTextList[i] = new FloatingText(newText, 2);
+        }
+
+
         // Play music
         GetComponent<AudioSource>().Play();
     }
@@ -113,8 +127,13 @@ public class Level : MonoBehaviour
     }
 
     private void Update() {
-        // updates location of all active floating error-texts
-        foreach (FloatingErrorText text in errorTextList) {
+        // updates location of all active floating texts
+        foreach (FloatingText text in errorTextList) {
+            if (text.IsActive()) {
+                text.UpdateFadeAndLocation();
+            }
+        }
+        foreach (FloatingText text in currencyTextList) {
             if (text.IsActive()) {
                 text.UpdateFadeAndLocation();
             }
@@ -212,16 +231,28 @@ public class Level : MonoBehaviour
     }
 
     // wrapper class used to manage the floating-error-text objects
-    public class FloatingErrorText {
-        private GameObject errorTextObject;     // reference to an instantiated text object from scene
-        private float fadeTime = 1f;            // seconds text will be visible
-        private float fadeDistance = 0.7f;      // distance text travels
+    public class FloatingText {
+        private GameObject floatingTextObject;  // reference to an instantiated text object from scene
+        private float fadeTime;                 // seconds text will be visible
+        private float fadeDistance = 0.6f;      // distance text travels
         private float timeRemaining;            // time until text is hidden
-        private bool isActive;
+        private bool isActive;                  // is this object currently visible?
+        private byte textType;                  // 1 = error text, 2 = currency text
 
         // constructor
-        public FloatingErrorText(GameObject errorTextObject) {
-            this.errorTextObject = errorTextObject;
+        public FloatingText(GameObject floatingTextObject, byte textType) {
+            this.floatingTextObject = floatingTextObject;
+            this.textType = textType;
+            
+            // error text
+            if (textType == 1) {
+                fadeTime = .8f;
+            }
+
+            // currency text
+            if (textType == 2) {
+                fadeTime = 1.4f;
+            }
         }
 
         // is the text currently shown
@@ -231,19 +262,24 @@ public class Level : MonoBehaviour
 
         // sets the text of the object
         public void SetText(string text) {
-            errorTextObject.GetComponent<Text>().text = text;
+            floatingTextObject.GetComponent<Text>().text = text;
+        }
+
+        // sets the color of the object
+        public void SetColor(Color color) {
+            floatingTextObject.GetComponent<Text>().color = color;
         }
 
         // hides the text of the object
         public void HideText() {
-            errorTextObject.GetComponent<CanvasGroup>().alpha = 0;
+            floatingTextObject.GetComponent<CanvasGroup>().alpha = 0;
         }
         
         // resets the starting location and timer for the object
-        public void SetupFadeCycle(Vector2 location) {
+        public void StartFadeCycle(Vector2 location) {
             timeRemaining = fadeTime;
-            errorTextObject.GetComponent<Text>().transform.position = location;
-            errorTextObject.GetComponent<CanvasGroup>().alpha = 1;
+            floatingTextObject.GetComponent<Text>().transform.position = location;
+            floatingTextObject.GetComponent<CanvasGroup>().alpha = 1;
             isActive = true;
         }
 
@@ -251,22 +287,26 @@ public class Level : MonoBehaviour
         public void UpdateFadeAndLocation() {
             
             // updates alpha
-            float currentAlpha = errorTextObject.GetComponent<CanvasGroup>().alpha;
+            float currentAlpha = floatingTextObject.GetComponent<CanvasGroup>().alpha;
             float newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
-            errorTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
+            floatingTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
 
-            // updates position
-            float currentY = errorTextObject.GetComponent<Text>().transform.position.y;
+            // updates position (floats upward)
+            float currentY = floatingTextObject.GetComponent<Text>().transform.position.y;
             float newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
-            Vector2 newPosition = new Vector2(errorTextObject.GetComponent<Text>().transform.position.x, newY);
-            errorTextObject.GetComponent<Text>().transform.position = newPosition;
+            Vector2 newPosition = new Vector2(floatingTextObject.GetComponent<Text>().transform.position.x, newY);
+            floatingTextObject.GetComponent<Text>().transform.position = newPosition;
             
             timeRemaining -= Time.deltaTime;
 
             if (timeRemaining <= 0) {
                 HideText();
                 isActive = false;
-                errorTextCount--;
+                
+                if (textType == 1)
+                    errorTextCount--;
+                else
+                    currencyTextCount--;
             }
         }
     }

@@ -77,6 +77,19 @@ public class buildingPlaceable : MonoBehaviour
                     upgradeViewer.transform.position = transform.position;
                 }
 
+                // this was disabled for now because it appears BEHIND the upgrade UI
+                
+                // // display -$123 floating currency text when upgrade is purchased
+                // if (Level.currencyTextCount < Level.CRNCY_TEXT_LIMIT) {
+                //     Level.currencyTextList[Level.nextCrncyIndex].SetText($"- ${upgradecost}");
+                //     Level.currencyTextList[Level.nextCrncyIndex].SetColor(Color.red);
+                //     Level.currencyTextList[Level.nextCrncyIndex].StartFadeCycle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                //     Level.currencyTextCount++;
+                //     Level.nextCrncyIndex++;
+                //     if (Level.nextCrncyIndex == Level.CRNCY_TEXT_LIMIT)
+                //         Level.nextCrncyIndex = 0;
+                // }
+
                 // Update star sprite
                 _upgradeSprite.sprite = _starSprites[timesUpgraded];
 
@@ -128,8 +141,19 @@ public class buildingPlaceable : MonoBehaviour
     }
     public void sell()
     {
-        Currency.amount = Currency.amount + (upgradecost - (upgradecost / 2));
+        Currency.amount = Currency.amount + (upgradecost / 2);
         Destroy(gameObject);
+
+        // display +$123 floating sell text
+        if (Level.currencyTextCount < Level.CRNCY_TEXT_LIMIT) {
+            Level.currencyTextList[Level.nextCrncyIndex].SetText($"+ ${(upgradecost/2)}");
+            Level.currencyTextList[Level.nextCrncyIndex].SetColor(new Color(0,0.3679245f,0.03581565f));
+            Level.currencyTextList[Level.nextCrncyIndex].StartFadeCycle(gameObject.transform.position);
+            Level.currencyTextCount++;
+            Level.nextCrncyIndex++;
+            if (Level.nextCrncyIndex == Level.CRNCY_TEXT_LIMIT)
+                Level.nextCrncyIndex = 0;
+        }
         
     }
     public void destroy()
