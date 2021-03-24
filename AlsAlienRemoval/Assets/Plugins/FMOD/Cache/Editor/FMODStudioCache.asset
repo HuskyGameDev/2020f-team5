@@ -64,6 +64,51 @@ MonoBehaviour:
   - {fileID: 2803792425063780492}
   IsStream: 0
   Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 800
+--- !u!114 &-8200184514116317515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Tower Build Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Tower Build Sound '
+  guid: 00382162b5f09045950a7c483e4dc8f4
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8103811307903311670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 3
+  guid: 67b0764fa1140b428a4e90c9b640dfe9
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
@@ -182,6 +227,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2538144
   Exists: 1
+--- !u!114 &-7156285464278673663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Main Start of Round '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Main Start of Round '
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7152813163252316531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +524,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5769814696276090342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 2
+  guid: db8e29400a9dcd4ca3ddad03a1e1fae3
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5617655213669421286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +562,50 @@ MonoBehaviour:
   guid: f24bcd07fadb4d4a9789876d7fb75eb1
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5570437259823557172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 6
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 6
+  guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5386365032929150245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 1
+  guid: f24bcd07fadb4d4a9789876d7fb75eb1
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -561,7 +695,7 @@ MonoBehaviour:
   Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Currency+Menu+Winning+Losing.bank
   Name: Currency+Menu+Winning+Losing
   StudioPath: bank:/Currency+Menu+Winning+Losing
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -636,6 +770,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4524378393611254214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 4
+  guid: ecece26656cd894291777d79e27994d4
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4472009629375368263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +809,51 @@ MonoBehaviour:
   guid: 4d58b126d7209d4b8695384975634f0f
   Banks:
   - {fileID: -4976712244370830485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4252459201818146811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 4
+  guid: 4782c65a516d2c4c98a0d0ae452a6b9c
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4139497679099037628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Main Start of Round '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Main Start of Round '
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -774,6 +976,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3442381751832891883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 2
+  guid: 28811a96c248224399eaa93ed250e055
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3318172708806208651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 2
+  guid: 28811a96c248224399eaa93ed250e055
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2963699230804810089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,12 +1036,34 @@ MonoBehaviour:
   Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 2538144
   Exists: 1
+--- !u!114 &-2942875899974511627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 2
+  guid: db8e29400a9dcd4ca3ddad03a1e1fae3
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2929806053508648667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,11 +1079,11 @@ MonoBehaviour:
   Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Tower.bank
   Name: Tower
   StudioPath: bank:/Tower
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 182368
+    Value: 188288
   Exists: 1
 --- !u!114 &-2874455803265098665
 MonoBehaviour:
@@ -1046,6 +1315,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2141155492521981246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 5
+  guid: 94f2c1221c567b4b85f41598f0861f28
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2028216410821723754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 5
+  guid: 94f2c1221c567b4b85f41598f0861f28
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1986665206717918799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,6 +1445,29 @@ MonoBehaviour:
   guid: f3812f220637884ca2b619b49d796850
   Banks:
   - {fileID: 2446625399533080449}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1425574190188727042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 1
+  guid: f24bcd07fadb4d4a9789876d7fb75eb1
+  Banks:
+  - {fileID: -2963699230804810089}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1391,6 +1728,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-703474067180611840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 2
+  guid: db8e29400a9dcd4ca3ddad03a1e1fae3
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-695037215009392536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,6 +1795,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 138880
   Exists: 1
+--- !u!114 &-322016275138148226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Start Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Start Sound
+  guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-247147641145023891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1532,20 +1914,6 @@ MonoBehaviour:
   - {fileID: 956683084839545895}
   - {fileID: -2563426938240501020}
   - {fileID: -6089689193820749189}
-  - {fileID: 7203065727373129392}
-  - {fileID: -1305490905948834898}
-  - {fileID: -2426895194149753702}
-  - {fileID: -5098998212149420851}
-  - {fileID: 1451817848428336238}
-  - {fileID: -3796470048300391718}
-  - {fileID: 41860319596290465}
-  - {fileID: -695037215009392536}
-  - {fileID: -8770118912741497255}
-  - {fileID: 1979010622047692638}
-  - {fileID: 6785546278485345722}
-  - {fileID: -4739276577786957257}
-  - {fileID: -2470488482299917963}
-  - {fileID: -5617655213669421286}
   - {fileID: -1058048132087714633}
   - {fileID: 7821676302061139415}
   - {fileID: -851805510837622271}
@@ -1562,12 +1930,26 @@ MonoBehaviour:
   - {fileID: -7889091150756362093}
   - {fileID: -8669299844104323045}
   - {fileID: -3918674322817120757}
+  - {fileID: 5286310989534534985}
+  - {fileID: -3318172708806208651}
+  - {fileID: 2591208182005828095}
+  - {fileID: 5770891613005221059}
+  - {fileID: -4252459201818146811}
+  - {fileID: 8055343457056175539}
+  - {fileID: -8103811307903311670}
+  - {fileID: 8266106836386199836}
+  - {fileID: -2028216410821723754}
+  - {fileID: -7156285464278673663}
+  - {fileID: 5117784106300358651}
+  - {fileID: -703474067180611840}
+  - {fileID: -4524378393611254214}
+  - {fileID: -1425574190188727042}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3509034309008523665}
   StringsBanks:
   - {fileID: 5966224893595897115}
-  stringsBankWriteTime: 637521172180000000
+  stringsBankWriteTime: 637521335340000000
   cacheVersion: 6
 --- !u!114 &41860319596290465
 MonoBehaviour:
@@ -1608,6 +1990,94 @@ MonoBehaviour:
   guid: 1fa7fab71c7a2041a8774803e03b1e32
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &93531666250553712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Start Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Start Sound
+  guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &234237500108695938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 5
+  guid: 32000a35f963274ebba3c8598ce6425b
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &297744440155707643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 4
+  guid: ecece26656cd894291777d79e27994d4
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &306289193987757052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 3
+  guid: 67b0764fa1140b428a4e90c9b640dfe9
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1723,6 +2193,28 @@ MonoBehaviour:
   guid: dca72091a816e542ba8e381e59c4772b
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &836292622984837418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Main Start of Round '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Main Start of Round '
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1914,6 +2406,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1426338233535902318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 3
+  guid: 35fad07e1ab2124892829b8e907217fd
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1451817848428336238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,6 +2444,28 @@ MonoBehaviour:
   guid: 4782c65a516d2c4c98a0d0ae452a6b9c
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1617722016947050101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 1
+  guid: 8d3945a5921f144a973382479e421c1a
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1959,7 +2495,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1149
+  Length: 400
 --- !u!114 &1713388746684713307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,6 +2655,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 211520
   Exists: 1
+--- !u!114 &2561877051794502287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 5
+  guid: 94f2c1221c567b4b85f41598f0861f28
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2589614948397031270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,6 +2693,29 @@ MonoBehaviour:
   guid: 688c15b3ca1c5647972a2dc68aedaa6d
   Banks:
   - {fileID: 2446625399533080449}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2591208182005828095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 5
+  guid: 32000a35f963274ebba3c8598ce6425b
+  Banks:
+  - {fileID: -2963699230804810089}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2180,11 +2761,11 @@ MonoBehaviour:
   Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Enemies.bank
   Name: Enemies
   StudioPath: bank:/Enemies
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 113056
+    Value: 112800
   Exists: 1
 --- !u!114 &2834301084715074387
 MonoBehaviour:
@@ -2202,6 +2783,50 @@ MonoBehaviour:
   guid: 50e70e3554778c4fb653a53b5548b397
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2838750441260005524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 3
+  guid: 67b0764fa1140b428a4e90c9b640dfe9
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2890915360842267097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 4
+  guid: 4782c65a516d2c4c98a0d0ae452a6b9c
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2248,7 +2873,7 @@ MonoBehaviour:
     Sounds.bank
   Name: Upgrade Sounds
   StudioPath: bank:/Upgrade Sounds
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2269,7 +2894,7 @@ MonoBehaviour:
   Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2291,6 +2916,28 @@ MonoBehaviour:
   guid: d75fcd73e4789d44bc4c99ec30010f9e
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3689844334188903149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Tower Build Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Tower Build Sound '
+  guid: 00382162b5f09045950a7c483e4dc8f4
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2344,6 +2991,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4432586894066014598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 3
+  guid: 35fad07e1ab2124892829b8e907217fd
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4501309470037884933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 4
+  guid: 4782c65a516d2c4c98a0d0ae452a6b9c
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4713027537398194904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,11 +3053,11 @@ MonoBehaviour:
   - {fileID: 2803792425063780492}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 1000
 --- !u!114 &4726786226851839220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2383,6 +3074,28 @@ MonoBehaviour:
   guid: 7a6eb5261d811c41b9b48101a8e3df95
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4756762291178893174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 4
+  guid: ecece26656cd894291777d79e27994d4
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2436,6 +3149,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5067091518484235771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 6
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 6
+  guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5117784106300358651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Start Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Start Sound
+  guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5262592813681975584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2452,6 +3210,29 @@ MonoBehaviour:
   guid: 97dc17d8b5ae444bae9c1e03f7318440
   Banks:
   - {fileID: -7180028034856955651}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5286310989534534985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Tower Build Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Tower Build Sound '
+  guid: 00382162b5f09045950a7c483e4dc8f4
+  Banks:
+  - {fileID: -2963699230804810089}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2549,6 +3330,51 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &5664747829110015223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 1
+  guid: f24bcd07fadb4d4a9789876d7fb75eb1
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5770891613005221059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 3
+  guid: 35fad07e1ab2124892829b8e907217fd
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5928784666880873086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,7 +3436,7 @@ MonoBehaviour:
   Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637521172180000000
+  lastModified: 637521335340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2632,6 +3458,28 @@ MonoBehaviour:
   guid: c824427d4830f847ac42f1a04c0d65a4
   Banks:
   - {fileID: -469882025432764053}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6362834496609915386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 1
+  guid: 8d3945a5921f144a973382479e421c1a
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3030,6 +3878,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7823017859094461111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 5
+  guid: 32000a35f963274ebba3c8598ce6425b
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8055343457056175539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 6
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 6
+  guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8105736915633254206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,11 +3941,11 @@ MonoBehaviour:
   - {fileID: 2803792425063780492}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 700
 --- !u!114 &8153403510444649774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,6 +3962,51 @@ MonoBehaviour:
   guid: 0ea2794230f968438c7a034e106e9eab
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8266106836386199836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 1
+  guid: 8d3945a5921f144a973382479e421c1a
+  Banks:
+  - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8489659037921481476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 2
+  guid: 28811a96c248224399eaa93ed250e055
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
