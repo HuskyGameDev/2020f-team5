@@ -11,17 +11,17 @@ using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour
 {
     // public game status variables
-    public int WaveNumber;               // global wave #
-    public static int EnemiesRemaining;         // global enemies remaining
-    public static int LivestockRemaining;       // global livestock remaining
-    public static int enemiesInSpawn;           // # of enemies within the spawn location
+    public int WaveNumber;                   // global wave #
+    public static int EnemiesRemaining;      // global enemies remaining
+    public static int LivestockRemaining;    // global livestock remaining
+    public static int enemiesInSpawn;        // # of enemies within the spawn location
 
-    public WaypointArea lastWaypointArea;   // Last waypoint in path. Contains cows
+    public WaypointArea lastWaypointArea;    // Last waypoint in path. Contains cows
     public WaypointArea spawnArea;           // Spawn point for enemies
 
-    public static bool showWaypoints;       // Show red dots at waypoint locations
-    public bool doDebugSpawning;            // Spawn random enemies for debug purposes
-    public Enemy DebugEnemy1;               // Pool of enemies for random spawning
+    public static bool showWaypoints;        // Show red dots at waypoint locations
+    public bool doDebugSpawning;             // Spawn random enemies for debug purposes
+    public Enemy DebugEnemy1;                // Pool of enemies for random spawning
     public Enemy DebugEnemy2;
     public Enemy DebugEnemy3;
     private Enemy[] _debugEnemies;
@@ -50,9 +50,15 @@ public class Level : MonoBehaviour
     public const int ERROR_TEXT_LIMIT = 10;             // maximum floating error-texts that can exist
     public const int CRNCY_TEXT_LIMIT = 5;              // maximum floating currency-texts that can exist
     public static FloatingText[] errorTextList;         // list of error-text wrapper objects
-    public static FloatingText[] currencyTextList;       // list of currency-text wrapper objects
+    public static FloatingText[] currencyTextList;      // list of currency-text wrapper objects
     public static int nextErrIndex = 0;                 // index of next available error text
     public static int nextCrncyIndex = 0;               // index of next available currency text
+
+    // cow pen boundaries (for cow movement)
+    public static float cowPenXmin;
+    public static float cowPenXmax;
+    public static float cowPenYmin;
+    public static float cowPenYmax;
 
     private Button _utilityButton;
 
@@ -105,7 +111,6 @@ public class Level : MonoBehaviour
             currencyTextList[i] = new FloatingText(newText, 2);
         }
 
-
         // Play music
         GetComponent<AudioSource>().Play();
     }
@@ -126,7 +131,9 @@ public class Level : MonoBehaviour
         Instantiate(enemyType, randomSpawnPoint, Quaternion.identity);
     }
 
+    // updates ones per frame
     private void Update() {
+
         // updates location of all active floating texts
         foreach (FloatingText text in errorTextList) {
             if (text.IsActive()) {
@@ -164,10 +171,12 @@ public class Level : MonoBehaviour
                 {
                     SceneManager.LoadScene("Win Screen");
                 }
-
                 WaveNumber++;
             }
-            
+        }
+        foreach (Cow cow in cowList) {
+            //Debug.Log("Running cow.RandomMovement() for a cow");
+            cow.RandomMovement();
         }
     }
 
@@ -181,8 +190,6 @@ public class Level : MonoBehaviour
             _waveInProgress = true;
             _spawningInProgress = true;
             _strengthLeftToSpawn = _waveStrengths[WaveNumber - 1];
-
-            Debug.Log($"WAVE {WaveNumber} BEGINS");
         }
     }
 
@@ -203,8 +210,6 @@ public class Level : MonoBehaviour
         // spawning complete
         if (_strengthLeftToSpawn <= 0)
             _spawningInProgress = false;
-
-        Debug.Log($"All enemies for wave {WaveNumber} have spawned");
     }
 
     // Spawn herd of cows in final waypoint to represent remaining livestock
@@ -218,13 +223,19 @@ public class Level : MonoBehaviour
         float areaWidth = collider.size.x;
         float areaHeight = collider.size.y;
 
+        // gets pen boundaries to setup cow movement
+        cowPenXmin = collider.bounds.center.x - (areaWidth / 2f) + .5f;
+        cowPenXmax = collider.bounds.center.x + (areaWidth / 2f) -.5f;
+        cowPenYmin = collider.bounds.center.y - (areaHeight / 2f) + .2f;
+        cowPenYmax = collider.bounds.center.y + (areaHeight / 2f) - .5f;
+
         // Spawn cows at randomized locations in final waypoint area
         for (int i = 0; i < LivestockRemaining; i++)
         {
             // Create a cow prefab at a random location
             Cow newCow = Instantiate(cowPrefab);
             newCow.transform.position = lastWaypointArea.transform.TransformPoint(new Vector2(Random.Range(-(areaWidth - 1) / 2, (areaWidth - 1) / 2), Random.Range(-(areaHeight - 1) / 2, (areaHeight - 1) / 2 - 1)));
-
+            
             // Add new cow to list
             cowList.Add(newCow);
         }
