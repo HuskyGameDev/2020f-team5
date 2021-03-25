@@ -528,7 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePosition: {fileID: 122637240633799433}
   towerPosition: {fileID: 2623971271211070187}
-  upgradeCost: 200
+  upgradeCost: 600
   fireRate: 1
   lineWidth: 0.125
   lineDuration: 0.25

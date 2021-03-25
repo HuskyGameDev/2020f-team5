@@ -10,14 +10,14 @@ public class buildingPlaceable : MonoBehaviour
     private int _triggerCount;  // Number of triggers this building is currently intersecting 
     public GameObject range;
     public int cost;
-    private int upgradecost = 200;
+    private int upgradecost = 120;
     public GameObject towerUI;
     private int timesUpgraded = 0;
     private SpriteRenderer _tileHighlight;
     int towerType;
     private bool beenPlaced = false;
     private bool toggleBool = false;
-
+    private string buttontext,upgradetext;
     public Sprite star1;
     public Sprite star2;
     public Sprite star3;
@@ -27,7 +27,7 @@ public class buildingPlaceable : MonoBehaviour
 
     void Start()
     {
-        upgradecost = cost * 2;
+        upgradecost = (int)(cost * 1.2);
         towerUI = GameObject.Find("TowerUI");
         towerUI.gameObject.SetActive(false);
         rangeSpriteRenderer = range.GetComponent<SpriteRenderer>();
@@ -95,7 +95,8 @@ public class buildingPlaceable : MonoBehaviour
 
                 Currency.amount = Currency.amount - upgradecost;
                 timesUpgraded = timesUpgraded + 1;
-                upgradecost = upgradecost * 2;
+                upgradecost = (int)(upgradecost * 1.2);
+
             }
         }
         

@@ -12,7 +12,7 @@ public class Currency : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        amount = 500;
+        amount = 1000;
         displayCurrency = amount.ToString() + "$";
         currencyText = GetComponent<Text>();
         currencyText.text = displayCurrency;

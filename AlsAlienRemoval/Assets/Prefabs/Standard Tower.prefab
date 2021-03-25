@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Upgrade:\n+Damage \n$200"
+  m_text: "Upgrade:\n+Damage \n$200\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -133,9 +133,9 @@ MonoBehaviour:
   m_margin: {x: 0.109009266, y: 0.09024811, z: 0.1401546, w: 0.10616076}
   m_textInfo:
     textComponent: {fileID: 1693581319096371574}
-    characterCount: 22
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 3
+    spaceCount: 4
     wordCount: 3
     linkCount: 0
     lineCount: 3
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePosition: {fileID: 122637240633799433}
   towerPosition: {fileID: 2623971271211070187}
-  upgradeCost: 200
+  upgradeCost: 120
   fireRate: 0.5
   lineWidth: 0.125
   lineDuration: 0.25

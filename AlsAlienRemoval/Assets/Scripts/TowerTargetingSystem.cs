@@ -329,7 +329,7 @@ public class TowerTargetingSystem : MonoBehaviour
                     towerDamage = towerDamage + 5;
                 }
                 timesUpgraded = timesUpgraded + 1;
-                upgradeCost = upgradeCost * 2;
+                upgradeCost = (int)(upgradeCost * 1.2);
                 if(timesUpgraded < 3)
                 {
                     if(timesUpgraded == 2 && towerType == 5)
