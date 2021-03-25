@@ -19,6 +19,12 @@ public class Enemy : MonoBehaviour
     private float lineWidth;
     private float lineDuration;
     private float towerDamage;
+    private float cascadeDecrease;
+    private int cascadeTimes;
+    private int cascadeCount;
+    private float cascadeRangeMin;
+    private float cascadeRangeMax;
+    private float slowDecrease;
     public Laser laser;
 
     // slow tower settings
@@ -107,6 +113,36 @@ public class Enemy : MonoBehaviour
         towerDamage = damage;
     }
 
+    void setCascadeDecrease(float decrease)
+    {
+        cascadeDecrease = decrease;
+    }
+
+    void setCascadeTimes(int times)
+    {
+        cascadeTimes = times;
+    }
+
+    void setCascadeCount(int count)
+    {
+        cascadeCount = count;
+    }
+
+    void setMinRangeCascade(float min)
+    {
+        cascadeRangeMin = min;
+    }
+
+    void setMaxRangeCascade(float max)
+    {
+        cascadeRangeMax = max;
+    }
+
+    void setDecrease(float decrease)
+    {
+        slowDecrease = decrease;
+    }
+
     void Splash()
     {
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
@@ -117,18 +153,102 @@ public class Enemy : MonoBehaviour
         float max = splashMaxRange * splashMaxRange;
         foreach (GameObject go in gos)
         {
-            Vector3 diff = go.transform.position - position;
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+            if (!(go.Equals(this.gameObject)))
             {
+                Vector3 diff = go.transform.position - position;
+                float curDistance = diff.sqrMagnitude;
+                if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+                {
+                    Laser drawLaser = Instantiate(laser);
+                    drawLaser.SendMessage("setStartPosition", this.transform.position);
+                    drawLaser.SendMessage("setEndPosition", go.transform.position);
+                    drawLaser.SendMessage("setColor", Color.red);
+                    drawLaser.SendMessage("setWidth", lineWidth);
+                    drawLaser.SendMessage("setDuration", lineDuration);
+                    drawLaser.SendMessage("draw");
+                    go.SendMessage("Hit", towerDamage);
+                }
+            }
+        }
+    }
+
+    void SplashIce()
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        Vector3 position = this.transform.position;
+
+        // calculate squared distances
+        float min = splashMinRange * splashMinRange;
+        float max = splashMaxRange * splashMaxRange;
+        foreach (GameObject go in gos)
+        {
+            if (!(go.Equals(this.gameObject)))
+            {
+                Vector3 diff = go.transform.position - position;
+                float curDistance = diff.sqrMagnitude;
+                if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+                {
+                    Laser drawLaser = Instantiate(laser);
+                    drawLaser.SendMessage("setStartPosition", this.transform.position);
+                    drawLaser.SendMessage("setEndPosition", go.transform.position);
+                    drawLaser.SendMessage("setColor", Color.cyan);
+                    drawLaser.SendMessage("setWidth", lineWidth);
+                    drawLaser.SendMessage("setDuration", lineDuration);
+                    drawLaser.SendMessage("draw");
+                    go.SendMessage("setSlowDuration", slowDuration);
+                    go.SendMessage("Slow", slowDecrease);
+                }
+            }
+        }
+    }
+
+    void Cascade()
+    {
+        if (cascadeCount < cascadeTimes)
+        {
+            GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+            GameObject target = null;
+            float distance = Mathf.Infinity;
+            Vector3 position = this.transform.position;
+
+            // calculate squared distances
+            float min = cascadeRangeMin * cascadeRangeMin;
+            float max = cascadeRangeMax * cascadeRangeMax;
+            foreach (GameObject go in gos)
+            {
+                if (!(go.Equals(this.gameObject)))
+                {
+                    Vector3 diff = go.transform.position - position;
+                    float curDistance = diff.sqrMagnitude;
+                    if (curDistance < distance && curDistance >= min && curDistance <= max)
+                    {
+                        target = go;
+                        distance = curDistance;
+                    }
+                }
+            }
+
+            if (target != null)
+            {
+                towerDamage = towerDamage * (1 - cascadeDecrease);
+                cascadeCount++;
                 Laser drawLaser = Instantiate(laser);
-                drawLaser.SendMessage("setStartPosition", this.transform.position);
-                drawLaser.SendMessage("setEndPosition", go.transform.position);
+                drawLaser.SendMessage("setStartPosition", position);
+                drawLaser.SendMessage("setEndPosition", target.transform.position);
                 drawLaser.SendMessage("setColor", Color.yellow);
                 drawLaser.SendMessage("setWidth", lineWidth);
                 drawLaser.SendMessage("setDuration", lineDuration);
                 drawLaser.SendMessage("draw");
-                go.SendMessage("Hit", towerDamage);
+                target.SendMessage("setCascadeDecrease", cascadeDecrease);
+                target.SendMessage("setCascadeTimes", cascadeTimes);
+                target.SendMessage("setLineWidth", lineWidth);
+                target.SendMessage("setLineDuration", lineDuration);
+                target.SendMessage("setTowerDamge", towerDamage);
+                target.SendMessage("setMinRangeCascade", cascadeRangeMin);
+                target.SendMessage("setMaxRangeCascade", cascadeRangeMax);
+                target.SendMessage("setCascadeCount", cascadeCount);
+                target.SendMessage("Cascade");
+                target.SendMessage("Hit", towerDamage);
             }
         }
     }

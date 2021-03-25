@@ -24,6 +24,10 @@ public class TowerTargetingSystem : MonoBehaviour
     private int timesUpgraded;
     public float splashMinRange;
     public float splashMaxRange;
+    public float cascadeDecrease;
+    public int cascadeTimes;
+    public float cascadeRangeMin;
+    public float cascadeRangeMax;
     public TMP_Text TargetText;
     public TMP_Text upgradeText;
     public TMP_Text sellText;
@@ -218,7 +222,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         Laser drawLaser = Instantiate(laser);
                         drawLaser.SendMessage("setStartPosition", firePosition.position);
                         drawLaser.SendMessage("setEndPosition", target.transform.position);
-                        drawLaser.SendMessage("setColor", Color.red);
+                        drawLaser.SendMessage("setColor", Color.green);
                         drawLaser.SendMessage("setWidth", lineWidth);
                         drawLaser.SendMessage("setDuration", lineDuration);
                         drawLaser.SendMessage("draw");
@@ -231,13 +235,26 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     if (target != null)
                     {
+                        int cascadeCount = 0;
                         Laser drawLaser = Instantiate(laser);
                         drawLaser.SendMessage("setStartPosition", firePosition.position);
                         drawLaser.SendMessage("setEndPosition", target.transform.position);
-                        drawLaser.SendMessage("setColor", Color.magenta);
+                        drawLaser.SendMessage("setColor", Color.yellow);
                         drawLaser.SendMessage("setWidth", lineWidth);
                         drawLaser.SendMessage("setDuration", lineDuration);
                         drawLaser.SendMessage("draw");
+                        if (timesUpgraded >= 3)
+                        {
+                            target.SendMessage("setCascadeDecrease", cascadeDecrease);
+                            target.SendMessage("setCascadeTimes", cascadeTimes);
+                            target.SendMessage("setLineWidth", lineWidth);
+                            target.SendMessage("setLineDuration", lineDuration);
+                            target.SendMessage("setTowerDamge", towerDamage);
+                            target.SendMessage("setMinRangeCascade", cascadeRangeMin);
+                            target.SendMessage("setMaxRangeCascade", cascadeRangeMax);
+                            target.SendMessage("setCascadeCount", cascadeCount);
+                            target.SendMessage("Cascade");
+                        }
                         target.SendMessage("Hit", towerDamage);
                         fireTimer = 0;
                         fireSoundSource.Play();
@@ -254,7 +271,16 @@ public class TowerTargetingSystem : MonoBehaviour
                         drawLaser.SendMessage("setWidth", lineWidth);
                         drawLaser.SendMessage("setDuration", lineDuration);
                         drawLaser.SendMessage("draw");
-                        target.SendMessage("setSlowDuration", towerSlowDuration);
+                        if (timesUpgraded >= 3)
+                        {
+                            target.SendMessage("setLineWidth", lineWidth);
+                            target.SendMessage("setLineDuration", lineDuration);
+                            target.SendMessage("setMinRange", splashMinRange);
+                            target.SendMessage("setMaxRange", splashMaxRange);
+                            target.SendMessage("setSlowDuration", towerSlowDuration);
+                            target.SendMessage("setDecrease", towerSpeedDecreasePercent);
+                            target.SendMessage("SplashIce");
+                        }
                         target.SendMessage("Slow", towerSpeedDecreasePercent);
                         fireTimer = 0;
                         fireSoundSource.Play();
@@ -267,7 +293,7 @@ public class TowerTargetingSystem : MonoBehaviour
                         Laser drawLaser = Instantiate(laser);
                         drawLaser.SendMessage("setStartPosition", firePosition.position);
                         drawLaser.SendMessage("setEndPosition", target.transform.position);
-                        drawLaser.SendMessage("setColor", Color.yellow);
+                        drawLaser.SendMessage("setColor", Color.red);
                         drawLaser.SendMessage("setWidth", lineWidth);
                         drawLaser.SendMessage("setDuration", lineDuration);
                         drawLaser.SendMessage("draw");
@@ -330,11 +356,21 @@ public class TowerTargetingSystem : MonoBehaviour
                 }
                 timesUpgraded = timesUpgraded + 1;
                 upgradeCost = (int)(upgradeCost * 1.2);
-                if(timesUpgraded < 3)
+                if (timesUpgraded < 3)
                 {
                     if(timesUpgraded == 2 && towerType == 5)
                     {
                         upgradeText.text = "Upgrade:\n+Damage\n+Triple Shot\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                    else if(timesUpgraded == 2 && towerType == 2)
+                    {
+                        upgradeText.text = "Upgrade:\n+Damage\n+Cascade\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                    else if(timesUpgraded == 2 && towerType == 3)
+                    {
+                        upgradeText.text = "Upgrade:\n+Duration\n+Splash\n$" + upgradeCost;
                         sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
                     }
                     else if(towerType == 3)

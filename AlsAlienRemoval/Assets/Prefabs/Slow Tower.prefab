@@ -797,7 +797,11 @@ MonoBehaviour:
   rangeMin: 0
   rangeMax: 2.5
   splashMinRange: 0
-  splashMaxRange: 0
+  splashMaxRange: 1
+  cascadeDecrease: 0
+  cascadeTimes: 0
+  cascadeRangeMin: 0
+  cascadeRangeMax: 0
   TargetText: {fileID: 6484418467402463997}
   upgradeText: {fileID: 4609089715416228902}
   sellText: {fileID: 621019491430372179}
