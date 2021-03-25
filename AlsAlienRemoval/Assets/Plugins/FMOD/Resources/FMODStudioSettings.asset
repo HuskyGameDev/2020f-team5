@@ -456,10 +456,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team
-    5 FMOD/Team 5 FMOD.fspro
-  sourceBankPath: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team
-    5 FMOD/Build
+  sourceProjectPath: ../Team 5 FMOD/Team 5 FMOD.fspro
+  sourceBankPath: ../Team 5 FMOD/Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -478,8 +476,14 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Currency+Menu+Winning+Losing
+  - Enemies
+  - Music
+  - Tower
+  - Upgrade Sounds
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

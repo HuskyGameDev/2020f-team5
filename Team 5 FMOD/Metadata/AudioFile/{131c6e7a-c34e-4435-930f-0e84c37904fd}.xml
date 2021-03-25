@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{131c6e7a-c34e-4435-930f-0e84c37904fd}">
+		<property name="assetPath">
+			<value>Music/Team 5 Main Start of Round .wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.8979591836734695</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{032d3d8a-3369-4eda-b959-66aefef7c084}</destination>
+		</relationship>
+	</object>
+</objects>

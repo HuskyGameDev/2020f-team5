@@ -1,5 +1,70 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9181408516188868748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Currency Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Currency Sound
+  guid: 1d91d92c65a87544abb93240ad4364fe
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-9043111423873983631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Winning Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Winning Sound
+  guid: c824427d4830f847ac42f1a04c0d65a4
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8848701931381661832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8770118912741497255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,6 +81,29 @@ MonoBehaviour:
   guid: 94f2c1221c567b4b85f41598f0861f28
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8712325306288339123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 2
+  guid: db8e29400a9dcd4ca3ddad03a1e1fae3
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -46,6 +134,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8627543081424378129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 2
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 2
+  guid: d41f0db249d3d54cac657f3c895d3127
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-8415665749518282371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 4
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 4
+  guid: f3812f220637884ca2b619b49d796850
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8326839991448134591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +203,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 800
+--- !u!114 &-8245291776109712810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 5
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 5
+  guid: 50e70e3554778c4fb653a53b5548b397
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8200184514116317515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +294,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8022447042815488927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Enemies.bank
+  Name: Enemies
+  StudioPath: bank:/Enemies
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 112800
+  Exists: 1
+--- !u!114 &-7972077903715078342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Death Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Death Sound
+  guid: 1fa7fab71c7a2041a8774803e03b1e32
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7889091150756362093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +384,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7614110623970671864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 7
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 7
+  guid: 56df7806a891e64aafdf784db25de1be
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7533407925614876772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 2
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 2
+  guid: d41f0db249d3d54cac657f3c895d3127
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
 --- !u!114 &-7400230028880208073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +446,75 @@ MonoBehaviour:
   guid: 53e7d06c0efa144ab5090c91335c759a
   Banks:
   - {fileID: 2803792425063780492}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7330376181924693665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/No Money Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/No Money Sound '
+  guid: dc3f219efbca53479a3775396d6e9858
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7276848683593027949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 7
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 7
+  guid: 56df7806a891e64aafdf784db25de1be
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7253060378272751052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Impact Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Impact Sound
+  guid: cdeb8e84b86d844cbef6a401f92908c0
+  Banks:
+  - {fileID: -8022447042815488927}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -273,6 +589,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 330
+--- !u!114 &-6955506089725544407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 4
+  guid: 4782c65a516d2c4c98a0d0ae452a6b9c
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-6810177487697461817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +704,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6633792187360310874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Splash Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Splash Tower
+  guid: 616f9034d1b1244997b0b68cfc0f41dc
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-6378477763556920890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +748,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 126848
   Exists: 1
+--- !u!114 &-6364824234035705196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ice Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Ice Tower
+  guid: 688c15b3ca1c5647972a2dc68aedaa6d
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-6274399351625180406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +787,75 @@ MonoBehaviour:
   guid: d41f0db249d3d54cac657f3c895d3127
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6176034882080702564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 5
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 5
+  guid: 0ea2794230f968438c7a034e106e9eab
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6112794007571949637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 2
+  guid: 28811a96c248224399eaa93ed250e055
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6095541002652913594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Impact Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Impact Sound
+  guid: dca72091a816e542ba8e381e59c4772b
+  Banks:
+  - {fileID: -8022447042815488927}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -501,6 +955,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5852087358199433443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 6
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 6
+  guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5786555174690666067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +1023,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5764851880780412286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower
+  guid: 2c9659a07e194848866af1a20cf19ea5
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5617655213669421286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +1069,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5575990869189473971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Slushie Death Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Slushie Death Sound '
+  guid: 7a6eb5261d811c41b9b48101a8e3df95
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5570437259823557172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,6 +1107,98 @@ MonoBehaviour:
   Path: event:/Team 5 Level Theme Part 6
   guid: 61f293cc1d5fad42a2a76cc3c41c6885
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5556620117203457008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 6
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 6
+  guid: 53e7d06c0efa144ab5090c91335c759a
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5504663688715868222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Reverse Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Reverse Tower
+  guid: 35bb86d72b7a014eba923c722bd7d5bb
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5430428958394569244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hypno Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Hypno Tower
+  guid: aa639876c0a8b44b81f0e9bc269635d5
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
+--- !u!114 &-5427506034228624706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade 2
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade 2
+  guid: 36ce3f656399664e8ce2cf6bac87eea0
+  Banks:
+  - {fileID: 3890873301950397435}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -657,6 +1272,75 @@ MonoBehaviour:
   - Name: Desktop
     Value: 110528
   Exists: 1
+--- !u!114 &-5141341935159375263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 3
+  guid: 35fad07e1ab2124892829b8e907217fd
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5121355761671810739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 3
+  guid: 67b0764fa1140b428a4e90c9b640dfe9
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5117563435948673010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sheep Abduction Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Sheep Abduction Sound
+  guid: 4d58b126d7209d4b8695384975634f0f
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5098998212149420851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,6 +1385,75 @@ MonoBehaviour:
   - Name: Desktop
     Value: 138880
   Exists: 1
+--- !u!114 &-4960764716324179840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Impact Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Impact Sound
+  guid: dca72091a816e542ba8e381e59c4772b
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4833680655021844695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade Sound
+  guid: 969e2b19737a374abe960e9730ae0418
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4815929699184504299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 2
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 2
+  guid: 7a250469bc2f9345acda2c55c011f403
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 800
 --- !u!114 &-4739276577786957257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,6 +1470,29 @@ MonoBehaviour:
   guid: db8e29400a9dcd4ca3ddad03a1e1fae3
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4678421093899503091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 3
+  guid: 35fad07e1ab2124892829b8e907217fd
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -747,6 +1523,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4593497207622419089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade 1
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade 1
+  guid: 10068e40bf88664db1c0190347b9e0b8
+  Banks:
+  - {fileID: 3890873301950397435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4540741899783936634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 637522857010000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2538144
+  Exists: 1
 --- !u!114 &-4531554680517736537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +1636,71 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4274578625990705556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade 3
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade 3
+  guid: e3e876e7ca42e045a463fe3d58359790
+  Banks:
+  - {fileID: 3890873301950397435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4262766940070500509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 637522857010000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4260574213069848952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 2
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 2
+  guid: 7a250469bc2f9345acda2c55c011f403
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 800
 --- !u!114 &-4252459201818146811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +1717,52 @@ MonoBehaviour:
   guid: 4782c65a516d2c4c98a0d0ae452a6b9c
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4170822350414936501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Electric Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Electric Tower
+  guid: d486bbbeaaaf654fbb3915c325134eaa
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
+--- !u!114 &-4151187168105377626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 3
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 3
+  guid: 4cc8454e3053b94289e5581b5ccdfbf8
+  Banks:
+  - {fileID: -155896850336009671}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -861,6 +1792,48 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4096679846139085431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower 2
+  guid: d661f18afda57b439dbacbf85810bcd5
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4064518200287691831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Tower.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Tower.bank
+  Name: Tower
+  StudioPath: bank:/Tower
+  lastModified: 637522857010000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4030641909038499485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,6 +1903,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3878991230634476230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 4
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 4
+  guid: cae65fbf306dc1429c06e07d560a6367
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3796470048300391718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +1949,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3782117769818859957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 4
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 4
+  guid: e62cedda3176ef478915bdeeb5863d35
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3703082067092351291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 4
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 4
+  guid: d621598d66c9624795a35ece70acda34
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 700
 --- !u!114 &-3682656549578075512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,6 +2018,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3487125519683751356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hypno Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Hypno Tower
+  guid: aa639876c0a8b44b81f0e9bc269635d5
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
 --- !u!114 &-3442381751832891883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +2056,52 @@ MonoBehaviour:
   Path: event:/Team 5 Menu Theme Part 2
   guid: 28811a96c248224399eaa93ed250e055
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3407628058976016896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 4
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 4
+  guid: d621598d66c9624795a35ece70acda34
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 700
+--- !u!114 &-3331806695444499219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Splash Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Splash Tower
+  guid: 616f9034d1b1244997b0b68cfc0f41dc
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1014,6 +2125,29 @@ MonoBehaviour:
   guid: 28811a96c248224399eaa93ed250e055
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2990184997030102291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sell Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Sell Sound
+  guid: 74c90395fa7dda44aaf11d637068590e
+  Banks:
+  - {fileID: 1262872454053097801}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1085,6 +2219,52 @@ MonoBehaviour:
   - Name: Desktop
     Value: 188288
   Exists: 1
+--- !u!114 &-2925911995697201971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 1
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 1
+  guid: 6d01e944f2022d4ab9ee404d2709bf3b
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 330
+--- !u!114 &-2901393674083757765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cow Abduction Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Cow Abduction Sound
+  guid: fe756b1a8c2a3348b5aa7934f67701bb
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2874455803265098665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,6 +2563,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-1853500338847200245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Bob Death Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Bob Death Sound '
+  guid: bf3aaca53a1b5f42aa192af0cd838fc5
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1846044380362317252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 1
+  guid: 8d3945a5921f144a973382479e421c1a
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1825659711664692160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,6 +2632,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-1772668708179423087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 1
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 1
+  guid: 6d01e944f2022d4ab9ee404d2709bf3b
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 330
 --- !u!114 &-1713450030046229664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1422,6 +2671,29 @@ MonoBehaviour:
   guid: cae65fbf306dc1429c06e07d560a6367
   Banks:
   - {fileID: 2803792425063780492}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1657449514123076014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Losing Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Losing Sound
+  guid: 76c3a70e7c057742b82a31bf23eef47c
+  Banks:
+  - {fileID: 6652849717796275491}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1452,6 +2724,73 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-1514196326132081795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 4
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 4
+  guid: e62cedda3176ef478915bdeeb5863d35
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1497703413783691908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 3
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 3
+  guid: 66f68fa377e5c240b606f21104ea9b25
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1484501844000934478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3600
+  Exists: 1
 --- !u!114 &-1425574190188727042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +2807,98 @@ MonoBehaviour:
   guid: f24bcd07fadb4d4a9789876d7fb75eb1
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1398539349965316982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 4
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 4
+  guid: cae65fbf306dc1429c06e07d560a6367
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1387559951073023891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 2
+  guid: 6d661032c2dedd4fb5439e1db9a03bfd
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1328858034674385882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Laser Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Laser Tower
+  guid: 4626132512b201498069dfb9b4feb134
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1313107244753436837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Tower Build Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Tower Build Sound '
+  guid: 00382162b5f09045950a7c483e4dc8f4
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1728,6 +3159,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-778110037588986117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Reverse Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Reverse Tower
+  guid: 35bb86d72b7a014eba923c722bd7d5bb
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-703474067180611840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1774,6 +3228,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-595591421046010875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 3
+  guid: 67b0764fa1140b428a4e90c9b640dfe9
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-469882025432764053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,6 +3272,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 138880
   Exists: 1
+--- !u!114 &-382680523127569908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 5
+  guid: 32000a35f963274ebba3c8598ce6425b
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-322016275138148226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1861,6 +3361,27 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3556
   Exists: 1
+--- !u!114 &-155896850336009671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Tower.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Tower.bank
+  Name: Tower
+  StudioPath: bank:/Tower
+  lastModified: 637522857010000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 188288
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,82 +3395,82 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 5966224893595897115}
-  - {fileID: -4976712244370830485}
-  - {fileID: 2803792425063780492}
-  - {fileID: 3509034309008523665}
-  - {fileID: -2963699230804810089}
-  - {fileID: -2929806053508648667}
-  - {fileID: 3145186118813374370}
+  - {fileID: 5696052316917819930}
+  - {fileID: 6652849717796275491}
+  - {fileID: 6525055542581061696}
+  - {fileID: -8848701931381661832}
+  - {fileID: -4262766940070500509}
+  - {fileID: -4064518200287691831}
+  - {fileID: 3890873301950397435}
   EditorEvents:
-  - {fileID: -4531554680517736537}
-  - {fileID: -4472009629375368263}
-  - {fileID: 2288187394556464642}
-  - {fileID: -5920593908475301817}
-  - {fileID: -1986665206717918799}
-  - {fileID: -1109298745585641786}
-  - {fileID: -2326439920368548054}
-  - {fileID: -7632805442359954049}
-  - {fileID: 3953653391729335672}
-  - {fileID: 5375476848328682641}
-  - {fileID: -5786555174690666067}
-  - {fileID: -844196149720972269}
-  - {fileID: -6810177487697461817}
-  - {fileID: -6785758595578733274}
-  - {fileID: -1098723347264096463}
-  - {fileID: -7400230028880208073}
-  - {fileID: -4030641909038499485}
-  - {fileID: -1034738592326498048}
-  - {fileID: -7152813163252316531}
-  - {fileID: -8326839991448134591}
-  - {fileID: 2157766943418235021}
-  - {fileID: -3682656549578075512}
-  - {fileID: 1022653639044546014}
-  - {fileID: -6716125323547368264}
-  - {fileID: -1713450030046229664}
-  - {fileID: -8041797327254871839}
-  - {fileID: 4713027537398194904}
-  - {fileID: 8105736915633254206}
-  - {fileID: 1372101616023275444}
-  - {fileID: 956683084839545895}
-  - {fileID: -2563426938240501020}
-  - {fileID: -6089689193820749189}
-  - {fileID: -1058048132087714633}
-  - {fileID: 7821676302061139415}
-  - {fileID: -851805510837622271}
-  - {fileID: 6678523478291889934}
-  - {fileID: 4186682059749833062}
-  - {fileID: 5928784666880873086}
-  - {fileID: 4922026210386110833}
-  - {fileID: 8974602386018946022}
-  - {fileID: 1709156076144622273}
-  - {fileID: 7617050341978337650}
-  - {fileID: -2417681933486129233}
-  - {fileID: 7701260814192028182}
-  - {fileID: 7079349087699999263}
-  - {fileID: -7889091150756362093}
-  - {fileID: -8669299844104323045}
-  - {fileID: -3918674322817120757}
-  - {fileID: 5286310989534534985}
-  - {fileID: -3318172708806208651}
-  - {fileID: 2591208182005828095}
-  - {fileID: 5770891613005221059}
-  - {fileID: -4252459201818146811}
-  - {fileID: 8055343457056175539}
-  - {fileID: -8103811307903311670}
-  - {fileID: 8266106836386199836}
-  - {fileID: -2028216410821723754}
-  - {fileID: -7156285464278673663}
-  - {fileID: 5117784106300358651}
-  - {fileID: -703474067180611840}
-  - {fileID: -4524378393611254214}
-  - {fileID: -1425574190188727042}
+  - {fileID: 4623487884810507640}
+  - {fileID: 6656441969525117077}
+  - {fileID: 734544979389306043}
+  - {fileID: -1657449514123076014}
+  - {fileID: 312557561888098575}
+  - {fileID: 5862260345296875114}
+  - {fileID: 3211466955903435248}
+  - {fileID: -7330376181924693665}
+  - {fileID: -2901393674083757765}
+  - {fileID: -6176034882080702564}
+  - {fileID: 45954076199303640}
+  - {fileID: -7972077903715078342}
+  - {fileID: 6839470395043012423}
+  - {fileID: 681823828064498484}
+  - {fileID: 8511338049557644706}
+  - {fileID: 721095072255551179}
+  - {fileID: -7614110623970671864}
+  - {fileID: -1497703413783691908}
+  - {fileID: -1772668708179423087}
+  - {fileID: -4815929699184504299}
+  - {fileID: 6174610956657253705}
+  - {fileID: 6579090669431728713}
+  - {fileID: -1853500338847200245}
+  - {fileID: 2360254004245847175}
+  - {fileID: -1398539349965316982}
+  - {fileID: 2710477542062125962}
+  - {fileID: -8627543081424378129}
+  - {fileID: -3407628058976016896}
+  - {fileID: 1515023863329877216}
+  - {fileID: -4960764716324179840}
+  - {fileID: -1514196326132081795}
+  - {fileID: 265473132812136619}
+  - {fileID: -1313107244753436837}
+  - {fileID: 3473510212851420736}
+  - {fileID: 5883575738478358606}
+  - {fileID: -4678421093899503091}
+  - {fileID: -6955506089725544407}
+  - {fileID: -5852087358199433443}
+  - {fileID: -595591421046010875}
+  - {fileID: -1846044380362317252}
+  - {fileID: 4524354608419591875}
+  - {fileID: 8844900863299215511}
+  - {fileID: 3090051922654879439}
+  - {fileID: -8712325306288339123}
+  - {fileID: 773577328796839351}
+  - {fileID: 4028977176883374034}
+  - {fileID: 8072815836948550489}
+  - {fileID: -5504663688715868222}
+  - {fileID: 6307064830302582174}
+  - {fileID: 4257772670371852562}
+  - {fileID: 1583368594888892736}
+  - {fileID: -3331806695444499219}
+  - {fileID: 6124089310055724225}
+  - {fileID: -1387559951073023891}
+  - {fileID: -3487125519683751356}
+  - {fileID: 964171692270231772}
+  - {fileID: 1316916684266336818}
+  - {fileID: -4096679846139085431}
+  - {fileID: -8415665749518282371}
+  - {fileID: -4593497207622419089}
+  - {fileID: -5427506034228624706}
+  - {fileID: -4274578625990705556}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3509034309008523665}
+  - {fileID: -8848701931381661832}
   StringsBanks:
-  - {fileID: 5966224893595897115}
-  stringsBankWriteTime: 637521335340000000
+  - {fileID: 5696052316917819930}
+  stringsBankWriteTime: 637522856980000000
   cacheVersion: 6
 --- !u!114 &41860319596290465
 MonoBehaviour:
@@ -1967,6 +3488,29 @@ MonoBehaviour:
   guid: 67b0764fa1140b428a4e90c9b640dfe9
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &45954076199303640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 3
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 3
+  guid: 1862218fad77ba479e2d36835e06aa32
+  Banks:
+  - {fileID: 6525055542581061696}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2041,6 +3585,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &265473132812136619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 1
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 1
+  guid: f372b373f88fd640be0155b439a206e0
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &297744440155707643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +3645,52 @@ MonoBehaviour:
   Path: event:/Team 5 Level Theme Part 3
   guid: 67b0764fa1140b428a4e90c9b640dfe9
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &312557561888098575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade Sound
+  guid: 969e2b19737a374abe960e9730ae0418
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &352037908741855758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 4
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 4
+  guid: f3812f220637884ca2b619b49d796850
+  Banks:
+  - {fileID: -155896850336009671}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2170,6 +3783,144 @@ MonoBehaviour:
   guid: 36ce3f656399664e8ce2cf6bac87eea0
   Banks:
   - {fileID: -6378477763556920890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &681823828064498484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 1
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 1
+  guid: 2678caaeab6b8d46ac5088afb78a7d28
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &721095072255551179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 6
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 6
+  guid: 53e7d06c0efa144ab5090c91335c759a
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &722884915920981141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Click
+  guid: b8f4fa9894d51c448eba393978838734
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &732683516764521106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 5
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 5
+  guid: 0ea2794230f968438c7a034e106e9eab
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &734544979389306043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sell Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Sell Sound
+  guid: 74c90395fa7dda44aaf11d637068590e
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &773577328796839351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 4
+  guid: ecece26656cd894291777d79e27994d4
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2314,6 +4065,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &964171692270231772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Tower
+  guid: b6bae771ca4bce4ba2675a0262de4dec
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1022653639044546014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2383,6 +4157,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1262872454053097801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Currency+Menu+Winning+Losing.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Currency+Menu+Winning+Losing.bank
+  Name: Currency+Menu+Winning+Losing
+  StudioPath: bank:/Currency+Menu+Winning+Losing
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 138880
+  Exists: 1
+--- !u!114 &1316916684266336818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Electric Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Electric Tower
+  guid: d486bbbeaaaf654fbb3915c325134eaa
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
 --- !u!114 &1372101616023275444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,6 +4269,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1515023863329877216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 3
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 3
+  guid: d75fcd73e4789d44bc4c99ec30010f9e
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1583368594888892736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 1
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 1
+  guid: 531ef469fab2fe46bc14ee0b6de46f09
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1617722016947050101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2512,6 +4376,75 @@ MonoBehaviour:
   guid: 10068e40bf88664db1c0190347b9e0b8
   Banks:
   - {fileID: -6378477763556920890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1778358305156481987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/No Money Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/No Money Sound '
+  guid: dc3f219efbca53479a3775396d6e9858
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1827191315186911969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade 3
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade 3
+  guid: e3e876e7ca42e045a463fe3d58359790
+  Banks:
+  - {fileID: 7824264726361742461}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1940531817939066263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Start Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Start Sound
+  guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks:
+  - {fileID: -4540741899783936634}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2634,6 +4567,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2360254004245847175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Slushie Impact Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Slushie Impact Sound '
+  guid: c3dee57317239e4ea640e91d90adc7dd
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2446625399533080449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,6 +4611,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 211520
   Exists: 1
+--- !u!114 &2544163374641906932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 2
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 2
+  guid: 23d56f29fe154b4f8bed1984accc5d5d
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2561877051794502287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,6 +4702,98 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2613368412753964204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 2
+  guid: 6d661032c2dedd4fb5439e1db9a03bfd
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2642932432434216396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Losing Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Losing Sound
+  guid: 76c3a70e7c057742b82a31bf23eef47c
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2691165097314947566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 2
+  guid: db8e29400a9dcd4ca3ddad03a1e1fae3
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2710477542062125962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Impact Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Impact Sound
+  guid: cdeb8e84b86d844cbef6a401f92908c0
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2716801027234533382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,6 +4838,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 112800
   Exists: 1
+--- !u!114 &2809041785791291825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 1
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 1
+  guid: 531ef469fab2fe46bc14ee0b6de46f09
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2834301084715074387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,6 +4951,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3090051922654879439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Start Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Start Sound
+  guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3145186118813374370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2879,6 +4996,98 @@ MonoBehaviour:
   - Name: Desktop
     Value: 126848
   Exists: 1
+--- !u!114 &3211466955903435248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Winning Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Winning Sound
+  guid: c824427d4830f847ac42f1a04c0d65a4
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3228796989965537858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 4
+  guid: 4782c65a516d2c4c98a0d0ae452a6b9c
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3473510212851420736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 2
+  guid: 28811a96c248224399eaa93ed250e055
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3474144835932736274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 5
+  guid: 94f2c1221c567b4b85f41598f0861f28
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3509034309008523665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2900,6 +5109,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &3552695296718393342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 6
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 6
+  guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3585010263011899040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2923,6 +5155,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3661196609165040496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Tower Build Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Tower Build Sound '
+  guid: 00382162b5f09045950a7c483e4dc8f4
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3689844334188903149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2938,6 +5193,48 @@ MonoBehaviour:
   Path: 'event:/Team 5 Tower Build Sound '
   guid: 00382162b5f09045950a7c483e4dc8f4
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3890873301950397435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Upgrade Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Upgrade Sounds.bank
+  Name: Upgrade Sounds
+  StudioPath: bank:/Upgrade Sounds
+  lastModified: 637522857010000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3940840231894178675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 1
+  guid: 8d3945a5921f144a973382479e421c1a
+  Banks:
+  - {fileID: -4540741899783936634}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2968,6 +5265,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4028977176883374034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 1
+  guid: f24bcd07fadb4d4a9789876d7fb75eb1
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4146427211834581358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower 2
+  guid: d661f18afda57b439dbacbf85810bcd5
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4186682059749833062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2984,6 +5327,52 @@ MonoBehaviour:
   guid: 531ef469fab2fe46bc14ee0b6de46f09
   Banks:
   - {fileID: -2929806053508648667}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4257772670371852562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 3
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 3
+  guid: 4cc8454e3053b94289e5581b5ccdfbf8
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4399361220049264741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 1
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 1
+  guid: 2678caaeab6b8d46ac5088afb78a7d28
+  Banks:
+  - {fileID: -8022447042815488927}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3013,6 +5402,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4445795129026643372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cow Abduction Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Cow Abduction Sound
+  guid: fe756b1a8c2a3348b5aa7934f67701bb
+  Banks:
+  - {fileID: 1262872454053097801}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4501309470037884933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3028,6 +5440,52 @@ MonoBehaviour:
   Path: event:/Team 5 Level Theme Part 4
   guid: 4782c65a516d2c4c98a0d0ae452a6b9c
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4524354608419591875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 5
+  guid: 94f2c1221c567b4b85f41598f0861f28
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4623487884810507640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Currency Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Currency Sound
+  guid: 1d91d92c65a87544abb93240ad4364fe
+  Banks:
+  - {fileID: 6652849717796275491}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3194,6 +5652,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5124275070501380078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sounds
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sounds
+  guid: a2d1a3d97dc8c744804c35d3c0ec9085
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5262592813681975584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3286,6 +5767,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5433165138683433144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Main Start of Round '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Main Start of Round '
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5452362246199802989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade 1
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade 1
+  guid: 10068e40bf88664db1c0190347b9e0b8
+  Banks:
+  - {fileID: 7824264726361742461}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5470194944216441613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3352,6 +5879,27 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5696052316917819930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3600
+  Exists: 1
 --- !u!114 &5770891613005221059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3368,6 +5916,75 @@ MonoBehaviour:
   guid: 35fad07e1ab2124892829b8e907217fd
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5862260345296875114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Click
+  guid: b8f4fa9894d51c448eba393978838734
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5880280207919912085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Tower
+  guid: b6bae771ca4bce4ba2675a0262de4dec
+  Banks:
+  - {fileID: -155896850336009671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5883575738478358606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 5
+  guid: 32000a35f963274ebba3c8598ce6425b
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3442,6 +6059,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3600
   Exists: 1
+--- !u!114 &6001795065302986946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 3
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 3
+  guid: d75fcd73e4789d44bc4c99ec30010f9e
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6048046675955304637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3465,6 +6105,75 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6124089310055724225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ice Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Ice Tower
+  guid: 688c15b3ca1c5647972a2dc68aedaa6d
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6174610956657253705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Slushie Death Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Slushie Death Sound '
+  guid: 7a6eb5261d811c41b9b48101a8e3df95
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6307064830302582174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Laser Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Laser Tower
+  guid: 4626132512b201498069dfb9b4feb134
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6362834496609915386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3480,6 +6189,29 @@ MonoBehaviour:
   Path: event:/Team 5 Menu Theme Part 1
   guid: 8d3945a5921f144a973382479e421c1a
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6387738616239603050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Death Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Death Sound
+  guid: 1fa7fab71c7a2041a8774803e03b1e32
+  Banks:
+  - {fileID: -8022447042815488927}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3510,6 +6242,90 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6525055542581061696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Enemies.bank
+  Name: Enemies
+  StudioPath: bank:/Enemies
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6579090669431728713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sounds
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sounds
+  guid: a2d1a3d97dc8c744804c35d3c0ec9085
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6652849717796275491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Currency+Menu+Winning+Losing.bank
+  m_EditorClassIdentifier: 
+  Path: ../Team 5 FMOD/Build/Desktop/Currency+Menu+Winning+Losing.bank
+  Name: Currency+Menu+Winning+Losing
+  StudioPath: bank:/Currency+Menu+Winning+Losing
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6656441969525117077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sheep Abduction Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Sheep Abduction Sound
+  guid: 4d58b126d7209d4b8695384975634f0f
+  Banks:
+  - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6678523478291889934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3526,6 +6342,29 @@ MonoBehaviour:
   guid: 4cc8454e3053b94289e5581b5ccdfbf8
   Banks:
   - {fileID: -2929806053508648667}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6680200134891607786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Slushie Impact Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Slushie Impact Sound '
+  guid: c3dee57317239e4ea640e91d90adc7dd
+  Banks:
+  - {fileID: -8022447042815488927}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3602,6 +6441,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6810647066675532188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 3
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 3
+  guid: 66f68fa377e5c240b606f21104ea9b25
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6829211942841913620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3625,6 +6487,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6839470395043012423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 2
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 2
+  guid: 23d56f29fe154b4f8bed1984accc5d5d
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6927944789176223676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3641,6 +6526,29 @@ MonoBehaviour:
   guid: 616f9034d1b1244997b0b68cfc0f41dc
   Banks:
   - {fileID: 2446625399533080449}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6934594107075212338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slushie Movement 1
+  m_EditorClassIdentifier: 
+  Path: event:/Slushie Movement 1
+  guid: f372b373f88fd640be0155b439a206e0
+  Banks:
+  - {fileID: -8022447042815488927}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3786,6 +6694,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7547581333377630672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrade 2
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrade 2
+  guid: 36ce3f656399664e8ce2cf6bac87eea0
+  Banks:
+  - {fileID: 7824264726361742461}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7617050341978337650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3900,6 +6831,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7824264726361742461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Upgrade Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Upgrade
+    Sounds.bank
+  Name: Upgrade Sounds
+  StudioPath: bank:/Upgrade Sounds
+  lastModified: 637522857010000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 126848
+  Exists: 1
+--- !u!114 &7835574702516648761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 1
+  guid: f24bcd07fadb4d4a9789876d7fb75eb1
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8055343457056175539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3916,6 +6892,29 @@ MonoBehaviour:
   guid: 61f293cc1d5fad42a2a76cc3c41c6885
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8072815836948550489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower
+  guid: 2c9659a07e194848866af1a20cf19ea5
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3969,6 +6968,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &8188102098982677231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 3
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 3
+  guid: 1862218fad77ba479e2d36835e06aa32
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8266106836386199836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3992,6 +7014,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &8370522909903997488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 4
+  guid: ecece26656cd894291777d79e27994d4
+  Banks:
+  - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8489659037921481476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4007,6 +7052,96 @@ MonoBehaviour:
   Path: event:/Team 5 Menu Theme Part 2
   guid: 28811a96c248224399eaa93ed250e055
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8511338049557644706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Peanut Movement Sound 5
+  m_EditorClassIdentifier: 
+  Path: event:/Peanut Movement Sound 5
+  guid: 50e70e3554778c4fb653a53b5548b397
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8570384745403363400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Bob Death Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Bob Death Sound '
+  guid: bf3aaca53a1b5f42aa192af0cd838fc5
+  Banks:
+  - {fileID: -8022447042815488927}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8624265594330024685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../../../Volumes/G-DRIVE mobile/Husky Game Design/Team 5 FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637522856980000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1012
+  Exists: 1
+--- !u!114 &8844900863299215511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Main Start of Round '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Main Start of Round '
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
