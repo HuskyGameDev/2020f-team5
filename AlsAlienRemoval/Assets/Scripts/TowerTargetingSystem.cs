@@ -395,6 +395,11 @@ public class TowerTargetingSystem : MonoBehaviour
                         upgradeText.text = "Upgrade:\n+Huge Damage\n$" + upgradeCost;
                         sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
                     }
+                    else if (timesUpgraded == 2 && towerType == 4)
+                    {
+                        upgradeText.text = "Upgrade:\n+Fire Damage\n+Damage\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
                     else if(towerType == 3)
                     {
                         upgradeText.text = "Upgrade:\n+Duration\n$" + upgradeCost;
