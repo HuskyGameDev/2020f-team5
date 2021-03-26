@@ -539,11 +539,16 @@ MonoBehaviour:
   rangeMax: 2.5
   splashMinRange: 0
   splashMaxRange: 1
+  cascadeDecrease: 0
+  cascadeTimes: 0
+  cascadeRangeMin: 0
+  cascadeRangeMax: 0
   TargetText: {fileID: 1118675388438845611}
   upgradeText: {fileID: 1607965765727665312}
   sellText: {fileID: 4787465960883864108}
   projectile: {fileID: 0}
   laser: {fileID: 7489112440526321097, guid: f6ba7a7ae1039864b9d4935af53c951d, type: 3}
+  firedamage: 1
 --- !u!114 &2039301582011662812
 MonoBehaviour:
   m_ObjectHideFlags: 0

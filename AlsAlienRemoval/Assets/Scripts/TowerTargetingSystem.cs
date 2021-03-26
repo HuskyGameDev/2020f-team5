@@ -34,6 +34,7 @@ public class TowerTargetingSystem : MonoBehaviour
     private int targetType;
     public Projectile projectile;
     public Laser laser;
+    public float firedamage;
     private AudioSource fireSoundSource;
 
     void placed(bool placed)
@@ -299,11 +300,20 @@ public class TowerTargetingSystem : MonoBehaviour
                         drawLaser.SendMessage("draw");
                         target.SendMessage("setLineWidth", lineWidth);
                         target.SendMessage("setLineDuration", lineDuration);
-                        target.SendMessage("setTowerDamge", towerDamage);
                         target.SendMessage("setMinRange", splashMinRange);
                         target.SendMessage("setMaxRange", splashMaxRange);
-                        target.SendMessage("Splash");
-                        target.SendMessage("Hit", towerDamage);
+                        if(timesUpgraded >= 3)
+                        {
+                            target.SendMessage("setFireDamage", firedamage);
+                            target.SendMessage("SplashFire");
+                            target.SendMessage("SetOnFire");
+                        }
+                        else
+                        {
+                            target.SendMessage("setTowerDamge", towerDamage);
+                            target.SendMessage("Splash");
+                            target.SendMessage("Hit", towerDamage);
+                        }
                         fireTimer = 0;
                         fireSoundSource.Play();
                     }
@@ -336,7 +346,14 @@ public class TowerTargetingSystem : MonoBehaviour
             {
                 if (towerType == 1)
                 {
-                    towerDamage = towerDamage + 5;
+                    if (timesUpgraded == 2)
+                    {
+                        towerDamage = towerDamage + 20;
+                    }
+                    else
+                    {
+                        towerDamage = towerDamage + 5;
+                    }
                 }
                 if (towerType == 2)
                 {
@@ -371,6 +388,11 @@ public class TowerTargetingSystem : MonoBehaviour
                     else if(timesUpgraded == 2 && towerType == 3)
                     {
                         upgradeText.text = "Upgrade:\n+Duration\n+Splash\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                    else if (timesUpgraded == 2 && towerType == 1)
+                    {
+                        upgradeText.text = "Upgrade:\n+Huge Damage\n$" + upgradeCost;
                         sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
                     }
                     else if(towerType == 3)

@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     private float cascadeRangeMax;
     private float slowDecrease;
     public Laser laser;
+    private float damagePerUpdate;
 
     // slow tower settings
     private Color baseColor = new Color(255, 255, 255, 255);        // normal color
@@ -35,6 +36,12 @@ public class Enemy : MonoBehaviour
     private float initialSpeed;                                     // initial speed of this enemy
     private bool slowed;                                            // flag for being slowed
 
+    //fire damage
+    private FireTimer firetimer;
+    private bool onfire;
+    private SpriteRenderer fireimage;
+    public GameObject fire;
+
     // Start is called before the first frame update
     void Start() {
         isProtected = true;
@@ -42,6 +49,10 @@ public class Enemy : MonoBehaviour
         slowed = false;
         initialSpeed = speed;
         minSpeed = initialSpeed * 0.10f;
+
+        onfire = false;
+        firetimer = gameObject.AddComponent<FireTimer>();
+        fireimage = fire.GetComponent<SpriteRenderer>();
     }
 
     // called once per frame
@@ -50,6 +61,16 @@ public class Enemy : MonoBehaviour
         // unslows enemy if timer expired
         if (slowed && !slowTimer.enabled) {
             UnSlow();
+        }
+
+        //Damages if on fire
+        if(onfire && !firetimer.enabled)
+        {
+            Douse();
+        }
+        else if(onfire)
+        {
+            Hit(damagePerUpdate);
         }
 
         // Move towards destination
@@ -87,6 +108,19 @@ public class Enemy : MonoBehaviour
         speed = initialSpeed;
         GetComponent<SpriteRenderer>().color = baseColor;
         slowed = false;
+    }
+
+    void SetOnFire()
+    {
+        onfire = true;
+        firetimer.addDuration(4.0f);
+        fireimage.enabled = true;
+    }
+
+    void Douse()
+    {
+        onfire = false;
+        fireimage.enabled = false;
     }
     
     void setSlowDuration(float duration) {
@@ -143,6 +177,11 @@ public class Enemy : MonoBehaviour
         slowDecrease = decrease;
     }
 
+    void setFireDamage(float damage)
+    {
+        damagePerUpdate = damage;
+    }
+
     void Splash()
     {
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
@@ -197,6 +236,36 @@ public class Enemy : MonoBehaviour
                     drawLaser.SendMessage("draw");
                     go.SendMessage("setSlowDuration", slowDuration);
                     go.SendMessage("Slow", slowDecrease);
+                }
+            }
+        }
+    }
+
+    void SplashFire()
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        Vector3 position = this.transform.position;
+
+        // calculate squared distances
+        float min = splashMinRange * splashMinRange;
+        float max = splashMaxRange * splashMaxRange;
+        foreach (GameObject go in gos)
+        {
+            if (!(go.Equals(this.gameObject)))
+            {
+                Vector3 diff = go.transform.position - position;
+                float curDistance = diff.sqrMagnitude;
+                if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+                {
+                    Laser drawLaser = Instantiate(laser);
+                    drawLaser.SendMessage("setStartPosition", this.transform.position);
+                    drawLaser.SendMessage("setEndPosition", go.transform.position);
+                    drawLaser.SendMessage("setColor", Color.red);
+                    drawLaser.SendMessage("setWidth", lineWidth);
+                    drawLaser.SendMessage("setDuration", lineDuration);
+                    drawLaser.SendMessage("draw");
+                    go.SendMessage("setFireDamage", damagePerUpdate);
+                    go.SendMessage("SetOnFire");
                 }
             }
         }
@@ -280,6 +349,45 @@ public class Enemy : MonoBehaviour
                 timeRemaining -= Time.fixedDeltaTime;
             }
             else {
+                this.enabled = false;
+            }
+        }
+    }
+
+    // timer for tracking duration remaining on fire damage
+    class FireTimer : MonoBehaviour
+    {
+
+        private float timeRemaining = 0.0f;     // time remaining
+        private float maxDuration = 7.5f;       // maximum duration
+
+        private void Awake()
+        {
+            this.enabled = false;
+        }
+
+        // adds time to the slow, cannot exceed max duration
+        public void addDuration(float seconds)
+        {
+            if (!this.enabled)
+                this.enabled = true;
+
+            timeRemaining += seconds;
+            if (timeRemaining > maxDuration)
+            {
+                timeRemaining = maxDuration;
+            }
+        }
+
+        // updates timer, disables when reaching 0
+        private void FixedUpdate()
+        {
+            if (timeRemaining >= 0)
+            {
+                timeRemaining -= Time.fixedDeltaTime;
+            }
+            else
+            {
                 this.enabled = false;
             }
         }
