@@ -528,7 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePosition: {fileID: 122637240633799433}
   towerPosition: {fileID: 2623971271211070187}
-  upgradeCost: 600
+  upgradeCost: 480
   fireRate: 1
   lineWidth: 0.125
   lineDuration: 0.25
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeSpriteRenderer: {fileID: 0}
   range: {fileID: 4348926466859441465}
-  cost: 500
+  cost: 400
   towerUI: {fileID: 0}
   star1: {fileID: 21300000, guid: 34b17a95b97d0b647be72fb77b092c8f, type: 3}
   star2: {fileID: 21300000, guid: d186050c6b74dff4cb5c385464e76959, type: 3}

@@ -497,7 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePosition: {fileID: 122637240633799433}
   towerPosition: {fileID: 2623971271211070187}
-  upgradeCost: 120
+  upgradeCost: 150
   fireRate: 0.5
   lineWidth: 0.125
   lineDuration: 0.25
@@ -508,12 +508,17 @@ MonoBehaviour:
   rangeMax: 2.5
   splashMinRange: 0
   splashMaxRange: 0
+  cascadeDecrease: 0
+  cascadeTimes: 0
+  cascadeRangeMin: 0
+  cascadeRangeMax: 0
   TargetText: {fileID: 1947989162275254496}
   upgradeText: {fileID: 1366241513921305174}
   sellText: {fileID: 2798706812944009360}
   projectile: {fileID: 4629680836702628572, guid: 9befbc112b35fdd4988f9f782e2a4f43,
     type: 3}
   laser: {fileID: 0}
+  firedamage: 0
 --- !u!114 &2039301582011662812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,7 +533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeSpriteRenderer: {fileID: 0}
   range: {fileID: 4348926466859441465}
-  cost: 100
+  cost: 125
   towerUI: {fileID: 0}
   star1: {fileID: 21300000, guid: 34b17a95b97d0b647be72fb77b092c8f, type: 3}
   star2: {fileID: 21300000, guid: d186050c6b74dff4cb5c385464e76959, type: 3}
