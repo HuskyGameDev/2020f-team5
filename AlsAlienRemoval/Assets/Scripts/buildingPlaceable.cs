@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class buildingPlaceable : MonoBehaviour
@@ -23,7 +24,6 @@ public class buildingPlaceable : MonoBehaviour
     public Sprite star3;
     private static Sprite[] _starSprites;
     private SpriteRenderer _upgradeSprite;
-
 
     void Start()
     {
@@ -63,7 +63,7 @@ public class buildingPlaceable : MonoBehaviour
     }
    public void upgradeTimes()
     {
-        if(Currency.amount >= upgradecost)
+        if(Currency.getCurrency() >= upgradecost)
         {
             if (timesUpgraded < 3)
             {
@@ -93,7 +93,7 @@ public class buildingPlaceable : MonoBehaviour
                 // Update star sprite
                 _upgradeSprite.sprite = _starSprites[timesUpgraded];
 
-                Currency.amount = Currency.amount - upgradecost;
+                Currency.subtractCurrency(upgradecost);
                 timesUpgraded = timesUpgraded + 1;
                 upgradecost = (int)(upgradecost * 1.2);
 
@@ -142,7 +142,7 @@ public class buildingPlaceable : MonoBehaviour
     }
     public void sell()
     {
-        Currency.amount = Currency.amount + (upgradecost / 2);
+        Currency.addCurrency(upgradecost / 2);
         Destroy(gameObject);
 
         // display +$123 floating sell text

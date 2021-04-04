@@ -27,7 +27,7 @@ public class buildingPlacement : MonoBehaviour
             Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
             currentBuilding.position = new Vector2(worldPoint2d.x,worldPoint2d.y);
 
-            if (buildingPlaceable.IsLegalPosition() && Currency.amount >= buildingPlaceable.getCost()) {
+            if (buildingPlaceable.IsLegalPosition() && Currency.getCurrency() >= buildingPlaceable.getCost()) {
                 buildingPlaceable.range.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 0f, .25f);
             }
             else {
@@ -45,7 +45,7 @@ public class buildingPlacement : MonoBehaviour
             if (Input.GetMouseButtonDown(0)) {
 
                 // has enough money
-                if (Currency.amount >= buildingPlaceable.getCost()) {
+                if (Currency.getCurrency() >= buildingPlaceable.getCost()) {
 
                     // valid position, builds tower
                     if (buildingPlaceable.IsLegalPosition()) {

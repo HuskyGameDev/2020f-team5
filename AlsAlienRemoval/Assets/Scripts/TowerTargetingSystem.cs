@@ -340,7 +340,7 @@ public class TowerTargetingSystem : MonoBehaviour
 
     public void upgradeTower()
     {
-        if (Currency.amount >= upgradeCost)
+        if (Currency.getCurrency() >= upgradeCost)
         {
             if (timesUpgraded < 3)
             {

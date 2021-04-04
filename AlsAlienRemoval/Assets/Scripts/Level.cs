@@ -184,6 +184,9 @@ public class Level : MonoBehaviour
     {
         if (!_waveInProgress)
         {
+            // Adjust currency reward scalar for new round
+            Currency.advanceScalar();
+
             waveTimer.enabled = true;
             _utilityButton.interactable = false;
 

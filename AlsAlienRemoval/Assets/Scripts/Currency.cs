@@ -5,15 +5,33 @@ using UnityEngine.UI;
 
 public class Currency : MonoBehaviour
 {
-    public static int amount;
+    public int amount;
+    private static float staticAmount;
+
+    public float startScalar;             // Starting value of scalar
+    public static float staticScalar;   // Value multiplied with currency rewards
+
+    public float scalarAdd;
+    public float scalarMult;
+
+    // Applied after each round:
+    // staticScalar = staticAdd + staticMult * staticScalar
+    private static float staticAdd;      
+    private static float staticMult;
+
     public static string displayCurrency = null;
     private static Text currencyText;
 
     // Start is called before the first frame update
     void Start()
     {
-        amount = 750;
-        displayCurrency = amount.ToString() + "$";
+        staticAmount = amount;
+
+        staticScalar = startScalar;
+        staticAdd = scalarAdd;
+        staticMult = scalarMult;
+
+        displayCurrency = ((int)amount).ToString() + "$";
         currencyText = GetComponent<Text>();
         currencyText.text = displayCurrency;
     }
@@ -21,27 +39,40 @@ public class Currency : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displayCurrency = amount.ToString() + "$";
+        displayCurrency = staticAmount.ToString() + "$";
         currencyText.text = displayCurrency;
     }
     public static void textChange()
     {
-        displayCurrency = amount.ToString() + "$";
+        displayCurrency = staticAmount.ToString() + "$";
         currencyText.text = displayCurrency;
     }
-    public static void addCurrency(int changeAmount)
+    public static void addCurrency(float changeAmount)
     {
-        amount = amount + changeAmount;
+        staticAmount = staticAmount + changeAmount;
         textChange();
     }
-    public static void subtractCurrency(int changeAmount)
+    public static void subtractCurrency(float changeAmount)
     {
-        amount = amount - changeAmount;
+        staticAmount = staticAmount - changeAmount;
         textChange();
    
     }
-    public int getCurrency()
+
+    // Adjust (decrease) currency award scalar according to vars
+    public static void advanceScalar()
     {
-        return amount;
+        staticScalar = staticAdd + staticMult * staticScalar;
+    }
+
+    // Scale a currency reward for enemy death, etc. before passing to add/subtract
+    public static float scaleReward(float amount)
+    {
+        return amount * staticScalar;
+    }
+
+    public static float getCurrency()
+    {
+        return staticAmount;
     }
 }

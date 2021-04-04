@@ -2835,6 +2835,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa4e532907629b4c85741e768b447a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amount: 0
+  startScalar: 0
+  scalarAdd: 0
+  scalarMult: 0
 --- !u!114 &970842707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8766,6 +8770,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa4e532907629b4c85741e768b447a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amount: 750
+  startScalar: 1.65
+  scalarAdd: -0.1
+  scalarMult: 0.9
 --- !u!114 &1583975954
 MonoBehaviour:
   m_ObjectHideFlags: 0

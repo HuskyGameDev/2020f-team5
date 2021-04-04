@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
 
         // enemy death
         if (health <= 0) {
-            Currency.addCurrency(moneyDropped);
+            Currency.addCurrency(Currency.scaleReward(moneyDropped));
             Level.EnemiesRemaining--;
             Destroy(gameObject);
         }
