@@ -959,7 +959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 603ea95e44e276e469e58b668033f1f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa37db0387c2e094a9c8be3a54f6cb96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2106,7 +2106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 603ea95e44e276e469e58b668033f1f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa37db0387c2e094a9c8be3a54f6cb96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2302,7 +2302,7 @@ GameObject:
   - component: {fileID: 1756386287}
   - component: {fileID: 1756386286}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2628,11 +2628,11 @@ MonoBehaviour:
     m_LineSpacing: 1.2
   m_Text: "Al's Alien Removal is a classic, tower defense-style game in which you
     assume the role of famed alien wrangler, Al, on a call to protect a farmer's
-    livestock from an alien raid.\n\nUsing the menu on the bottom right-hand side
-    of the screen, place towers strategically to wipe out the aliens before they
-    get to the herd. \n\nBe careful! The material needed to construct towers isn't
-    cheap, but the farmer helps to cover these costs by paying you some for each
-    alien stopped.\n\n\nStay tuned for more to come in future updates!"
+    livestock from an alien raid.\n\nUsing the menu on the bottom of the screen,
+    click and drag to place towers strategically in order to wipe out the aliens
+    before they get to the herd. \n\nBe careful! The material needed to construct
+    towers isn't cheap, but the farmer helps to cover these costs by paying you some
+    for each alien eradicated.\n\n\nGood Luck, brave alien wrangler!"
 --- !u!222 &1781835049
 CanvasRenderer:
   m_ObjectHideFlags: 0
