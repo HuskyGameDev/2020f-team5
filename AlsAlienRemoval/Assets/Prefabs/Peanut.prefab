@@ -140,7 +140,7 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   nextDestination: {x: 0, y: 0, z: 0}
   isProtected: 0
-  health: 30
+  health: 25
   moneyDropped: 5
   laser: {fileID: 7489112440526321097, guid: f6ba7a7ae1039864b9d4935af53c951d, type: 3}
   fire: {fileID: 7343880620034216923}

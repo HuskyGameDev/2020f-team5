@@ -20,7 +20,7 @@ public class Cow : MonoBehaviour {
         // Destroy enemy and cow and subtract life if colliding enemy is this cow's designated attacker
         if (enemy != null)
         {
-            if (enemy.destination == transform.position)
+            if (enemy.destination == gameObject)
             {
                 // Destroy attacking enemy and itself, remove a life, and mark attacking enemy as dead
                 Destroy(enemy.gameObject);

@@ -31,20 +31,29 @@ public class Currency : MonoBehaviour
         staticAdd = scalarAdd;
         staticMult = scalarMult;
 
-        displayCurrency = ((int)amount).ToString() + "$";
+        displayCurrency = amount.ToString() + "$";
         currencyText = GetComponent<Text>();
         currencyText.text = displayCurrency;
+
+        // Check to see if scalar will ever reach 0
+        float testScalar = startScalar;
+        for (int i = 1; i <= 10; i++)
+        {
+            Debug.Log($"WAVE {i} SCALAR: {testScalar}");
+            testScalar = staticAdd + staticMult * testScalar;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        displayCurrency = staticAmount.ToString() + "$";
+        displayCurrency = ((int)staticAmount).ToString() + "$";
         currencyText.text = displayCurrency;
     }
     public static void textChange()
     {
-        displayCurrency = staticAmount.ToString() + "$";
+        displayCurrency = ((int)staticAmount).ToString() + "$";
         currencyText.text = displayCurrency;
     }
     public static void addCurrency(float changeAmount)

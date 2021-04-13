@@ -172,6 +172,10 @@ public class Level : MonoBehaviour
                     SceneManager.LoadScene("Win Screen");
                 }
                 WaveNumber++;
+
+                // Adjust currency reward scalar for new round
+                Currency.advanceScalar();
+
             }
         }
         foreach (Cow cow in cowList) {
@@ -184,8 +188,6 @@ public class Level : MonoBehaviour
     {
         if (!_waveInProgress)
         {
-            // Adjust currency reward scalar for new round
-            Currency.advanceScalar();
 
             waveTimer.enabled = true;
             _utilityButton.interactable = false;

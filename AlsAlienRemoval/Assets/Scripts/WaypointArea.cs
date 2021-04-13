@@ -18,9 +18,6 @@ public class WaypointArea : MonoBehaviour
             Destroy(GetComponentInChildren<SpriteRenderer>());
         }
 
-        // Get poistion of waypoint converted from local space to world space
-        waypointPosition = waypointGameObject.transform.position;
-
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -37,7 +34,7 @@ public class WaypointArea : MonoBehaviour
                 enemy.isProtected = true;
                 Cow cowTarget = Level.cowList[0];
                 Level.cowList.Remove(cowTarget);
-                setAsNextDestination(enemy, cowTarget.transform.position);
+                setAsNextDestination(enemy, cowTarget.gameObject);
             }
             else
             {
@@ -65,7 +62,7 @@ public class WaypointArea : MonoBehaviour
             }
 
             // Make enemy pursue its next destination if it was successfully assigned one before leaving
-            if (enemy.nextDestination != waypointPosition)
+            if (enemy.nextDestination != waypointGameObject)
             {
                 enemy.destination = enemy.nextDestination;
             }
@@ -77,13 +74,13 @@ public class WaypointArea : MonoBehaviour
         }
     }
 
-    public void setAsNextDestination(Enemy enemy, Vector2 dest)
+    public void setAsNextDestination(Enemy enemy, GameObject dest)
     {
         // Assign this waypoint as enemy's next destination
         enemy.nextDestination = dest;
 
         // Set enemy's current destination as well if it does not have one (first waypoint in level, etc.) as indicated by zero vector
-        if (enemy.destination == Vector3.zero)
+        if (enemy.destination.transform.position == Vector3.zero)
         {
             enemy.destination = dest;
         }
@@ -91,6 +88,6 @@ public class WaypointArea : MonoBehaviour
 
     public void setAsNextDestination(Enemy enemy)
     {
-        setAsNextDestination(enemy, waypointPosition);
+        setAsNextDestination(enemy, waypointGameObject);
     }
 }
