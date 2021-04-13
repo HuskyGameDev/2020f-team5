@@ -236,12 +236,12 @@ SpriteRenderer:
   m_SortingLayerID: -486406477
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92b5bbb6fcea891488b0ac260e2fa90c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a686420349bc29440acaaf3b9e8e929e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.02, y: 1.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -293,11 +293,16 @@ MonoBehaviour:
   rangeMax: 2.5
   splashMinRange: 0
   splashMaxRange: 0
+  cascadeDecrease: 0
+  cascadeTimes: 0
+  cascadeRangeMin: 0
+  cascadeRangeMax: 0
   TargetText: {fileID: 1310485965908149690}
   upgradeText: {fileID: 1693581319096371574}
   sellText: {fileID: 4286024248101097526}
   projectile: {fileID: 0}
   laser: {fileID: 7489112440526321097, guid: f6ba7a7ae1039864b9d4935af53c951d, type: 3}
+  firedamage: 0
 --- !u!114 &2039301582011662812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +335,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.07}
+  m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!82 &1575154409468047454
@@ -1875,7 +1880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8302895911117971130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.14, z: -0}
+  m_LocalPosition: {x: -0, y: 0.7, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 2623971271211070187}
