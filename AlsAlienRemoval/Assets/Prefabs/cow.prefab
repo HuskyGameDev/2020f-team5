@@ -112,6 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c2758c18526534a9398d0b73901831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeUntilBehaviorChange: 0
+  destination: {x: 0, y: 0}
+  speed: 0
 --- !u!114 &2503101671984313976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Enemy
   Event: event:/Cow Abduction Sound
-  PlayEvent: 2
+  PlayEvent: 5
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0

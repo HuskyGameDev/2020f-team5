@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 6921178478751613962}
   - component: {fileID: -986188609286198093}
   - component: {fileID: 7991241917708251948}
+  - component: {fileID: 7420545088397480767}
   m_Layer: 8
   m_Name: Rapid Tower
   m_TagString: building
@@ -607,6 +608,7 @@ MonoBehaviour:
   sellText: {fileID: 8164759880500272339}
   projectile: {fileID: 0}
   laser: {fileID: 7489112440526321097, guid: f6ba7a7ae1039864b9d4935af53c951d, type: 3}
+  firedamage: 0
 --- !u!114 &2039301582011662812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,6 +758,29 @@ MonoBehaviour:
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &7420545088397480767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623971271211070166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Sell Sound
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
   Preload: 0
   Params: []
   OverrideAttenuation: 0

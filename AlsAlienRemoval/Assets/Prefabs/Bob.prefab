@@ -101,7 +101,7 @@ GameObject:
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6611935607478839157
 Transform:
@@ -183,7 +183,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.0001
 --- !u!50 &6611935607478839156
 Rigidbody2D:
   serializedVersion: 4
@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  destination: {x: 0, y: 0, z: 0}
-  nextDestination: {x: 0, y: 0, z: 0}
+  destination: {fileID: 0}
+  nextDestination: {fileID: 0}
   isProtected: 0
   health: 40
   moneyDropped: 10
@@ -241,7 +241,7 @@ MonoBehaviour:
   Event: 'event:/Bob Death Sound '
   PlayEvent: 2
   StopEvent: 0
-  AllowFadeout: 1
+  AllowFadeout: 0
   TriggerOnce: 0
   Preload: 0
   Params: []
@@ -260,11 +260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Tile Map
   Event: event:/Bob Movement Sound 4
   PlayEvent: 1
   StopEvent: 2
-  AllowFadeout: 1
+  AllowFadeout: 0
   TriggerOnce: 0
   Preload: 0
   Params: []

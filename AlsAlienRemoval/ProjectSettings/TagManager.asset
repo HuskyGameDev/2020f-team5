@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - Laser
   - Button
+  - Tile Map
   layers:
   - Default
   - TransparentFX
