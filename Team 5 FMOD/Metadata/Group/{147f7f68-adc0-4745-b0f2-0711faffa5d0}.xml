@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{147f7f68-adc0-4745-b0f2-0711faffa5d0}">
+		<property name="name">
+			<value>Enemy Movement Sounds</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{fc817258-f232-4816-afab-e0b34edfc971}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{fffbfd50-9a88-4a40-8c14-a82e7aac2d76}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{d5fbf0f7-0457-4c22-8cff-5228db92d1ab}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{fc817258-f232-4816-afab-e0b34edfc971}">
+		<relationship name="effects">
+			<destination>{80720ca4-b6c1-4659-a91a-23b01c662851}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{fffbfd50-9a88-4a40-8c14-a82e7aac2d76}" />
+	<object class="MixerBusFader" id="{80720ca4-b6c1-4659-a91a-23b01c662851}" />
+</objects>

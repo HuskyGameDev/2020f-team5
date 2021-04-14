@@ -105,7 +105,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637539518680000000
+  lastModified: 637539576430000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1893,6 +1893,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5042602542647315130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 4/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5027906526590955916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,7 +2397,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637539518680000000
+  lastModified: 637539576430000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2554,7 +2574,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Tower.bank
   Name: Tower
   StudioPath: bank:/Tower
-  lastModified: 637539518690000000
+  lastModified: 637539576430000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2873,8 +2893,7 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: 9131828944405551222}
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
   Length: 510
@@ -3420,6 +3439,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2172092386106646283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2141155492521981246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4787,12 +4826,13 @@ MonoBehaviour:
   - {fileID: -2627076172497288927}
   - {fileID: 2049831674220680359}
   - {fileID: 164071824628985334}
+  - {fileID: 3116426349010251392}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8848701931381661832}
   StringsBanks:
   - {fileID: 5696052316917819930}
-  stringsBankWriteTime: 637539518680000000
+  stringsBankWriteTime: 637539576430000000
   cacheVersion: 6
 --- !u!114 &41860319596290465
 MonoBehaviour:
@@ -5701,6 +5741,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1414617781707737579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1426338233535902318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6605,6 +6665,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3116426349010251392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Movement stop
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Movement stop
+  guid: 5d25bcd34a259442a1d42c9cd1d75acc
+  Banks:
+  - {fileID: -8848701931381661832}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3145186118813374370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7003,7 +7086,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Upgrade Sounds.bank
   Name: Upgrade Sounds
   StudioPath: bank:/Upgrade Sounds
-  lastModified: 637539518690000000
+  lastModified: 637539576430000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -7924,11 +8007,11 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637539518680000000
+  lastModified: 637539576430000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3652
+    Value: 3818
   Exists: 1
 --- !u!114 &5770891613005221059
 MonoBehaviour:
@@ -7953,6 +8036,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5789765003293925478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5862260345296875114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8307,7 +8410,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Enemies.bank
   Name: Enemies
   StudioPath: bank:/Enemies
-  lastModified: 637539518680000000
+  lastModified: 637539576430000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -8394,7 +8497,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Currency+Menu+Winning+Losing.bank
   Name: Currency+Menu+Winning+Losing
   StudioPath: bank:/Currency+Menu+Winning+Losing
-  lastModified: 637539518680000000
+  lastModified: 637539576420000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -8625,7 +8728,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8768323571198035349}
+  - {fileID: 5789765003293925478}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
