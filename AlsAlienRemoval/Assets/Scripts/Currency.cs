@@ -36,12 +36,12 @@ public class Currency : MonoBehaviour
         currencyText.text = displayCurrency;
 
         // Check to see if scalar will ever reach 0
-        float testScalar = startScalar;
-        for (int i = 1; i <= 10; i++)
-        {
-            Debug.Log($"WAVE {i} SCALAR: {testScalar}");
-            testScalar = staticAdd + staticMult * testScalar;
-        }
+        // float testScalar = startScalar;
+        // for (int i = 1; i <= 10; i++)
+        // {
+        //     Debug.Log($"WAVE {i} SCALAR: {testScalar}");
+        //     testScalar = staticAdd + staticMult * testScalar;
+        // }
 
     }
 

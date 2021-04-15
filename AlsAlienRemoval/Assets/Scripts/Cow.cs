@@ -46,8 +46,8 @@ public class Cow : MonoBehaviour {
 
             timeUntilBehaviorChange = Random.Range(4f,10f);
 
-            // 70% chance to just stand there (like a cow)
-            if (Random.Range(0f, 1f) < 0.7f) {
+            // 80% chance to just stand there (like a cow)
+            if (Random.Range(0f, 1f) < 0.80f) {
                 active = false;
             }
 

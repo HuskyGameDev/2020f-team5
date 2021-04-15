@@ -83,6 +83,16 @@ public class Enemy : MonoBehaviour
 
         // enemy death
         if (health <= 0) {
+
+            // briefly display coins at enemy's feet where they died
+            if (Level.coinTextCount < Level.COIN_TEXT_LIMIT) {
+                Level.coinTextList[Level.nextCoinIndex].StartFadeCycle(transform.position);
+                Level.coinTextCount++;
+                Level.nextCoinIndex++;
+                if (Level.nextCoinIndex >= Level.COIN_TEXT_LIMIT)
+                    Level.nextCoinIndex = 0;
+            }
+
             Currency.addCurrency(Currency.scaleReward(moneyDropped));
             Level.EnemiesRemaining--;
             Destroy(gameObject);

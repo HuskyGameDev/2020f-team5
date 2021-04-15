@@ -47,12 +47,16 @@ public class Level : MonoBehaviour
     // floating-text stuff
     public static int errorTextCount = 0;               // # of error texts currently visible
     public static int currencyTextCount = 0;            // # of currency texts currently visible
+    public static int coinTextCount = 0;                // # of coin texts currently visible
     public const int ERROR_TEXT_LIMIT = 10;             // maximum floating error-texts that can exist
     public const int CRNCY_TEXT_LIMIT = 5;              // maximum floating currency-texts that can exist
+    public const int COIN_TEXT_LIMIT = 100;             // maximum floating coins that can exist
     public static FloatingText[] errorTextList;         // list of error-text wrapper objects
     public static FloatingText[] currencyTextList;      // list of currency-text wrapper objects
+    public static FloatingText[] coinTextList;          // list of coin wrapper objects
     public static int nextErrIndex = 0;                 // index of next available error text
     public static int nextCrncyIndex = 0;               // index of next available currency text
+    public static int nextCoinIndex = 0;                // index of next available coin text
 
     // cow pen boundaries (for cow movement)
     public static float cowPenXmin;
@@ -94,21 +98,28 @@ public class Level : MonoBehaviour
         // hides floating texts
         GameObject errorTextObject = GameObject.Find("text_floating_error");
         GameObject currencyTextObject = GameObject.Find("text_floating_currency");
+        GameObject coinTextObject = GameObject.Find("image_floating_coins");
         errorTextObject.GetComponent<CanvasGroup>().alpha = 0;
         currencyTextObject.GetComponent<CanvasGroup>().alpha = 0;
+        coinTextObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0);
 
-        // fills error/currencty text object arrays with wrapper objects by cloning their respective texts from the scene
+        // fills error/currency/coin text object arrays with wrapper objects by cloning their respective texts from the scene
         GameObject newText;
         GameObject buttomUIPanel = GameObject.Find("BottomUIPanel");        // this will be parent of the clones
         errorTextList = new FloatingText[ERROR_TEXT_LIMIT];
         for (int i = 0; i < ERROR_TEXT_LIMIT; i++) {
-            newText = Object.Instantiate(errorTextObject, buttomUIPanel.transform, true);
+            newText = Instantiate(errorTextObject, buttomUIPanel.transform, true);
             errorTextList[i] = new FloatingText(newText, 1);
         }
         currencyTextList = new FloatingText[CRNCY_TEXT_LIMIT];
         for (int i = 0; i < CRNCY_TEXT_LIMIT; i++) {
-            newText = Object.Instantiate(currencyTextObject, buttomUIPanel.transform, true);
+            newText = Instantiate(currencyTextObject, buttomUIPanel.transform, true);
             currencyTextList[i] = new FloatingText(newText, 2);
+        }
+        coinTextList = new FloatingText[COIN_TEXT_LIMIT];
+        for (int i = 0; i < COIN_TEXT_LIMIT; i++) {
+            newText = Instantiate(coinTextObject, buttomUIPanel.transform, true);
+            coinTextList[i] = new FloatingText(newText, 3);
         }
 
         // Play music
@@ -145,6 +156,11 @@ public class Level : MonoBehaviour
                 text.UpdateFadeAndLocation();
             }
         }
+        foreach (FloatingText text in coinTextList) {
+            if (text.IsActive()) {
+                text.UpdateFadeAndLocation();
+            }
+        }
     }
 
     // updates independant of fps
@@ -166,7 +182,6 @@ public class Level : MonoBehaviour
             if (!waveTimer.enabled && _waveInProgress && EnemiesRemaining == 0) {
                 _utilityButton.interactable = true;
                 _waveInProgress = false;
-                Debug.Log($"WAVE {WaveNumber} DEFEATED");
                 if (WaveNumber == 10)
                 {
                     SceneManager.LoadScene("Win Screen");
@@ -246,14 +261,15 @@ public class Level : MonoBehaviour
         }
     }
 
-    // wrapper class used to manage the floating-error-text objects
+    // wrapper class used to manage the floating-text objects
+    // this includes error-text, currency-text, and coin-text
     public class FloatingText {
         private GameObject floatingTextObject;  // reference to an instantiated text object from scene
         private float fadeTime;                 // seconds text will be visible
         private float fadeDistance = 0.6f;      // distance text travels
         private float timeRemaining;            // time until text is hidden
         private bool isActive;                  // is this object currently visible?
-        private byte textType;                  // 1 = error text, 2 = currency text
+        private byte textType;                  // 1 = error text, 2 = currency text, 3 = coins
 
         // constructor
         public FloatingText(GameObject floatingTextObject, byte textType) {
@@ -266,8 +282,16 @@ public class Level : MonoBehaviour
             }
 
             // currency text
-            if (textType == 2) {
+            else if (textType == 2) {
                 fadeTime = 1.4f;
+            }
+
+            // coin image, always appears behind enemy sprites
+            else {
+                // floatingTextObject.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
+                // floatingTextObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                fadeTime = 10f;
+                fadeDistance = 0;
             }
         }
 
@@ -288,31 +312,62 @@ public class Level : MonoBehaviour
 
         // hides the text of the object
         public void HideText() {
-            floatingTextObject.GetComponent<CanvasGroup>().alpha = 0;
+            if (textType == 3)
+                floatingTextObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0);
+            else
+                floatingTextObject.GetComponent<CanvasGroup>().alpha = 0;
         }
         
         // resets the starting location and timer for the object
         public void StartFadeCycle(Vector2 location) {
             timeRemaining = fadeTime;
-            floatingTextObject.GetComponent<Text>().transform.position = location;
-            floatingTextObject.GetComponent<CanvasGroup>().alpha = 1;
+            if (textType == 3) {
+                floatingTextObject.transform.position = location;
+                floatingTextObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
+            }
+            else {
+                floatingTextObject.GetComponent<Text>().transform.position = location;
+                floatingTextObject.GetComponent<CanvasGroup>().alpha = 1;
+            }
             isActive = true;
         }
 
         // repeatidly updates the fade and location of the object
         public void UpdateFadeAndLocation() {
-            
+
             // updates alpha
-            float currentAlpha = floatingTextObject.GetComponent<CanvasGroup>().alpha;
-            float newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
-            floatingTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
+            float currentAlpha;
+            float newAlpha;
+            if (textType == 3) {
+                // uncomment this to make coins fade out
+                // // currentAlpha = floatingTextObject.GetComponent<SpriteRenderer>().color.a;
+                // newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
+                // floatingTextObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, newAlpha);
+            }
+            else {
+                currentAlpha = floatingTextObject.GetComponent<CanvasGroup>().alpha;
+                newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
+                floatingTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
+            }
 
             // updates position (floats upward)
-            float currentY = floatingTextObject.GetComponent<Text>().transform.position.y;
-            float newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
-            Vector2 newPosition = new Vector2(floatingTextObject.GetComponent<Text>().transform.position.x, newY);
-            floatingTextObject.GetComponent<Text>().transform.position = newPosition;
-            
+            float currentY;
+            float newY;
+            Vector2 newPosition;
+            if (textType == 3) {
+                // uncomment this to make coins float upward
+                // currentY = floatingTextObject.transform.position.y;
+                // newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
+                // newPosition = new Vector2(floatingTextObject.transform.position.x, newY);
+                // floatingTextObject.transform.position = newPosition;
+            }
+            else {
+                currentY = floatingTextObject.GetComponent<Text>().transform.position.y;
+                newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
+                newPosition = new Vector2(floatingTextObject.GetComponent<Text>().transform.position.x, newY);
+                floatingTextObject.GetComponent<Text>().transform.position = newPosition;
+            }
+
             timeRemaining -= Time.deltaTime;
 
             if (timeRemaining <= 0) {
@@ -321,8 +376,10 @@ public class Level : MonoBehaviour
                 
                 if (textType == 1)
                     errorTextCount--;
-                else
+                else if (textType == 2)
                     currencyTextCount--;
+                else 
+                    coinTextCount--;
             }
         }
     }
