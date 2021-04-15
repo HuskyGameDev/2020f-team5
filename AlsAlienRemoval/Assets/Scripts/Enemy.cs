@@ -211,7 +211,7 @@ public class Enemy : MonoBehaviour
             {
                 Vector3 diff = go.transform.position - position;
                 float curDistance = diff.sqrMagnitude;
-                if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+                if (curDistance >= min && curDistance <= max)
                 {
                     Laser drawLaser = Instantiate(laser);
                     drawLaser.SendMessage("setStartPosition", this.transform.position);
@@ -240,7 +240,7 @@ public class Enemy : MonoBehaviour
             {
                 Vector3 diff = go.transform.position - position;
                 float curDistance = diff.sqrMagnitude;
-                if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+                if (curDistance >= min && curDistance <= max)
                 {
                     Laser drawLaser = Instantiate(laser);
                     drawLaser.SendMessage("setStartPosition", this.transform.position);
@@ -270,7 +270,7 @@ public class Enemy : MonoBehaviour
             {
                 Vector3 diff = go.transform.position - position;
                 float curDistance = diff.sqrMagnitude;
-                if (curDistance >= splashMinRange && curDistance <= splashMaxRange)
+                if (curDistance >= min && curDistance <= max)
                 {
                     Laser drawLaser = Instantiate(laser);
                     drawLaser.SendMessage("setStartPosition", this.transform.position);

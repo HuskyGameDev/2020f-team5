@@ -24,6 +24,19 @@ public class buildingPlaceable : MonoBehaviour
     public Sprite star3;
     private static Sprite[] _starSprites;
     private SpriteRenderer _upgradeSprite;
+    private SpriteRenderer targetimage;
+    public GameObject explosionTarget;
+    private bool target;
+    public GameObject targetButton;
+    public GameObject targetTypeText;
+
+    void setTarget()
+    {
+        target = true;
+        targetButton.SetActive(true);
+        targetTypeText.SetActive(false);
+        targetimage.enabled = true;
+    }
 
     void Start()
     {
@@ -31,6 +44,8 @@ public class buildingPlaceable : MonoBehaviour
         towerUI = GameObject.Find("TowerUI");
         towerUI.gameObject.SetActive(false);
         rangeSpriteRenderer = range.GetComponent<SpriteRenderer>();
+        targetimage = explosionTarget.GetComponent<SpriteRenderer>();
+        target = false;
 
         // Initialize array of sprites for viewing upgrades
         _starSprites = new Sprite[3] { star1, star2, star3 };
@@ -105,6 +120,7 @@ public class buildingPlaceable : MonoBehaviour
     {
         this.SendMessage("placed", true);
         beenPlaced = true;
+        explosionTarget.transform.position = new Vector3(-7.26f, -3.2f, 0);
     }
     void type(int type)
     {
@@ -127,6 +143,7 @@ public class buildingPlaceable : MonoBehaviour
             {
                 towerUI.gameObject.SetActive(false);
                 rangeSpriteRenderer.enabled = false;
+                targetimage.enabled = false;
                 toggleBool = false;
 
             }
@@ -135,6 +152,10 @@ public class buildingPlaceable : MonoBehaviour
                 towerUI.gameObject.SetActive(true);
                 rangeSpriteRenderer.enabled = true;
                 rangeSpriteRenderer.color = new Color(0.0f, 0.0f, 0.0f, 0.25f);
+                if (target)
+                {
+                    targetimage.enabled = true;
+                }
                 toggleBool = true;
             }
             

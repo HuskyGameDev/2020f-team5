@@ -36,6 +36,12 @@ public class TowerTargetingSystem : MonoBehaviour
     public Laser laser;
     public float firedamage;
     private AudioSource fireSoundSource;
+    public Explosion explosion;
+    private bool changeTarget;
+    public GameObject explosionTarget;
+    public GameObject explosiveFirePoint;
+    public float explosiveFirePointDuration;
+
 
     void placed(bool placed)
     {
@@ -188,6 +194,8 @@ public class TowerTargetingSystem : MonoBehaviour
         hasPlaced = false;
 
         fireSoundSource = GetComponent<AudioSource>();
+
+        changeTarget = false;
     }
 
     // Update is called once per frame
@@ -195,6 +203,18 @@ public class TowerTargetingSystem : MonoBehaviour
     {
         if(hasPlaced)
         {
+            if(changeTarget)
+            {
+                Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 worldPoint2d = new Vector2(worldPoint.x, worldPoint.y);
+                explosionTarget.transform.position = new Vector2(worldPoint2d.x, worldPoint2d.y);
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    changeTarget = false;
+                }
+            }
+
             fireTimer += Time.deltaTime;
             if (fireTimer >= fireRate)
             {
@@ -291,31 +311,41 @@ public class TowerTargetingSystem : MonoBehaviour
                 {
                     if (target != null)
                     {
-                        Laser drawLaser = Instantiate(laser);
-                        drawLaser.SendMessage("setStartPosition", firePosition.position);
-                        drawLaser.SendMessage("setEndPosition", target.transform.position);
-                        drawLaser.SendMessage("setColor", Color.red);
-                        drawLaser.SendMessage("setWidth", lineWidth);
-                        drawLaser.SendMessage("setDuration", lineDuration);
-                        drawLaser.SendMessage("draw");
-                        target.SendMessage("setLineWidth", lineWidth);
-                        target.SendMessage("setLineDuration", lineDuration);
-                        target.SendMessage("setMinRange", splashMinRange);
-                        target.SendMessage("setMaxRange", splashMaxRange);
-                        if(timesUpgraded >= 3)
+                        if (timesUpgraded <= 2)
                         {
-                            target.SendMessage("setFireDamage", firedamage);
-                            target.SendMessage("SplashFire");
-                            target.SendMessage("SetOnFire");
+                            Laser drawLaser = Instantiate(laser);
+                            drawLaser.SendMessage("setStartPosition", firePosition.position);
+                            drawLaser.SendMessage("setEndPosition", target.transform.position);
+                            drawLaser.SendMessage("setColor", Color.red);
+                            drawLaser.SendMessage("setWidth", lineWidth);
+                            drawLaser.SendMessage("setDuration", lineDuration);
+                            drawLaser.SendMessage("draw");
+                            target.SendMessage("setLineWidth", lineWidth);
+                            target.SendMessage("setLineDuration", lineDuration);
+                            target.SendMessage("setMinRange", splashMinRange);
+                            target.SendMessage("setMaxRange", splashMaxRange);
+                            if (timesUpgraded == 2)
+                            {
+                                target.SendMessage("setFireDamage", firedamage);
+                                target.SendMessage("SplashFire");
+                                target.SendMessage("SetOnFire");
+                                fireTimer = 0;
+                            }
+                            else if (timesUpgraded < 2)
+                            {
+                                target.SendMessage("setTowerDamge", towerDamage);
+                                target.SendMessage("Splash");
+                                target.SendMessage("Hit", towerDamage);
+                                fireTimer = 0;
+                            }
+                            fireSoundSource.Play();
                         }
-                        else
-                        {
-                            target.SendMessage("setTowerDamge", towerDamage);
-                            target.SendMessage("Splash");
-                            target.SendMessage("Hit", towerDamage);
-                        }
+                    }
+                    if (timesUpgraded >= 3 && ifEnemyExists())
+                    {
+                        StartCoroutine(ExplsoiveFirePoint());
+                        Instantiate(explosion, explosionTarget.transform.position, Quaternion.Euler(0, 0, 0));
                         fireTimer = 0;
-                        fireSoundSource.Play();
                     }
                 }
                 else if (towerType == 5)
@@ -336,6 +366,17 @@ public class TowerTargetingSystem : MonoBehaviour
             }
 
         }
+    }
+
+    private bool ifEnemyExists()
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        bool flag = false;
+        foreach(GameObject go in gos)
+        {
+            flag = true;
+        }
+        return flag;
     }
 
     public void upgradeTower()
@@ -397,7 +438,12 @@ public class TowerTargetingSystem : MonoBehaviour
                     }
                     else if (timesUpgraded == 2 && towerType == 4)
                     {
-                        upgradeText.text = "Upgrade:\n+Fire Damage\n+Damage\n$" + upgradeCost;
+                        upgradeText.text = "Upgrade:\n+Damage\n+Explosive\n$" + upgradeCost;
+                        sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
+                    }
+                    else if (timesUpgraded == 1 && towerType == 4)
+                    {
+                        upgradeText.text = "Upgrade:\n+Damage\n+ Fire Damage\n$" + upgradeCost;
                         sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
                     }
                     else if(towerType == 3)
@@ -413,6 +459,10 @@ public class TowerTargetingSystem : MonoBehaviour
                 }
                 else
                 {
+                    if(towerType == 4 && timesUpgraded >= 3)
+                    {
+                        this.SendMessage("setTarget");
+                    }
                     upgradeText.text = "No More Upgrades";
                     sellText.text = "Sell Amount:\n$" + (upgradeCost - (upgradeCost / 2));
                 }
@@ -471,5 +521,19 @@ public class TowerTargetingSystem : MonoBehaviour
         {
             TargetText.text = "Fastest";
         }
+    }
+
+    public void changeExplosionTarget()
+    {
+        changeTarget = true;
+    }
+
+    IEnumerator ExplsoiveFirePoint()
+    {
+        explosiveFirePoint.SetActive(true);
+
+        yield return new WaitForSeconds(explosiveFirePointDuration);
+
+        explosiveFirePoint.SetActive(false);
     }
 }
