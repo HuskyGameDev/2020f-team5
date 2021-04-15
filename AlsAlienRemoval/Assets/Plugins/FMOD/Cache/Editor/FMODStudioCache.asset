@@ -90,6 +90,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8956477385855186375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower 2
+  guid: d661f18afda57b439dbacbf85810bcd5
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8889957981041895451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Splash Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Splash Tower
+  guid: 616f9034d1b1244997b0b68cfc0f41dc
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8848701931381661832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +149,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637539576430000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -239,11 +283,11 @@ MonoBehaviour:
   - {fileID: 6525055542581061696}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 800
+  Length: 2704
 --- !u!114 &-8626615929961692558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +333,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8492110386770159287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Laser Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Laser Tower
+  guid: 4626132512b201498069dfb9b4feb134
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1071
 --- !u!114 &-8485914439721321083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,6 +446,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8234990969768542642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Main Start of Round
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Main Start of Round
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8200184514116317515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +491,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8183151411857482600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 2
+  guid: db8e29400a9dcd4ca3ddad03a1e1fae3
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8177194107168330818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Laser Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Laser Tower
+  guid: 4626132512b201498069dfb9b4feb134
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1071
 --- !u!114 &-8103811307903311670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,8 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Splash Tower
   guid: 616f9034d1b1244997b0b68cfc0f41dc
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -537,6 +671,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7752891811501033563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-7742178489418081924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +714,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7699986398742364431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-7689572039349901159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +802,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7608417866272581841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 5
+  guid: 32000a35f963274ebba3c8598ce6425b
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7533407925614876772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,6 +848,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &-7464039527839637816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Tower
+  guid: b6bae771ca4bce4ba2675a0262de4dec
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7449010105215735683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +960,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7335323147672175072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-7330376181924693665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,6 +1320,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6421293618665524360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6378477763556920890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,6 +1406,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6276685828067786237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hypno Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Hypno Tower
+  guid: aa639876c0a8b44b81f0e9bc269635d5
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
 --- !u!114 &-6274399351625180406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,6 +1451,48 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6262155842722244288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Tower
+  guid: b6bae771ca4bce4ba2675a0262de4dec
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6196988225929172066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-6176034882080702564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,6 +1677,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5828255060860994712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-5786555174690666067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,6 +1809,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5735276426780932497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Electric Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Electric Tower
+  guid: d486bbbeaaaf654fbb3915c325134eaa
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
 --- !u!114 &-5617655213669421286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,6 +1847,28 @@ MonoBehaviour:
   guid: f24bcd07fadb4d4a9789876d7fb75eb1
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5578702607588759761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Tower
+  guid: b6bae771ca4bce4ba2675a0262de4dec
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1525,6 +1913,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Team 5 Level Theme Part 6
   guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5561187012924028591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 1
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 1
+  guid: 531ef469fab2fe46bc14ee0b6de46f09
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5561183505037494817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower
+  guid: 2c9659a07e194848866af1a20cf19ea5
   Banks: []
   IsStream: 0
   Is3D: 0
@@ -1734,6 +2166,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 110528
   Exists: 1
+--- !u!114 &-5236995330090475749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower
+  guid: 2c9659a07e194848866af1a20cf19ea5
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5195067780733453554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,8 +2202,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Rapid Fire Tower 4
   guid: f3812f220637884ca2b619b49d796850
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5194399475484537924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 3
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 3
+  guid: 4cc8454e3053b94289e5581b5ccdfbf8
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2014,8 +2489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Rapid Fire Tower 1
   guid: 531ef469fab2fe46bc14ee0b6de46f09
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2064,11 +2538,11 @@ MonoBehaviour:
   - {fileID: 6525055542581061696}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 500
+  Length: 1546
 --- !u!114 &-4739276577786957257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,6 +2566,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4685645938103072167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4678421093899503091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,6 +2652,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4603724606825161408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Start Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Start Sound
+  guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2448
 --- !u!114 &-4599013901775317651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2315,6 +2832,49 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4443095291891503561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-4374674772793912424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower
+  guid: 2c9659a07e194848866af1a20cf19ea5
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4275548315891511976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,7 +2957,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637539576430000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2574,7 +3134,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Tower.bank
   Name: Tower
   StudioPath: bank:/Tower
-  lastModified: 637539576430000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2716,6 +3276,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3790703216052491541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Reverse Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Reverse Tower
+  guid: 35bb86d72b7a014eba923c722bd7d5bb
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3782117769818859957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2739,6 +3321,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3756145592051593910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-3703082067092351291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2799,8 +3401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Electric Tower
   guid: d486bbbeaaaf654fbb3915c325134eaa
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2888,15 +3489,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Bob Movement Sound 4
   guid: d621598d66c9624795a35ece70acda34
-  Banks:
-  - {fileID: 6525055542581061696}
+  Banks: []
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 510
+  Length: 3926
 --- !u!114 &-3331806695444499219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2942,6 +3542,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3275080557422622634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hypno Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Hypno Tower
+  guid: aa639876c0a8b44b81f0e9bc269635d5
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
 --- !u!114 &-3053181977453682031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2964,7 +3587,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 2448
 --- !u!114 &-2990184997030102291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +3611,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2978894655033218485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-2963699230804810089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,6 +3764,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2846745400167349034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2767930360585216343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3190,6 +3853,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2618543362077841645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ice Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Ice Tower
+  guid: 688c15b3ca1c5647972a2dc68aedaa6d
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2595484304929631951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,6 +3898,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2587304637145021535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-2563426938240501020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3297,6 +4002,29 @@ MonoBehaviour:
   guid: ecece26656cd894291777d79e27994d4
   Banks:
   - {fileID: -2963699230804810089}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2428457717577452179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 1
+  guid: f24bcd07fadb4d4a9789876d7fb75eb1
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3417,6 +4145,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2201447669668103632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Laser Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Laser Tower
+  guid: 4626132512b201498069dfb9b4feb134
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1071
 --- !u!114 &-2179589140539606775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,11 +4432,11 @@ MonoBehaviour:
   - {fileID: 6652849717796275491}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 13000
 --- !u!114 &-1637797081258592124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3860,6 +4610,28 @@ MonoBehaviour:
   guid: cae65fbf306dc1429c06e07d560a6367
   Banks:
   - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1397563078923649945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 2
+  guid: 6d661032c2dedd4fb5439e1db9a03bfd
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4275,6 +5047,48 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-833106800453250250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower 2
+  guid: d661f18afda57b439dbacbf85810bcd5
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-810546679355320017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-798869437348898173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4389,6 +5203,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-682681116103146636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 4
+  guid: 4782c65a516d2c4c98a0d0ae452a6b9c
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-674207482563091749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4479,6 +5316,71 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-572182968885251309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Reverse Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Reverse Tower
+  guid: 35bb86d72b7a014eba923c722bd7d5bb
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-548106036987988943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound Final
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound Final
+  guid: d621598d66c9624795a35ece70acda34
+  Banks: []
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 127346
+--- !u!114 &-536059820712203300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-469882025432764053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4500,6 +5402,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 138880
   Exists: 1
+--- !u!114 &-383181574179538599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-382680523127569908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4581,6 +5503,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Team 5 Menu Start Sound
   guid: ce152db8e54edb489e8f6d90626a4da6
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-320788678688158334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 4
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 4
+  guid: f3812f220637884ca2b619b49d796850
   Banks: []
   IsStream: 0
   Is3D: 0
@@ -4791,48 +5735,48 @@ MonoBehaviour:
   - {fileID: -1398539349965316982}
   - {fileID: 2710477542062125962}
   - {fileID: -8627543081424378129}
-  - {fileID: -3407628058976016896}
   - {fileID: 1515023863329877216}
   - {fileID: -4960764716324179840}
   - {fileID: -1514196326132081795}
   - {fileID: 265473132812136619}
-  - {fileID: 1209205740486760455}
-  - {fileID: 4130686107515722781}
-  - {fileID: 7158623082396748644}
-  - {fileID: 6563845985399203781}
-  - {fileID: -4950363231964295625}
-  - {fileID: -7794485713125649340}
-  - {fileID: 3370485569182642216}
-  - {fileID: 3682945488490257847}
-  - {fileID: 7111259461828448149}
-  - {fileID: 3635707272662023276}
-  - {fileID: -3516049363179895521}
-  - {fileID: 7388286237095830881}
-  - {fileID: -5195067780733453554}
   - {fileID: 8894779247348529724}
   - {fileID: 2182600511577955147}
   - {fileID: -7742178489418081924}
-  - {fileID: 6689533369942910977}
-  - {fileID: -4014540288515062977}
-  - {fileID: 2289343985674050020}
-  - {fileID: 878766073376094681}
-  - {fileID: -206055701130557424}
-  - {fileID: 7536903831300641689}
-  - {fileID: -8809001860135318198}
-  - {fileID: -626912684417444799}
-  - {fileID: -4951186812924387278}
-  - {fileID: -8626615929961692558}
-  - {fileID: -3053181977453682031}
-  - {fileID: -2627076172497288927}
-  - {fileID: 2049831674220680359}
-  - {fileID: 164071824628985334}
   - {fileID: 3116426349010251392}
+  - {fileID: 7699170585498926126}
+  - {fileID: 1255759296762651591}
+  - {fileID: 4745465403030665246}
+  - {fileID: -7608417866272581841}
+  - {fileID: 7645873122486531376}
+  - {fileID: -682681116103146636}
+  - {fileID: 1141299223377441582}
+  - {fileID: 5564848365523567026}
+  - {fileID: 3133902913088779643}
+  - {fileID: 6010689160298141526}
+  - {fileID: -8234990969768542642}
+  - {fileID: -4603724606825161408}
+  - {fileID: -8183151411857482600}
+  - {fileID: 3041109668112842031}
+  - {fileID: -2428457717577452179}
+  - {fileID: -4374674772793912424}
+  - {fileID: -572182968885251309}
+  - {fileID: -8492110386770159287}
+  - {fileID: 5098965327050405970}
+  - {fileID: 1143944724793548795}
+  - {fileID: 6070271131882279764}
+  - {fileID: 7713225660243425524}
+  - {fileID: 9070012377478743702}
+  - {fileID: -3275080557422622634}
+  - {fileID: -7464039527839637816}
+  - {fileID: 6281627468365405777}
+  - {fileID: 5586949122323765302}
+  - {fileID: 8383859857989071110}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8848701931381661832}
   StringsBanks:
   - {fileID: 5696052316917819930}
-  stringsBankWriteTime: 637539576430000000
+  stringsBankWriteTime: 637540299170000000
   cacheVersion: 6
 --- !u!114 &41860319596290465
 MonoBehaviour:
@@ -5584,6 +6528,72 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1069727741085285571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &1141299223377441582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 6
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 6
+  guid: 61f293cc1d5fad42a2a76cc3c41c6885
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1143944724793548795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 1
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 1
+  guid: 531ef469fab2fe46bc14ee0b6de46f09
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1157432419097161039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5643,8 +6653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Flame Tower
   guid: 2c9659a07e194848866af1a20cf19ea5
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5668,6 +6677,29 @@ MonoBehaviour:
   guid: 66f68fa377e5c240b606f21104ea9b25
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1255759296762651591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/Team 5 Tower Build Sound '
+  m_EditorClassIdentifier: 
+  Path: 'event:/Team 5 Tower Build Sound '
+  guid: 00382162b5f09045950a7c483e4dc8f4
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5822,6 +6854,28 @@ MonoBehaviour:
   guid: d75fcd73e4789d44bc4c99ec30010f9e
   Banks:
   - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1538122369976775437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Splash Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Splash Tower
+  guid: 616f9034d1b1244997b0b68cfc0f41dc
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6642,6 +7696,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3041109668112842031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 4
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 4
+  guid: ecece26656cd894291777d79e27994d4
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3090051922654879439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6688,6 +7765,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3133902913088779643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 1
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 1
+  guid: 8d3945a5921f144a973382479e421c1a
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3145186118813374370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6726,6 +7826,28 @@ MonoBehaviour:
   guid: c824427d4830f847ac42f1a04c0d65a4
   Banks:
   - {fileID: 6652849717796275491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 7000
+--- !u!114 &3228696888068001162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 3
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 3
+  guid: 4cc8454e3053b94289e5581b5ccdfbf8
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6792,8 +7914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Ice Tower
   guid: 688c15b3ca1c5647972a2dc68aedaa6d
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6972,8 +8093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Fire Tower
   guid: b6bae771ca4bce4ba2675a0262de4dec
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7018,8 +8138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Rapid Fire Tower 2
   guid: 6d661032c2dedd4fb5439e1db9a03bfd
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7049,6 +8168,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3704083136101077621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3710294996899821542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7086,7 +8225,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Upgrade Sounds.bank
   Name: Upgrade Sounds
   StudioPath: bank:/Upgrade Sounds
-  lastModified: 637539576430000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -7136,6 +8275,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3994044814173281612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hypno Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Hypno Tower
+  guid: aa639876c0a8b44b81f0e9bc269635d5
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
 --- !u!114 &4019682996930563560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7195,8 +8356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Reverse Tower
   guid: 35bb86d72b7a014eba923c722bd7d5bb
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7429,6 +8589,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4549451645731461185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Main Start of Round
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Main Start of Round
+  guid: 97dc17d8b5ae444bae9c1e03f7318440
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4584440846062954451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7451,6 +8634,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 150
+--- !u!114 &4604846341407813528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ice Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Ice Tower
+  guid: 688c15b3ca1c5647972a2dc68aedaa6d
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4623487884810507640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7513,6 +8718,29 @@ MonoBehaviour:
   guid: 7a6eb5261d811c41b9b48101a8e3df95
   Banks:
   - {fileID: -5257294063049299803}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4745465403030665246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 2
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 2
+  guid: 28811a96c248224399eaa93ed250e055
+  Banks:
+  - {fileID: -4262766940070500509}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7647,6 +8875,29 @@ MonoBehaviour:
   Path: event:/Team 5 Level Theme Part 6
   guid: 61f293cc1d5fad42a2a76cc3c41c6885
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5098965327050405970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 3
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 3
+  guid: 4cc8454e3053b94289e5581b5ccdfbf8
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7790,6 +9041,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5307507657093233507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Electric Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Electric Tower
+  guid: d486bbbeaaaf654fbb3915c325134eaa
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
 --- !u!114 &5372142996951933108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7948,6 +9221,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &5564848365523567026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Level Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Level Theme Part 3
+  guid: 67b0764fa1140b428a4e90c9b640dfe9
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5580507778359919565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7963,6 +9259,29 @@ MonoBehaviour:
   Path: event:/Team 5 Level Theme Part 6
   guid: 61f293cc1d5fad42a2a76cc3c41c6885
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5586949122323765302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flame Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Flame Tower 2
+  guid: d661f18afda57b439dbacbf85810bcd5
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8007,11 +9326,11 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637539576430000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3818
+    Value: 3816
   Exists: 1
 --- !u!114 &5770891613005221059
 MonoBehaviour:
@@ -8215,6 +9534,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6010689160298141526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 5
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 5
+  guid: 94f2c1221c567b4b85f41598f0861f28
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6048046675955304637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8231,6 +9573,29 @@ MonoBehaviour:
   guid: c824427d4830f847ac42f1a04c0d65a4
   Banks:
   - {fileID: -469882025432764053}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6070271131882279764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Splash Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Splash Tower
+  guid: 616f9034d1b1244997b0b68cfc0f41dc
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8283,6 +9648,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6281627468365405777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Electric Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Electric Tower
+  guid: d486bbbeaaaf654fbb3915c325134eaa
+  Banks:
+  - {fileID: -4064518200287691831}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
 --- !u!114 &6307064830302582174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8410,7 +9798,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Enemies.bank
   Name: Enemies
   StudioPath: bank:/Enemies
-  lastModified: 637539576430000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -8428,8 +9816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Rapid Fire Tower 3
   guid: 4cc8454e3053b94289e5581b5ccdfbf8
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8497,7 +9884,7 @@ MonoBehaviour:
   Path: ../Team 5 FMOD/Build/Desktop/Currency+Menu+Winning+Losing.bank
   Name: Currency+Menu+Winning+Losing
   StudioPath: bank:/Currency+Menu+Winning+Losing
-  lastModified: 637539576420000000
+  lastModified: 637540299170000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -8728,7 +10115,29 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 5789765003293925478}
+  - {fileID: -2846745400167349034}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6918429955236981558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 4
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 4
+  guid: f3812f220637884ca2b619b49d796850
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -8801,6 +10210,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6972632287661630703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Reverse Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Reverse Tower
+  guid: 35bb86d72b7a014eba923c722bd7d5bb
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7079349087699999263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8860,8 +10291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Hypno Tower
   guid: aa639876c0a8b44b81f0e9bc269635d5
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8883,15 +10313,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Laser Tower
   guid: 4626132512b201498069dfb9b4feb134
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 1071
 --- !u!114 &7203065727373129392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8952,8 +10381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Flame Tower 2
   guid: d661f18afda57b439dbacbf85810bcd5
-  Banks:
-  - {fileID: -4064518200287691831}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8984,6 +10412,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7473479694035117125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7513276833832629409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9076,6 +10524,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7645873122486531376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Team 5 Menu Theme Part 3
+  m_EditorClassIdentifier: 
+  Path: event:/Team 5 Menu Theme Part 3
+  guid: 35fad07e1ab2124892829b8e907217fd
+  Banks:
+  - {fileID: -4262766940070500509}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7699170585498926126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bob Movement Sound 4
+  m_EditorClassIdentifier: 
+  Path: event:/Bob Movement Sound 4
+  guid: d621598d66c9624795a35ece70acda34
+  Banks:
+  - {fileID: 6525055542581061696}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2156
 --- !u!114 &7701260814192028182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9092,6 +10586,29 @@ MonoBehaviour:
   guid: d661f18afda57b439dbacbf85810bcd5
   Banks:
   - {fileID: -2929806053508648667}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7713225660243425524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ice Tower
+  m_EditorClassIdentifier: 
+  Path: event:/Ice Tower
+  guid: 688c15b3ca1c5647972a2dc68aedaa6d
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9437,6 +10954,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &8297179577038842047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &8301945876152610522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9475,6 +11012,49 @@ MonoBehaviour:
   guid: ecece26656cd894291777d79e27994d4
   Banks:
   - {fileID: -4540741899783936634}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8379908396553146482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8383859857989071110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 4
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 4
+  guid: f3812f220637884ca2b619b49d796850
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9615,6 +11195,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &8795936690897571501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 1
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 1
+  guid: 531ef469fab2fe46bc14ee0b6de46f09
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8835824299340107150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9706,6 +11308,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &8893097989798060888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bob Movement Sound 2/Movement stop sound
+  m_EditorClassIdentifier: 
+  Name: Movement stop sound
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &8894779247348529724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9834,6 +11456,51 @@ MonoBehaviour:
   Path: event:/Laser Tower
   guid: 4626132512b201498069dfb9b4feb134
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &9020692530504510523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 2
+  guid: 6d661032c2dedd4fb5439e1db9a03bfd
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &9070012377478743702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rapid Fire Tower 2
+  m_EditorClassIdentifier: 
+  Path: event:/Rapid Fire Tower 2
+  guid: 6d661032c2dedd4fb5439e1db9a03bfd
+  Banks:
+  - {fileID: -4064518200287691831}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

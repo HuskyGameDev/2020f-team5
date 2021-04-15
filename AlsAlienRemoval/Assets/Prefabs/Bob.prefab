@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: Tile Map
   Event: event:/Bob Movement Sound 4
-  PlayEvent: 1
+  PlayEvent: 9
   StopEvent: 2
   AllowFadeout: 0
   TriggerOnce: 0

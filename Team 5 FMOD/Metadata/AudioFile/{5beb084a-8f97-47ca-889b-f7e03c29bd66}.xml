@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{5beb084a-8f97-47ca-889b-f7e03c29bd66}">
+		<property name="assetPath">
+			<value>Enemies/Bob Movement Sound.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>127.34693877551021</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{032d3d8a-3369-4eda-b959-66aefef7c084}</destination>
+		</relationship>
+	</object>
+</objects>
