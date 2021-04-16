@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour
 {
     // public game status variables
-    public int WaveNumber;                   // global wave #
+    public static int WaveNumber;            // global wave #
     public static int EnemiesRemaining;      // global enemies remaining
     public static int LivestockRemaining;    // global livestock remaining
     public static int enemiesInSpawn;        // # of enemies within the spawn location
@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
     public Enemy DebugEnemy2;
     public Enemy DebugEnemy3;
     private Enemy[] _debugEnemies;
-
+    
     // Cow / livestock visual representation variables
     public Cow cowPrefab;                  // Cow prefab for spawning. Assigned in editor
     public static List<Cow> cowList;       // List of cows on the final waypoint
@@ -50,7 +50,7 @@ public class Level : MonoBehaviour
     public static int coinTextCount = 0;                // # of coin texts currently visible
     public const int ERROR_TEXT_LIMIT = 10;             // maximum floating error-texts that can exist
     public const int CRNCY_TEXT_LIMIT = 5;              // maximum floating currency-texts that can exist
-    public const int COIN_TEXT_LIMIT = 100;             // maximum floating coins that can exist
+    public const int COIN_TEXT_LIMIT = 50;              // maximum floating coins that can exist
     public static FloatingText[] errorTextList;         // list of error-text wrapper objects
     public static FloatingText[] currencyTextList;      // list of currency-text wrapper objects
     public static FloatingText[] coinTextList;          // list of coin wrapper objects
@@ -75,7 +75,7 @@ public class Level : MonoBehaviour
         _waveStrengths = new int[] { 100, 150, 225, 335, 500, 750, 1125, 1700, 2500, 5000 };
         enemiesInSpawn = 0;
         _enemiesInSpawnLimit = 30;
-        //WaveNumber = 1;
+        WaveNumber = 1;
         EnemiesRemaining = 0;
         LivestockRemaining = 20;
 
@@ -118,7 +118,7 @@ public class Level : MonoBehaviour
         }
         coinTextList = new FloatingText[COIN_TEXT_LIMIT];
         for (int i = 0; i < COIN_TEXT_LIMIT; i++) {
-            newText = Instantiate(coinTextObject, buttomUIPanel.transform, true);
+            newText = Instantiate(coinTextObject, transform, true);
             coinTextList[i] = new FloatingText(newText, 3);
         }
 
@@ -182,15 +182,16 @@ public class Level : MonoBehaviour
             if (!waveTimer.enabled && _waveInProgress && EnemiesRemaining == 0) {
                 _utilityButton.interactable = true;
                 _waveInProgress = false;
-                if (WaveNumber == 10)
-                {
+
+                // YOU WIN
+                if (WaveNumber == 10) {
                     SceneManager.LoadScene("Win Screen");
                 }
+
                 WaveNumber++;
 
                 // Adjust currency reward scalar for new round
                 Currency.advanceScalar();
-
             }
         }
         foreach (Cow cow in cowList) {
@@ -203,10 +204,8 @@ public class Level : MonoBehaviour
     {
         if (!_waveInProgress)
         {
-
             waveTimer.enabled = true;
             _utilityButton.interactable = false;
-
             _waveInProgress = true;
             _spawningInProgress = true;
             _strengthLeftToSpawn = _waveStrengths[WaveNumber - 1];
@@ -335,26 +334,12 @@ public class Level : MonoBehaviour
         // repeatidly updates the fade and location of the object
         public void UpdateFadeAndLocation() {
 
-            // updates alpha
-            float currentAlpha;
-            float newAlpha;
             if (textType == 3) {
                 // uncomment this to make coins fade out
                 // // currentAlpha = floatingTextObject.GetComponent<SpriteRenderer>().color.a;
                 // newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
                 // floatingTextObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, newAlpha);
-            }
-            else {
-                currentAlpha = floatingTextObject.GetComponent<CanvasGroup>().alpha;
-                newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
-                floatingTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
-            }
 
-            // updates position (floats upward)
-            float currentY;
-            float newY;
-            Vector2 newPosition;
-            if (textType == 3) {
                 // uncomment this to make coins float upward
                 // currentY = floatingTextObject.transform.position.y;
                 // newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
@@ -362,10 +347,19 @@ public class Level : MonoBehaviour
                 // floatingTextObject.transform.position = newPosition;
             }
             else {
-                currentY = floatingTextObject.GetComponent<Text>().transform.position.y;
-                newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
+
+                // updates alpha
+                float currentAlpha = floatingTextObject.GetComponent<CanvasGroup>().alpha;
+                float newAlpha = Math.Max(0, currentAlpha - (Time.deltaTime / fadeTime));
+                floatingTextObject.GetComponent<CanvasGroup>().alpha = newAlpha;
+
+                // updates position (floats upward)
+                Vector2 newPosition;
+                float currentY = floatingTextObject.GetComponent<Text>().transform.position.y;
+                float newY = currentY + ((Time.deltaTime / fadeTime) * fadeDistance);
                 newPosition = new Vector2(floatingTextObject.GetComponent<Text>().transform.position.x, newY);
                 floatingTextObject.GetComponent<Text>().transform.position = newPosition;
+
             }
 
             timeRemaining -= Time.deltaTime;

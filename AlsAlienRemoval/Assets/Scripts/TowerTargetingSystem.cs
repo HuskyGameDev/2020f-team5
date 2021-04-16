@@ -243,6 +243,7 @@ public class TowerTargetingSystem : MonoBehaviour
                     target = FindFastestEnemy();
                 }
 
+                // earth tower
                 if (towerType == 1)
                 {
                     if (target != null)
@@ -259,6 +260,8 @@ public class TowerTargetingSystem : MonoBehaviour
                         fireSoundSource.Play();
                     }
                 }
+
+                // rapid tower
                 else if(towerType == 2)
                 {
                     if (target != null)
@@ -288,6 +291,8 @@ public class TowerTargetingSystem : MonoBehaviour
                         fireSoundSource.Play();
                     }
                 }
+
+                // slow tower
                 else if (towerType == 3)
                 {
                     if (target != null)
@@ -314,6 +319,8 @@ public class TowerTargetingSystem : MonoBehaviour
                         fireSoundSource.Play();
                     }
                 }
+
+                // splash tower
                 else if (towerType == 4)
                 {
                     if (target != null)
@@ -355,6 +362,8 @@ public class TowerTargetingSystem : MonoBehaviour
                         fireTimer = 0;
                     }
                 }
+
+                // projectile tower
                 else if (towerType == 5)
                 {
                     if(target != null)

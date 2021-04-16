@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed;                             // Speed in units/second
-    public GameObject destination;      // Current point enemy is moving towards in world space
-    public GameObject nextDestination;  // Next point enemy will move to. Assigned when new waypoint area is entered, and set to destination when previous area is left
-    public bool isProtected;                        // If true, enemy is invincible due to spawn protection, or it is attacking a cow
+    public float speed;                     // Speed in units/second
+    public GameObject destination;          // Current point enemy is moving towards in world space
+    public GameObject nextDestination;      // Next point enemy will move to. Assigned when new waypoint area is entered, and set to destination when previous area is left
+    public bool isProtected;                // If true, enemy is invincible due to spawn protection, or it is attacking a cow
     public float health;
     public int moneyDropped;
     private float slowDuration;
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     // slow tower settings
     private Color baseColor = new Color(255, 255, 255, 255);        // normal color
     private Color slowedColor = new Color(0, 150, 255, 200);        // blue tint
-    private SlowTimer slowTimer;                                    // timer that contols enemy speed
+    private SlowTimer slowTimer;                                    // timer that controls enemy speed
     private float minSpeed;                                         // min speed this enemy can move
     private float initialSpeed;                                     // initial speed of this enemy
     private bool slowed;                                            // flag for being slowed
@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake() {
-
         destination = new GameObject();
         destination.transform.position = Vector3.zero;
         nextDestination = destination;
@@ -58,6 +57,9 @@ public class Enemy : MonoBehaviour
         onfire = false;
         firetimer = gameObject.AddComponent<FireTimer>();
         fireimage = fire.GetComponent<SpriteRenderer>();
+
+        // increases enemy hp by 10% every wave
+        health *= (1 + ((Level.WaveNumber-1) * .1f));
     }
 
     // called once per frame
