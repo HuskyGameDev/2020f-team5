@@ -38,6 +38,7 @@ public class TowerTargetingSystem : MonoBehaviour
     private AudioSource fireSoundSource;
     public Explosion explosion;
     private bool changeTarget;
+    private Vector3 oldposition;
     public GameObject explosionTarget;
     public GameObject explosiveFirePoint;
     public float explosiveFirePointDuration;
@@ -196,6 +197,7 @@ public class TowerTargetingSystem : MonoBehaviour
         fireSoundSource = GetComponent<AudioSource>();
 
         changeTarget = false;
+        oldposition = new Vector3(0,0,0);
     }
 
     // Update is called once per frame
@@ -211,6 +213,11 @@ public class TowerTargetingSystem : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
+                    changeTarget = false;
+                }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    explosionTarget.transform.position = oldposition;
                     changeTarget = false;
                 }
             }
@@ -526,6 +533,7 @@ public class TowerTargetingSystem : MonoBehaviour
     public void changeExplosionTarget()
     {
         changeTarget = true;
+        oldposition = explosionTarget.transform.position;
     }
 
     IEnumerator ExplsoiveFirePoint()
