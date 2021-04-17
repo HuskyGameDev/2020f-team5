@@ -36,6 +36,7 @@ public class buildingPlaceable : MonoBehaviour
         targetButton.SetActive(true);
         targetTypeText.SetActive(false);
         targetimage.enabled = true;
+        rangeSpriteRenderer.enabled = false;
     }
 
     void Start()
@@ -150,11 +151,14 @@ public class buildingPlaceable : MonoBehaviour
             else
             {
                 towerUI.gameObject.SetActive(true);
-                rangeSpriteRenderer.enabled = true;
-                rangeSpriteRenderer.color = new Color(0.0f, 0.0f, 0.0f, 0.25f);
                 if (target)
                 {
                     targetimage.enabled = true;
+                }
+                else
+                {
+                    rangeSpriteRenderer.enabled = true;
+                    rangeSpriteRenderer.color = new Color(0.0f, 0.0f, 0.0f, 0.25f);
                 }
                 toggleBool = true;
             }
