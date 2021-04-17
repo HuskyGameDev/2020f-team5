@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1715286573276024934}
   - component: {fileID: 1080124079421325054}
   - component: {fileID: 2503101671984313976}
+  - component: {fileID: -2102566948484003334}
   m_Layer: 0
   m_Name: cow
   m_TagString: Untagged
@@ -73,7 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: -486406477
   m_SortingLayer: -2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6702d16407d19dd469e1c2682e9abc44, type: 3}
+  m_Sprite: {fileID: -3098749641643601824, guid: bff167b0298791743b8205981b6de1a5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,6 +117,7 @@ MonoBehaviour:
   timeUntilBehaviorChange: 0
   destination: {x: 0, y: 0}
   speed: 0
+  anim: {fileID: -2102566948484003334}
 --- !u!114 &2503101671984313976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,3 +141,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!95 &-2102566948484003334
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333047690317778149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1468f8d9a0049344eaeb91f3a69e5239, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

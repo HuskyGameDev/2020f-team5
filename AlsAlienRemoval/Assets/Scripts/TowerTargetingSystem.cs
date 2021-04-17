@@ -357,9 +357,18 @@ public class TowerTargetingSystem : MonoBehaviour
                     }
                     if (timesUpgraded >= 3 && ifEnemyExists())
                     {
-                        StartCoroutine(ExplsoiveFirePoint());
-                        Instantiate(explosion, explosionTarget.transform.position, Quaternion.Euler(0, 0, 0));
-                        fireTimer = 0;
+                        if (changeTarget)
+                        {
+                            StartCoroutine(ExplsoiveFirePoint());
+                            Instantiate(explosion, oldposition, Quaternion.Euler(0, 0, 0));
+                            fireTimer = 0;
+                        }
+                        else
+                        {
+                            StartCoroutine(ExplsoiveFirePoint());
+                            Instantiate(explosion, explosionTarget.transform.position, Quaternion.Euler(0, 0, 0));
+                            fireTimer = 0;
+                        }
                     }
                 }
 

@@ -8,6 +8,8 @@ public class Cow : MonoBehaviour {
     public float speed;                         // current speed of this cow
     private bool active;                        // is this cow moving?
 
+    public Animator anim;
+
     // starts random movement
     void Start(){
         timeUntilBehaviorChange = 0;
@@ -49,11 +51,13 @@ public class Cow : MonoBehaviour {
             // 80% chance to just stand there (like a cow)
             if (Random.Range(0f, 1f) < 0.80f) {
                 active = false;
+                anim.SetBool("Walking", false);
             }
 
             // otherwise, calculate next random direction to move and speed to get there in time
             else {
                 active = true;
+                anim.SetBool("Walking", true);
                 destination.x = Random.Range(Level.cowPenXmin, Level.cowPenXmax);
                 destination.y = Random.Range(Level.cowPenYmin, Level.cowPenYmax);
                 if (destination.x > transform.position.x)
