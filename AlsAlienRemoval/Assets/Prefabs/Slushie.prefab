@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2639010729161105698}
   - component: {fileID: 2452960242440195377}
   - component: {fileID: 2278195147550751030}
+  - component: {fileID: 6635567687392135023}
   m_Layer: 0
   m_Name: Slushie
   m_TagString: Enemy
@@ -76,7 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: -486406477
   m_SortingLayer: -2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 90c7aa296e8fe9641918cc736aad638e, type: 3}
+  m_Sprite: {fileID: 4766023407113163281, guid: 491ac4b0dbd261340a0e31fc3539606d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,6 +192,25 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!95 &6635567687392135023
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893917781624240521}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7723a91ccc38ec841b5ad794277b91b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6731396259965742691
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6731396259965742691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009, y: 0.292, z: 0}
+  m_LocalPosition: {x: 0.025, y: -0.198, z: 0}
   m_LocalScale: {x: 0.625, y: 0.625, z: 1}
   m_Children: []
   m_Father: {fileID: 8714093886247741946}

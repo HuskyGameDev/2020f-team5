@@ -672,7 +672,7 @@ MonoBehaviour:
   towerPosition: {fileID: 2623971271211070187}
   upgradeCost: 240
   fireRate: 0.25
-  lineWidth: 0.125
+  lineWidth: 0.0625
   lineDuration: 0.125
   towerDamage: 5
   towerSpeedDecreasePercent: 0
@@ -2251,7 +2251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8302895911117971130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 1.27, z: -0}
+  m_LocalPosition: {x: 0.029, y: 1.24, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 2623971271211070187}

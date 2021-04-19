@@ -795,7 +795,7 @@ MonoBehaviour:
   towerPosition: {fileID: 2623971271211070187}
   upgradeCost: 480
   fireRate: 1
-  lineWidth: 0.125
+  lineWidth: 0.0625
   lineDuration: 0.25
   towerDamage: 25
   towerSpeedDecreasePercent: 0
