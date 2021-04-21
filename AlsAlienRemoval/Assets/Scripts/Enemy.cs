@@ -44,8 +44,7 @@ public class Enemy : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake() {
-        destination = new GameObject();
-        destination.transform.position = Vector3.zero;
+        destination = null;
         nextDestination = destination;
 
         isProtected = true;

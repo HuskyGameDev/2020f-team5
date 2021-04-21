@@ -80,7 +80,7 @@ public class WaypointArea : MonoBehaviour
         enemy.nextDestination = dest;
 
         // Set enemy's current destination as well if it does not have one (first waypoint in level, etc.) as indicated by zero vector
-        if (enemy.destination.transform.position == Vector3.zero)
+        if (enemy.destination == null)
         {
             enemy.destination = dest;
         }
