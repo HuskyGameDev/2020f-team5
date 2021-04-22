@@ -69,6 +69,9 @@ public class Level : MonoBehaviour
     // runs once
     private void Start() {
 
+        //Set timescale
+        Time.timeScale = 1;
+
         // ASSIGNS GAME SETTINGS
         _debugEnemies = new Enemy[] { DebugEnemy1, DebugEnemy2, DebugEnemy3 };
         _enemyCosts = new int[] { 5, 10, 20 };
